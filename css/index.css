@@ -1,0 +1,96 @@
+@font-face {
+    font-family: esta;
+    src: url(../font/estanoche/EstaNoche.ttf);
+}
+.navbar-fixed, .nav, nav{background-color:#040404 !important;}
+.logo img{width:200px;height:auto;}
+.fb, .tw,.ins{width:50px;display:inline-block;margin-left:7px;margin-right:7px;margin-top:30px;}
+.logo-line{margin-top:-15px;}
+.brand-logo{margin-left:20px;font-size:22px !important;}
+p{line-height:2rem;}
+.button-collapse{color:#26a69a;}
+.parallax-container{min-height:250px;line-height:0;height:auto;color:rgba(255,255,255,.9);}
+.parallax-container .section{width:100%;}
+@media only screen and (max-width:992px){.parallax-container .section{position:absolute;top:40%;}
+#index-banner .section{top:10%;}
+}
+.page-footer, footer{margin-top:0 !important;background-color:#040404 !important;}
+.button{background-color:#040404;}
+.button:hover{background-color:#040404;}
+#index-banner{height:100vh !important;
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#index-banner{height:150vh !important;
+}
+}
+
+.button:visited{background-color:#040404;}
+.button:active{background-color:#040404;}
+#preloader{position:fixed;top:0;left:0;text-align:center;z-index:999;width:100vw;height:100vh;background-color:rgba(255, 255, 255, .8);}
+.load{margin:0 auto;}
+.spinner-green, .spinner-green-only{border-color:#6dc066 !important;}
+.spinner-yellow, .spinner-yellow-only{border-color:#040404 !important;}
+.spinner-red, .spinner-red-only{border-color:#EE6E73 !important;}
+.spinner-blue, .spinner-blue-only{border-color:#008080 !important;}
+.footer-copyright{height:auto !important;}
+.foot{padding-top:0px !important;padding-bottom:0 !important;}
+.foot1{margin-bottom:0px !important;}
+.sprite{-webkit-transition-duration:0.2s;-moz-transition-duration:0.2s;-o-transition-duration:0.2s;transition-duration:0.2s;-webkit-transition-property:background-position;-moz-transition-property:background-position;-o-transition-property:background-position;transition-property:background-position;}
+.sprite:hover{background-position:0 -51px;}
+.facebook{background:url(../img/icn-facebook.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
+.instgram{background:url(../img/icn-instagram.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
+.twitter{background:url(../img/icn-twitter.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
+.subs{
+	background-color: #eeeeee;
+}
+
+.subs1 select{
+	border: none;
+	border-bottom: 1px solid #9e9e9e;
+	background-color:  inherit;
+}
+
+.subt{
+	margin-top: 30px !important;
+}
+
+.app-heading{
+	font-family: "esta";
+}
+.ftp{
+	width: 240px;
+	height: auto;
+}
+.ftp1{
+	width: 120px;
+	height: auto;
+}
+
+/*.subscity{
+	margin-bottom: 10px !important;
+	padding-bottom: 10px !important;
+}*/
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .subscity {
+     display: none !important;
+    }
+    ::i-block-chrome, .subscity {
+    display: block !important;
+    }
+}*/
+@supports (-webkit-appearance:none) {
+    subscity {
+        display: none !important;
+    }
+}   
+_:-moz-tree-row(hover), subscity {
+    display: none !important;
+}    
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    subscity {
+       display: none !important;
+    }
+}  

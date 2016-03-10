@@ -1,0 +1,753 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8"/>
+      <title>Food Talk India | Food Events Delhi | Restaurant Reviews</title>
+      <meta name="apple-itunes-app" content="app-id=923340748">
+      <meta name="description" content="Food Talk India is one of the best Social Food Community situated in Delhi, where member's read and share their genuine food experiences via real time recommendations.">
+      <meta name="keyword" content="Best Brunches in Delhi, Food Talk India, Food Community Delhi, Food Promotion, Food Events India, Delhi Food Events, Food Groups Delhi, Mumbai Food Events, Restaurant Marketing, Restaurant Reviews, Cocktail Making Workshops, Largest Food Community India, Food Events Delhi, Cooking Classes Delhi, Cocktail Events Delhi,Blind Tasting, Dinner with Strangers, Sunday Brunch, Tasting Plate, Blind Folded dinner"> 
+      <!-- Twitter Card data -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="google-site-verification" content="_bpCmpthEwEH4gTlWc36eXYJxF0n1K595zkxXl2Rd-o" />
+      <meta name="twitter:site" content="@foodtalkindia">
+      <meta name="twitter:title" content="Food Talk India">
+      <meta name="twitter:description" content="An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.">
+      <meta name="twitter:creator" content="@foodtalkindia">
+      <!-- Twitter summary card with large image must be at least 280x150px -->
+      <meta name="twitter:image:src" content="http://www.foodtalkindia.com/img/image.jpg">
+      <!-- Open Graph data -->
+      <meta property="og:title" content="FoodtalkIndia" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="http://www.foodtalkindia.com/" />
+      <meta property="og:image" content="http://www.foodtalkindia.com/img/image.jpg" />
+      <meta property="og:description" content="An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations." />
+      <meta property="og:site_name" content="Food Talk India" />
+      <meta property="article:published_time" content="2015-05-21T05:59:00+01:00" />
+      <meta property="article:modified_time" content="2015-05-22T19:08:47+01:00" />
+      <meta property="article:section" content="Food Talk India" />
+      <meta property="article:tag" content="foodtalkindia" />
+      <meta property="fb:admins" content="" />
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
+      <link rel="shortcut icon" href="img/favicon.png" />
+      <link type="text/css" rel="stylesheet" href="css/app.css">
+      <link type="text/css" rel="stylesheet" href="css/index.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-60524336-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+      <script>
+            // This is called with the results from from FB.getLoginStatus().
+            // This function is called when someone finishes with the Login
+            // Button.  See the onlogin handler attached to it in the sample
+            // code below.
+            function checkLoginState() {
+              FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+              });
+            }
+
+            window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '567830766693152',
+              cookie     : true,  // enable cookies to allow the server to access 
+                                  // the session
+              xfbml      : true,  // parse social plugins on this page
+              version    : 'v2.2' // use version 2.2
+            });
+
+
+            FB.getLoginStatus(function(response) {
+              console.log("response working");
+            });
+
+            };
+
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+
+            function LoginProcess() {
+              FB.getLoginStatus(function(response) {
+              if (response.status === 'connected') {
+                alert("Already requested an invite");
+              } else if (response.status === 'not_authorized') {
+              FB.login(function(response) {
+                if (response.authResponse) {
+                    FB.api('/me', function(response) {
+                        if (window.XMLHttpRequest) {
+                            // code for IE7+, Firefox, Chrome, Opera, Safari
+                            xmlhttp = new XMLHttpRequest();
+                        } else {
+                            // code for IE6, IE5
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange = function() {
+                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            }
+                        }
+                        xmlhttp.open("GET","API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender,true);
+                        xmlhttp.send();
+                        console.log("API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender);
+                        alert('Hello, ' + response.name + '!, You will receive an invite soon!!!');
+                    });
+                } else {
+                    alert('You canceled the request process.');
+                }
+              }, {scope: 'public_profile, email'});
+              } else {
+                FB.login(function(response) {
+                if (response.authResponse) {
+                    FB.api('/me', function(response) {
+                        if (window.XMLHttpRequest) {
+                            // code for IE7+, Firefox, Chrome, Opera, Safari
+                            xmlhttp = new XMLHttpRequest();
+                        } else {
+                            // code for IE6, IE5
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange = function() {
+                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            }
+                        }
+                        xmlhttp.open("GET","API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender,true);
+                        xmlhttp.send();
+                        console.log("API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender);
+                        alert('Hello, ' + response.name + '!, You will receive an invite soon!!!');
+                    });
+                } else {
+                    alert('You canceled the request process.');
+                }
+              }, {scope: 'public_profile, email'});
+              }
+              });
+            }
+          </script>
+          <style>
+          .patt{
+            background-image: url('img/food.png');
+          }
+          .santa{
+  display: inline-block;
+  position: absolute;
+  left: 190px;
+}
+.santa1{
+  display: inline-block;
+}
+            #dropdown2{margin-top: 64px;}.navbar-fixed, .nav, nav{background-color: #101125 !important;}body{background-color: #f8f8f8 !important;}.fill{height: 20px;}.mar{margin-top: 10px !important;margin-bottom: 10px !important;}
+            html::-webkit-scrollbar { 
+          display: none; 
+      }
+            #delhiLive{
+              background-image: url('festival_step2/bg2.png');
+            background-repeat: no-repeat;
+          background-attachment: fixed;
+        background-size: cover;
+        background-position: center; 
+              width: 100vw;
+              height: 100vh !important;
+              position: fixed;
+              top: 0 !important;
+              max-height: 100%;
+              left: 0;
+              color: #2c2c2c !important;
+            }
+            #delhiLive p{
+              font-size: 19px !important;
+              margin: 5px !important;
+            }
+            .close-b{
+              margin: 5px 0 0 0;
+              font-size: 24px;
+              position: absolute;
+              right: 2;
+            }
+            .close-b a{
+              padding: 0 !important;
+            }
+            .close-b a img{
+              height: 45px;
+              width: auto;
+            }
+            .logo-s img{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: -10px;
+            }
+            .logo-m img{
+        width: 800px;
+        height: auto;
+        margin-bottom: 20px;
+            }
+            .but-s{
+              width: 100% !important;
+              position: absolute;
+              bottom: 0;
+              background-color: #01AEF0 !important;
+            }
+            .but-m{
+              padding: 0 40px;
+              margin-top: 20px;
+              background-color: #01AEF0 !important;
+            }
+            .spc{
+              margin-top: 20px;
+              color: #212121;
+            }
+            
+            .appd{
+              font-size: 50px;
+              margin-right: 70px 0;
+            }
+
+            .appd img{
+              width: 240px;
+            }
+            
+            .appd1{
+              font-size: 50px;
+              margin-top: 30px;
+            }
+
+            .appd1 img{
+              width: 240px;
+            }
+
+
+          </style>
+</head>
+<body class="patt">
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQQHDN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MQQHDN');</script>
+  <!-- End Google Tag Manager -->
+    <div class="navbar-fixed">
+        <!-- <ul id="dropdown1" class="dropdown-content">
+              <li><a href="cityguide.html">Delhi</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">two</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">three</a></li>
+            </ul>
+            <ul id="dropdown2" class="dropdown-content">
+              <li><a href="cityguide.html">Delhi</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">two</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">three</a></li>
+            </ul> -->
+        <nav>
+          <div class="nav-wrapper">
+          <span class="santa1 hide-on-large-only right"></span>
+            <a href="index.html" class="brand-logo"><strong>FOOD</strong>TALKIN</a>
+            <span class="santa hide-on-med-and-down"></span>
+            <a href="#" data-activates="mobile-demo" class="button-collapse" title="Best Brunches in Delhi"><i class="mdi-navigation-menu"></i></a>
+            <ul class="right hide-on-med-and-down">
+              <li class="active"><a href="index.html" title="Food Community Delhi">Home</a></li>
+              <!-- <li><a href="delhilive/index.html">Festival</a></li> -->
+              <li><a href="experience.html">Events</a></li>
+              <!-- <li><a href="http://www.foodtalkplus.com/" target="_blank">App <sub>BETA</sub></a></li> -->
+              <li><a href="service.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li class="active"><a href="index.html">Home</a></li>
+              <!-- <li><a href="delhilive/index.html">Festival</a></li> -->
+              <li><a href="experience.html">Events</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+        <div id="index-banner" class="parallax-container valign-wrapper">
+          <div class="section no-pad-bot">
+            <div class="container center">
+           <!--  <div class="appd"><a href="https://itunes.apple.com/in/app/food-talk-plus/id923340748?mt=8" target="_blank"><img src="img/app.png" alt=""></a></div> -->
+              <div class="header center valign logo"><img src="img/logo.png" alt="Food Community India, Food Events Delhi, Food Events India, Cocktail Events Delhi, Food Groups Delhi, Food Groups India, Blind Tasting, Blindfolded Dinner, Restaurant Reviews Delhi, Restaurant Marketing Delhi, Mumbai Food Events"></div>
+                <!-- <h5 class="header col s12 light logo-line">A social food network.</h5> -->
+                <div class="row ">
+                <div class="col s12 m12 l12">
+                  <div class="row center-align">
+                    <div class="col s12 m12 l6 offset-l3">
+                      <div class="fb center-align"><a href="https://www.facebook.com/foodtalkindia" target="_blank"><div class="facebook sprite"></div></a></div>
+                      <div class="tw center-align"><a href="https://twitter.com/foodtalkindia" target="_blank"><div class="twitter sprite"></div></a></div>
+                      <div class="ins center-align"><a href="https://instagram.com/foodtalkindia/" target="_blank"><div class="instgram sprite"></div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card col s12 m12 l12 subs z-depth-4">
+                <div   id="mc_embed_signup" class="col s12 l12 m12">
+                  <form action="//foodtalkindia.us11.list-manage.com/subscribe/post?u=5e5e4b849d6f2077ae6e12ecf&amp;id=4b6d309d13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class="col s12 m12 l12 grey-text" id="mc_embed_signup_scroll">
+                      <h5 class="grey-text text-darken-4 center-align">Subscribe to our Events</h5>
+                      <div class="input-field col s12 m6 l4 mc-field-group mar">
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <label for="mce-EMAIL">Email</label>
+                      </div>
+                      <div class="input-field col s12 m6 l4 mc-field-group subs1 mar">    
+                        <label for="mce-group[4381]" class="subscity">City </label>  
+                        <select  name="group[4381]" class="REQ_CSS browser-default" id="mce-group[4381]">
+                          <option ></option>
+                          <option value="1">Delhi NCR</option>
+                          <option value="2">Mumbai</option>
+                          <option value="4">Pune</option>
+                          <option value="8">Bangalore</option>
+                          <option value="16">Other</option>
+                        </select>
+                        
+                      </div>
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_5e5e4b849d6f2077ae6e12ecf_4b6d309d13" tabindex="-1" value=""></div>
+                      <div class="clear col s12 m12 l4 center-align mar">  
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-waves-effect waves-light btn-large">Subscribe</button></div>
+                      </div> 
+                  </form>
+                  <div class="fill"></div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parallax"><img src="img/food_events.jpg" alt="Food Events Delhi, Food Community India, Food Events India, Best Brunches in Delhi, Mumbai Food Events, Cocktail Events Delhi, Delhi Restaurant Reviews"></div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <!-- <div class="row hide-on-large-only">
+                  <div class="col s12 m12 l12">
+                    <div   id="mc_embed_signup" class="col s12 l12 m12">
+                      <form action="//foodtalkindia.us11.list-manage.com/subscribe/post?u=5e5e4b849d6f2077ae6e12ecf&amp;id=4b6d309d13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div class="col s12 m12 l12 grey-text" id="mc_embed_signup_scroll">
+                          <h5 class="grey-text text-darken-4 center-align">Subscribe to our Events</h5>
+                          <div class="input-field col s12 m6 l4 mc-field-group">
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                            <label for="mce-EMAIL">Email</label>
+                          </div>
+                          <div class="input-field col s12 m6 l4 mc-field-group subs1">      
+                            <select  name="group[4381]" class="REQ_CSS browser-default" id="mce-group[4381]">
+                              <option value="1">Delhi NCR</option>
+                              <option value="2">Mumbai</option>
+                              <option value="4">Pune</option>
+                              <option value="8">Bangalore</option>
+                              <option value="16">Other</option>
+                            </select>
+                            <label for="mce-group[4381]" class="hide">City </label>
+                          </div>
+                          <div class="fill"></div>
+                          <div class="row">
+                          <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                          </div>
+                          <div style="position: absolute; left: -5000px;"><input type="text" name="b_5e5e4b849d6f2077ae6e12ecf_4b6d309d13" tabindex="-1" value=""></div>
+                          <div class="clear col s12 m12 l4 center-align">  
+                            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-waves-effect waves-light btn-large subt">Subscribe</button></div>
+                          </div>
+                          </div> 
+                      </form>
+                    </div>
+                  </div>
+                </div> -->
+              <div class="row">
+                <div class="col s12 center">
+                  <h3 class="header col s12 m12  light">India`s Largest Digital Food Community</h3>
+                  <p class=" justify">People want real authentic stories that are relatable and give context. We are a  unique community who solve dining out problems through relatable stories that people trust, stories that move people to action. Actions that can have a direct impact on brands. Our community consists of diverse individuals across India and around the world. Individuals who have a large social network and are influencing their networks about where to eat and what to order. They are brand ambassadors-They are food talkers.</p>
+                </div>
+              </div>
+              <!--   Icon Section   -->
+              <div class="row">
+                <div class="col s12 m4 l4 offset-m2 offset-l2">
+                  <div class="icon-block">
+                    <h5 class="header col s12 m12 light center">Invite-Only</h5>
+                    <h2 class="center"><img src="img/about/food_community_india.png" alt="Delhi Events, Food Events, Largest Food Community India">&nbsp;</h2> 
+                    <p class="center-align">An Invite-Only Food Community- where members come together to read and share genuine food experiences via real time recommendations.</p>
+                  </div>
+                  <!-- <div class="col s12 m12 l12 center hide-on-med-and-up">
+                    <div class="col s12 m4 l4 offset-m2 offset-l2 center"><a class="btn-large waves-effect waves-light button" onclick="LoginProcess();">Request invite</a></div>
+                  </div> -->
+                </div>
+                <div class="col s12 m4 l4">
+                  <div class="icon-block">
+                    <h5 class="header col s12 m12 light center">Social Media</h5>
+                    <h2 class="center"><img src="img/about/food_community_india_media.png" alt="Food Community India, Cocktail Events Delhi, Best Brunches in Delhi, Blindfolded Dinner">&nbsp;</h2>
+                    <p class="center-align">India's largest Crowd-Sourced food community across all social media platforms.</p>
+                  </div>
+                  <!-- <div class="col s12 m12 l12 center hide-on-med-and-up">
+                    <div class="col s12 m4 l4 center"><button data-target="modal1" class="btn-large modal-trigger blue waves-effect waves-light button">Advertise</button></div>
+                  </div> -->
+                </div>
+                <!-- <div class="col s12 m4 l4">
+                  <div class="icon-block">
+                    <h5 class="header col s12 m12 light center">Events</h5>
+                    <h2 class="center"><img src="img/about/food_events_delhi.png" alt="Food Talk India Events in Delhi">&nbsp;</h2>
+                    <p class="center-align">Food Talk India curates interactive concept experiences at venues across India.</p>
+                  </div>
+                </div> -->
+              </div>
+              <!-- <div class="row"> 
+                <div class="col s12 m12 l12 center hide-on-small-only">
+                  <div class="col s12 m4 l4 offset-m2 offset-l2 center"><a class="btn-large waves-effect waves-light button" onclick="LoginProcess();">Request invite</a></div>
+                  <div class="col s12 m4 l4 center"><button data-target="modal1" class="btn-large modal-trigger waves-effect waves-light button">Advertise</button></div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          
+           <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+              <div class="container">
+                <div class="row center"><div class="col s12 m12 l12 offset-m4"><img src="img/foodtalkapp.png" alt="" class="ftp responsive-img hide-on-small-only"><h5 class="header col s12 hide-on-med-and-up">FOOD <strong>TALK</strong> ON MOBILE</h5></div>
+                <div class="col s12 m12 l12 offset-m4"><h5 class="hide-on-small-only">FOOD <strong>TALK</strong> ON MOBILE</h5></div>
+              </div>
+              </div>
+            </div>
+            <div class="parallax"><img src="img/newbgalt.jpg" alt="Food Events | Restaurant Reviews"></div>
+          </div>
+          <div class="container ">
+            <div class="section">
+              <div class="row">
+                <div class="col s12 center">
+                  <p class="center light">
+                      <!-- <div class="col s12 m12 l12"><h1 class="app-heading">Find Awesome Dishes</h1></div> -->
+                      
+                      
+                      <div class="row">
+                        <div class="col s12 m12 l12">
+                          <!-- <div class="col s12 m3 l3 center valign-wrapper">
+                            <img src="img/ftp.png" alt="" class="ftp valign responsive-img">
+                          </div> -->
+                          <div class="col s12 m12 m12">
+                            <hp class="center">Food Talk on mobile allows you to rate, share and discover dishes in Delhi Ncr.</p>
+                          </div>
+                          <div class="col s12 m12 l12">
+                            <div class="appd1"><a href="https://itunes.apple.com/in/app/food-talk-plus/id923340748?mt=8" target="_blank"><img src="img/download.png" alt=""></a></div>
+                          </div>
+                        </div>
+                      </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+              <div class="container"><div class="row center"><h4 class="header col s12">Food Talk for Business</h4></div></div>
+            </div>
+            <div class="parallax"><img src="img/food_events_india.jpg" alt="Mumbai Food Events, Food Community India, Delhi Food Events"></div>
+          </div>
+          <div class="container">
+            <div class="section">
+              <div class="row">
+                <div class="col s12 m12 l12 center">                  
+                  <p class="justify">Food Talk is a versatile digital, social and on-ground platform with a growing and highly active audience. Brands & restaurants can engage with this audience to enhance growth of their business. One can engage and target this audience by either advertising with us or have us curate a highly customised event.</p><p class="justify">We are holistic marketing solution for the F&B industry.</p>
+                  <div class="col s12 m12 l12 center">
+                    <div class="section"></div>
+                    <a href="contact.html" class="btn-large waves-effect waves-light button" title="Restaurant Reviews">Know More</a></div>
+                  <!-- <div class="col s6 m6 l6 left-align">
+                    <div class="section"></div>
+                    <a href="subscribe/index.html" class="btn-large waves-effect waves-light blue button" title="Restaurant Reviews">Subscribe</a></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+              <div class="container"><div class="row center"><h4 class="header col s12">Partners</h4></div></div>
+            </div>
+            <div class="parallax"><img src="img/food_events_mumbai.jpg" alt="Restaurant Marketing, Food Events, Restaurant Reviews Delhi"></div>
+          </div>
+          <div class="container">
+            <div class="section">
+              <div class="row">
+                <div class="col s12 center">
+                  <div class="col s12 m12 l12">
+                    <div class="col s6 m2 l2"><img src="img/partners/audi.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/google.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/chevorlet.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/microsoft.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/encompass.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/bira.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/pernod.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/masterchef.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/grants.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/diageo.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/yum.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/food_events_p3.png" class="responsive-img" alt="Food Events | Food Talk India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/food_events_p9.png" class="responsive-img" alt="Best Food Events Delhi" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/food_events_p10.png" class="responsive-img" alt="Food Events India" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/food_events_p11.png" class="responsive-img" alt="Food Talk India Events Delhi" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/food_events_p14.png" class="responsive-img" alt="Restaurant Reviews" /></div>
+                    <div class="col s6 m2 l2"><img src="img/partners/food_events_p16.png" class="responsive-img" alt="Dinner with Strangers" /></div>
+                  </div>
+                  <div class="col s12 m12 l12 center">
+                    <p><strong>And many more</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+           <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+              <div class="container"><div class="row center"><h4 class="header col s12">Press</h4></div></div>
+            </div>
+            <div class="parallax"><img src="img/food_events_delhi.jpg" alt="Food Events press"></div>
+          </div>
+          <div class="container">
+            <div class="section">
+              <div class="row">
+                <div class="col s12 center">
+                  <div class="col s12 m12 l12">
+                  <div class="col s6 m3 l2"><a href="http://www.entrepreneur.com/article/250446" target="_blank" title="Blindfolded Dinner"><img src="img/Coverage/food_community_india_c15.png" class="responsive-img" alt="The-Economic-times septmber 14 2014" /></a></div>
+                  <div class="col s6 m3 l2"><a href="http://indiatoday.intoday.in/story/turning-culinary-delights-into-a-global-experience/1/466437.html" target="_blank" title="Blindfolded Dinner"><img src="img/Coverage/food_community_india_c16.png" class="responsive-img" alt="The-Economic-times septmber 14 2014" /></a></div>
+                    <div class="col s6 m3 l2"><a href="media/The-Economic-times.html" target="_blank" title="Blindfolded Dinner"><img src="img/Coverage/food_community_india_c1.png" class="responsive-img" alt="The-Economic-times septmber 14 2014" /></a></div>
+                    <div class="col s6 m3 l2"><img src="img/Coverage/food_community_india_c2.png" class="responsive-img" alt="NDTV videos interview" /></div>
+                    <div class="col s6 m3 l2"><a href="media/the_hindu.html" target="_blank" title="Food Events"><img src="img/Coverage/food_community_india_c3.png" class="responsive-img" alt="the-hindu artical" /></a></div>
+                    <div class="col s6 m3 l2"><a href="media/mailtoday.html" target="_blank"><img src="img/Coverage/food_community_india_c4.png" class="responsive-img" alt="mail today artical" /></a></div>
+                    <div class="col s6 m3 l2"><a href="media/cosmopolitan.html" target="_blank"><img src="img/Coverage/food_community_india_c5.png" class="responsive-img" alt="cosmopolitan artical april 2014 dining with strangers" /></a></div>
+                    <div class="col s6 m3 l2"><a href="media/femina.html" target="_blank"><img src="img/Coverage/food_community_india_c6.png" class="responsive-img" alt="femina for the love of food" /></a></div>
+                    <div class="col s6 m3 l2"><a href="img/nrai.pdf" target="_blank"><img src="img/Coverage/food_community_india_c7.png" class="responsive-img" alt="food events media coverage" /></a></div>
+                    <div class="col s6 m3 l2"><a href="img/Coverage/posts/outlook.pdf" target="_blank"><img src="img/Coverage/food_community_india_c13.png" class="responsive-img" alt="food experiences Delhi" /></a></div>
+                    <div class="col s6 m3 l2"><a href="" target="_blank"><img src="img/Coverage/food_community_india_c14.png" class="responsive-img" alt="food experiences" /></a></div>
+                  </div>
+                  <div class="col s12 m12 l12 center">
+                    <p><strong>And many more</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>       
+           <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+              <div class="container"><div class="row center"><h4 class="header col s12">Team</h4></div></div>
+            </div>
+            <div class="parallax"><img src="img/food_community_india.jpg" alt="Food Talk India Events Team"></div>
+          </div>
+          <div class="container">
+            <div class="section">
+              <div class="row">
+                <div class="col s12 center">
+                  <div class="col s12 m12 l12">
+                    <div class="section"></div>
+                    <div class="col s12 l4 m6 center-align">
+                      <img src="img/team/food_events_delhi_t1.png" class="responsive-img" alt="Food events Delhi Team ">
+                      <div class="col s12 m12 l12">
+                        <h5>Shuchir Suri</h5><h6 class="light">Founder</h6><div class="section"></div>
+                      </div>
+                    </div>
+                    <div class="col s12 l4 m6 center-align">
+                      <img src="img/team/food_events_delhi_t2.png"  class="responsive-img" alt="Food Experience">
+                      <div class="col s12 m12 l12">
+                        <h5>Anjali Batra</h5><h6 class="light">Co-Founder</h6><div class="section"></div>
+                      </div>
+                    </div>
+                    <div class="col s12 l4 m6 center-align">
+                      <img src="img/team/food_events_delhi_t3.png" class="responsive-img" alt="Delhi Food Events">
+                      <div class="col s12 m12 l12">
+                        <h5>Himanshu</h5><h6 class="light">Tech</h6><div class="section"></div>
+                      </div>
+                    </div>
+                    <div class="col s12 m12 l12 center-align">
+
+                    <p><strong>And many more</strong></p>
+                    <!-- <a href="team.html" class="btn-large waves-effect waves-light button">See all</a> -->
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+                <div id="modal2" class="modal">
+                  <div class="modal-content center-align green-text">
+                    <h5>Thank You.</h5><h6> We will get in touch with you soon.</h6>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="" class="modal-action modal-close waves-effect waves-green btn-flat ">Ok</a>
+                  </div>
+                </div>
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Advertise With Us</h4>
+                    <form id="form1">
+                      <div id="tos1" class="center-align hide"><h5 class="light red-text">Please fill the form</h5></div>
+                      <div class="row">
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="name" type="text" class="validate" name="name" required/><label for="name">Name</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="cname" type="text" class="validate" name="cname" required/><label for="cname">Company Name</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="phone" type="text" class="validate" name="ph" required/><label for="phone">Phone</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="email" type="email" class="validate" name="email" required/>
+                            <label for="email">Email</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="web" type="text" class="validate"  name="web"><label for="web">Website</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field" >
+                            <input id="loc" type="text" class="validate" name="loc" required/><label for="loc">City</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field" >
+                            <button class="btn waves-effect waves-light center button" type="button" name="action" id="save1">Submit</button>
+                          </div>
+                      </div>
+                     </form>
+                    </div>
+                  </div>
+          <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 m6 s12 hide-on-med-and-up center-align">
+                  <h5 class="white-text center">Advertise With Us</h5>
+                  <p class="grey-text text-lighten-4 light justify">Food Talk India is here to create a buzz and promote your brand and nobody does it better. Contact us and let’s create something disruptive today!</p>
+                  <button data-target="modal1" class="btn modal-trigger">Advertise</button>
+                </div>
+                <div class="col l6 m6 s12 hide-on-small-only">
+                  <h5 class="white-text">Advertise With Us</h5>
+                  <p class="grey-text text-lighten-4 light justify">Food Talk India is here to create a buzz and promote your brand and nobody does it better. Contact us and let’s create something disruptive today!</p>
+                  <button data-target="modal1" class="btn modal-trigger">Advertise</button>
+                </div>      
+                <!-- <div class="col l3 s6 hide-on-small-only justify">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    <li><a class="white-text light" href="http://www.foodtalkplus.com" target="_blank">FoodTalkPlus</a></li>
+                    <li><a class="white-text light" href="badcustomer/index.html" target="_blank">Bad Customer</a></li>
+                    <li><a class="white-text light" href="request/index.html" target="_blank">Facebook Invites</a></li>
+                    <li><a class="white-text light" href="subscribe/index.html" target="_blank">Subscribe</a></li>
+                    <li><a class="white-text light" href="contact.html" target="_blank">Contact</a></li>
+                    <li><a class="white-text light" href="sitemap.html" target="_blank">Sitemap</a></li>
+                  </ul>
+                </div> -->
+                <div class="col l3 s12 offset-l3 hide-on-small-only justify">
+                  <h5 class="white-text">Social</h5>
+                  <ul>
+                    <li><a class="white-text light" href="https://www.facebook.com/foodtalkindia" target="_blank">Facebook</a></li>
+                    <li><a class="white-text light" href="https://instagram.com/foodtalkindia/" target="_blank">Instagram</a></li>
+                    <li><a class="white-text light" href="https://twitter.com/foodtalkindia" target="_blank">Twitter</a></li>
+                    <li><a class="white-text light" href="https://www.youtube.com/channel/UCjSJcg7rNI_K-FFRm8Nk4Gw" target="_blank">Youtube</a></li>
+                    <li><a class="white-text light" href="http://chats.viber.com/foodtalkindia" target="_blank">Viber</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="col l3 s6 center-align hide-on-med-and-up">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    <li><a class="white-text light" href="http://www.foodtalkplus.com/" target="_blank">FoodTalkPlus</a></li>
+                    <li><a class="white-text light" href="festival.html" target="_blank">Delhi live</a></li>
+                    <li><a class="white-text light" href="badcustomer/index.html" target="_blank">Bad Customer</a></li>
+                    <li><a class="white-text light" href="request/index.html" target="_blank">Facebook Invites</a></li>
+                    <li><a class="white-text light" href="subscribe/index.html" target="_blank">Subscribe</a></li>
+                    <li><a class="white-text light" href="contact.html" target="_blank">Contact</a></li>
+                    <li><a class="white-text light" href="sitemap.html" target="_blank">Sitemap</a></li>
+                  </ul>
+                </div> -->
+                <div class="col l6 m6 s12 center-align hide-on-med-and-up">
+                  <h5 class="white-text">Social</h5>
+                  <ul>
+                    <li><a class="white-text light" href="https://www.facebook.com/foodtalkindia" target="_blank">Facebook</a></li>
+                    <li><a class="white-text light" href="https://instagram.com/foodtalkindia/" target="_blank">Instagram</a></li>
+                    <li><a class="white-text light" href="https://twitter.com/foodtalkindia" target="_blank">Twitter</a></li>
+                    <li><a class="white-text light" href="https://www.youtube.com/channel/UCjSJcg7rNI_K-FFRm8Nk4Gw" target="_blank">Youtube</a></li>
+                    <li><a class="white-text light" href="http://chats.viber.com/foodtalkindia" target="_blank">Viber</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+               <div class="row foot1 center-align">
+                 <div class="col s12 m3 l3 foot"><a href="mailto:info@foodtalkindia.com" class=" light-blue-text text-lighten-3"> info@foodtalkindia.com </a></div>
+                 <div class="col s12 m3 l3 foot"><a href="tel:+911244225022" class=" light-blue-text text-lighten-3">+91 124 422 5022</a></div>
+                 <div class="col s12 m3 l3 foot">&copy; Digital Food Talk Pvt Ltd</div>
+                 <div class="col s12 m3 l3 foot"><a href="document.html" class=" light-blue-text text-lighten-3"> Legal </a></div>
+
+               </div>
+              </div>
+            </div>
+          </footer>
+          <div id="delhiLive" class="modal">  
+        <div class="row">
+          <div class="col s12 m12 l12 close-b">
+            <a href="#!" class=" modal-action modal-close btn-flat right"><img src="img/close.png" alt=""></a>
+          </div>
+        
+          <div class="col s12 m12 l12 logo-s center-align hide-on-med-and-up">
+            <img src="delhilive_application_form/cover.jpg" alt="">
+          </div>
+          <div class="col s12 m12 l12 logo-m center-align hide-on-small-only">
+            <img src="delhilive_application_form/cover.jpg" alt="">
+          </div>
+        
+          <div class="col s12 m12 l12 center-align">
+            <h3 class="hide-on-small-only">Food | Music | Art | Adventure</h3>
+            <h5 class="hide-on-med-and-up">Food | Music | Art | Adventure</h5>
+            <p class="hide-on-med-and-up">Delhi Live, 18th to 20th December'15 at Nehru Park</p>
+            <h5 class="hide-on-small-only">Delhi Live, 18th to 20th December'15 at Nehru Park</h5>
+            <div class="col m8 l8 offset-l2 offset-m2">
+              <h5 class="hide-on-small-only">A three day long Festival celebrating the vibrant and diverse populace of Delhi culture. Food, Retail, Music, Entertainment and more.</h5>
+              <a class="waves-effect waves-light btn hide-on-small-only but-m" href="delhilive/index.html">Book a Stall</a><a href="#!" class=" modal-action modal-close btn-flat hide-on-small-only spc"><u>Close</u></a>
+            </div>
+          </div>
+        </div>
+        <a class="waves-effect waves-light but-s btn hide-on-med-and-up btn-large" href="delhilive/index.html">Book a Stall</a>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          // $('#delhiLive').openModal();
+          $(".dropdown-button").dropdown({ hover: false });
+          $('select').material_select();
+          $("#tos1").addClass('hide');
+          $(".button-collapse").sideNav();
+          $('.parallax').parallax();
+          
+          $(document).ready(function(){
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal-trigger').leanModal({
+              dismissible: true
+            });
+          });
+          $("#save1").click(function(){
+            var data = $('#form1').serialize();
+            $.ajax("save.php?"+data).done(function(result){
+              if (result == 1) {
+                $('#modal1').closeModal();
+                $('#modal2').openModal();
+              }else{
+                $("#tos1").removeClass('hide');
+              };
+            });
+          });
+        })
+      </script>
+    </body>
+  </html>

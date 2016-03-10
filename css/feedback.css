@@ -1,0 +1,47 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+label{
+      font-size: 1rem !important;
+      color: #151414;
+}
+.rating { 
+  border: none !important;
+  float: left !important;
+      margin: 0 0 15px 0;
+}
+
+.rating > input { display: none !important; } 
+.rating > label:before { 
+  margin: 5px !important;
+  font-size: 1.25em !important;
+  font-family: FontAwesome !important;
+  display: inline-block !important;
+  content: "\f005" !important;
+}
+
+.rating > .half:before { 
+  content: "\f089" !important;
+  position: absolute !important;
+}
+
+.rating > label { 
+  color: #ddd !important; 
+ float: right !important; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700 !important;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85 !important;  } 
+
+

@@ -1,0 +1,33 @@
+FFFFFFF  OOOOO   OOOOO  DDDDD    TTTTTTT   AAA   LL      KK  KK 
+FF      OO   OO OO   OO DD  DD     TTT    AAAAA  LL      KK KK  
+FFFF    OO   OO OO   OO DD   DD    TTT   AA   AA LL      KKKK   
+FF      OO   OO OO   OO DD   DD    TTT   AAAAAAA LL      KK KK  
+FF       OOOO0   OOOO0  DDDDDD     TTT   AA   AA LLLLLLL KK  KK 
+                                                                
+IIIII NN   NN DDDDD   IIIII   AAA   
+ III  NNN  NN DD  DD   III   AAAAA  
+ III  NN N NN DD   DD  III  AA   AA 
+ III  NN  NNN DD   DD  III  AAAAAAA 
+IIIII NN   NN DDDDDD  IIIII AA   AA 
+
+
+
+/* MAIN */
+  Designer: Shalga
+  Twitter: @shalvishnoi
+
+  Develop: Richa
+  Twitter: @rchshrm16
+
+  Designer: himvais
+  Twitter: @himvais
+  
+/* SITE */
+  Last update: 22/05/2015
+  Doctype: HTML5, css3
+  IDE: Sublime, Photoshop, Sketch, materializecss
+
+
+  And, of course, all Digital Food Talk pvt ltd team!
+
+

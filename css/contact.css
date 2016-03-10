@@ -1,0 +1,110 @@
+.navbar-fixed, .nav, nav{
+
+	background-color: #3b3b3b !important;
+
+}
+
+
+
+.card.large {
+
+	height: auto !important;
+
+	overflow: inherit !important;
+
+}
+
+
+.page-footer, footer{
+	margin-top: 0 !important;
+	background-color: #3b3b3b !important;
+}
+
+
+
+.button{
+
+	background-color: #3b3b3b !important;
+
+}
+
+.footer-copyright p{
+	margin-bottom: 10 !important;
+}
+
+
+.button:hover{
+
+	background-color: #3b3b3b !important;
+
+}
+
+
+.button:active {
+	background-color: #3b3b3b !important;
+}
+
+.button:visited {
+	background-color: #3b3b3b !important;
+}
+
+
+
+
+
+.divider{
+
+	color: #3b3b3b;
+
+	background-color: #3b3b3b;
+
+}
+
+.foot{
+  padding-top: 0px !important;
+  padding-bottom: 0 !important;
+}
+
+.foot1{
+  margin-bottom: 0px !important;
+}
+
+.form{
+
+	padding: 20px;
+
+}
+
+
+
+.form h4{
+
+	color: #616161;
+
+}
+
+
+#preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.load{
+  margin: 0 auto;
+}
+
+.spinner-yellow, .spinner-yellow-only{
+  border-color: #3b3b3b !important;
+}
+
+.footer-copyright p{
+	margin: 0 !important;
+	padding: 0 !important;
+	margin-top: 2px;
+}

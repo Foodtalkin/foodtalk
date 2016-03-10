@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://foodtalkindia.com/</title>
+  <link>http://foodtalkindia.com/</link>
+
+<item>
+     <link>http://foodtalkindia.com/</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/index.html</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/experience.html</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+
+
+<item>
+     <link>http://foodtalkindia.com/contact.html</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/media/The-Economic-times.html</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/media/the-hindu.html</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/media/mailtoday.html</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/media/cosmopolitan.html</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/media/femina.html</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/img/nrai.pdf</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/img/Coverage/posts/outlook.pdf</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/sitemap.html</link>
+     <title>Food Talk India</title>
+     <description>Food Talk India</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+
+</channel>
+</rss>
+  
