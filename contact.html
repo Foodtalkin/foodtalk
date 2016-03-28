@@ -102,13 +102,13 @@
             </div>
             <div class="row">
               <div class="col s12 m6 l6 input-field">
-                <input id="name1" type="text" class="validate" name="name" required/><label for="name">Name *</label>
+                <input id="name1" type="text" class="validate imp" name="name" required/><label for="name">Name *</label>
               </div>
               <div class="col s12 m6 l6 input-field">
-                <input id="phone1" type="text" class="validate" name="ph" required/><label for="phone">Phone *</label>
+                <input id="phone1" type="text" class="validate imp" name="ph" required/><label for="phone">Phone *</label>
               </div>
               <div class="col s12 m6 l6 input-field">
-                <input id="email1" type="email" class="validate" name="email" required/><label for="email">Email *</label>
+                <input id="email1" type="email" class="validate imp" name="email" required/><label for="email">Email *</label>
               </div>
               <div class="col s12 m6 l6 input-field">
                 <select name="pur" required>
@@ -124,10 +124,10 @@
                 <input id="web1" type="text" class="validate"  name="web"><label for="web">Website</label>
               </div>
               <div class="col s12 m6 l6 input-field" >
-                <input id="loc1" type="text" class="validate" name="loc" required/><label for="loc">Location *</label>
+                <input id="loc1" type="text" class="validate imp" name="loc" required/><label for="loc">Location *</label>
               </div>
               <div class="col s12 m12 l12 input-field">
-                <textarea id="message1" class="materialize-textarea" name="msg" required></textarea>
+                <textarea id="message1" class="materialize-textarea imp" name="msg" required></textarea>
                 <label for="message">Message *</label>
               </div>
             </div>
@@ -247,32 +247,62 @@
           });
 
           $("#save1").click(function(){
+            event.preventDefault();
+            console.log("submit");
+            $(this).attr("disabled", 'disabled');
+            if(validateForm() == true){
             var data = $('#form1').serialize();
             $.ajax("contact.php?"+data).done(function(result){
               if (result == 1) {
                 $('#form1')[0].reset();
                 $("#tos1").addClass('hide');
                 $("#toste1").removeClass('hide');
+                $(location).attr('href', 'thanks.php');
               }else{
                 $("#toste1").addClass('hide');
                 $("#tos1").removeClass('hide');
+                $('#save1').attr('disabled',false);
               };
             });
+          }else{
+                $('#save1').attr('disabled',false);
+              }
           });
 
           $("#save2").click(function(){
+            event.preventDefault();
+            console.log("submit");
+            $(this).attr("disabled", 'disabled');
+            if(validateForm() == true){
             var data = $('#form2').serialize();
             $.ajax("contact.php?"+data).done(function(result){
               if (result == 1) {
                 $('#form2')[0].reset();
                 $("#tos2").addClass('hide');
                 $("#toste2").removeClass('hide');
+                $(location).attr('href', 'thanks.php');
               }else{
                 $("#toste2").addClass('hide');
                 $("#tos2").removeClass('hide');
+                $('#save2').attr('disabled',false);
               };
             });
+          }else{
+                $('#save2').attr('disabled',false);
+              }
           });
+          function validateForm() {
+            var allIsOk = true;
+            //Check if empty of not
+            $('#frm').find( '.imp' ).each(function () {
+                if ( ! $(this).val() ) { 
+                    $(this).addClass('borderR');
+                    $(this).focus();
+                    allIsOk = false;
+                }
+            });
+            return allIsOk
+        };
         })
       </script>
     </body>
