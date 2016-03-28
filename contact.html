@@ -150,13 +150,13 @@
             </div>
             <div class="row">
               <div class="col s12 m6 l6 input-field">
-                <input id="name" type="text" class="validate" name="name" required/><label for="name">Name</label>
+                <input id="name" type="text" class="validate imp" name="name" required/><label for="name">Name</label>
               </div>
               <div class="col s12 m6 l6 input-field">
-                <input id="phone" type="text" class="validate" name="ph" required/><label for="phone">Phone</label>
+                <input id="phone" type="text" class="validate imp" name="ph" required/><label for="phone">Phone</label>
               </div>
               <div class="col s12 m6 l6 input-field">
-                <input id="email" type="email" class="validate"  name="email" required/><label for="email">Email</label>
+                <input id="email" type="email" class="validate imp"  name="email" required/><label for="email">Email</label>
               </div>
               <div class="col s12 m6 l6 input-field">
                 <select  name="pur" required>
@@ -173,10 +173,10 @@
                 <input id="web" type="text" name="web"><label for="web">Website</label>
               </div>
               <div class="col s12 m6 l6 input-field">
-                <input id="loc" type="text" class="validate"  name="loc" required/><label for="loc">Location</label>
+                <input id="loc" type="text" class="validate"  name="loc imp" required/><label for="loc">Location</label>
               </div>
               <div class="col s12 m12 l12 input-field">
-                <textarea id="message" class="materialize-textarea"  name="msg" required></textarea><label for="message">Message</label>
+                <textarea id="message" class="materialize-textarea"  name="msg imp" required></textarea><label for="message">Message</label>
               </div>
             </div>
             <div class="row">
@@ -250,14 +250,14 @@
             event.preventDefault();
             console.log("submit");
             $(this).attr("disabled", 'disabled');
-            if(validateForm() == true){
+            if(validateForm1() == true){
             var data = $('#form1').serialize();
             $.ajax("contact.php?"+data).done(function(result){
               if (result == 1) {
                 $('#form1')[0].reset();
                 $("#tos1").addClass('hide');
                 $("#toste1").removeClass('hide');
-                $(location).attr('href', 'thanks.php');
+                $(location).attr('href', 'thanks.html');
               }else{
                 $("#toste1").addClass('hide');
                 $("#tos1").removeClass('hide');
@@ -273,14 +273,14 @@
             event.preventDefault();
             console.log("submit");
             $(this).attr("disabled", 'disabled');
-            if(validateForm() == true){
+            if(validateForm2() == true){
             var data = $('#form2').serialize();
             $.ajax("contact.php?"+data).done(function(result){
               if (result == 1) {
                 $('#form2')[0].reset();
                 $("#tos2").addClass('hide');
                 $("#toste2").removeClass('hide');
-                $(location).attr('href', 'thanks.php');
+                $(location).attr('href', 'thanks.html');
               }else{
                 $("#toste2").addClass('hide');
                 $("#tos2").removeClass('hide');
@@ -291,10 +291,22 @@
                 $('#save2').attr('disabled',false);
               }
           });
-          function validateForm() {
+          function validateForm1() {
             var allIsOk = true;
             //Check if empty of not
-            $('#frm').find( '.imp' ).each(function () {
+            $('#form1').find( '.imp' ).each(function () {
+                if ( ! $(this).val() ) { 
+                    $(this).addClass('borderR');
+                    $(this).focus();
+                    allIsOk = false;
+                }
+            });
+            return allIsOk
+        };
+        function validateForm2() {
+            var allIsOk = true;
+            //Check if empty of not
+            $('#form2').find( '.imp' ).each(function () {
                 if ( ! $(this).val() ) { 
                     $(this).addClass('borderR');
                     $(this).focus();
