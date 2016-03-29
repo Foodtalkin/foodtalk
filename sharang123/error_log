@@ -1,9 +1,0 @@
-[01-Feb-2016 02:51:34 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home4/shuchir/public_html/sharang/index.php on line 87
-[01-Feb-2016 02:51:59 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home4/shuchir/public_html/sharang/index.php on line 87
-[01-Feb-2016 23:44:17 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 2' in /home4/shuchir/public_html/sharang/functions.php:27
-Stack trace:
-#0 /home4/shuchir/public_html/sharang/functions.php(27): PDOStatement->execute(NULL)
-#1 /home4/shuchir/public_html/sharang/index.php(7): query('SELECT * FROM c...', NULL, Object(PDO))
-#2 {main}
-  thrown in /home4/shuchir/public_html/sharang/functions.php on line 27
-[03-Feb-2016 01:46:46 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home4/shuchir/public_html/sharang/index.php on line 82
