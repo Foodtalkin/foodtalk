@@ -1,6 +1,6 @@
 <?php
    session_start();
-    
+    var_dump($_SESSION);
    $user =(array) $_SESSION['USER']['result'];
     
     $metadata = (array) $user['metadata'];
