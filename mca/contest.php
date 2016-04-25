@@ -77,7 +77,7 @@
 			    padding: .5em 0 0 0;
 			}
 			.part {
-			    color: #E01E2B;
+			    color: #8D0106 !important;
 			    font-size: 1.5em;
 			    font-weight: normal;
 			}
