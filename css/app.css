@@ -74,3 +74,15 @@
 html::-webkit-scrollbar { 
           display: none; 
       }
+
+.about-font{
+    font-size: 30px;
+    letter-spacing: -1px;
+    line-height: 120%;
+  }
+.about-font-subhead{font-size: 21px; font-weight: 500;}
+.txt-align{text-align: justify;}
+.patt {
+    background-image: url('../img/food.png');
+}
+.custom-padd-index{padding:6% 10%;}
