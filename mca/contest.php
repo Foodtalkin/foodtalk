@@ -135,8 +135,8 @@
 								</div>
 								<div class="6u 6u(mobilep)">
 									<ul>
-										<li>Roulad</li>
-										<li>Quennelle</li>
+										<li>Bain Marie</li>
+										<li>Carpaccio</li>
 									</ul>
 								</div>
 								</label>
