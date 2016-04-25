@@ -51,7 +51,7 @@
 				margin-left: 20px;
 			}
 			.dates{
-				margin-bottom: 0;
+				margin: 20px 0;
 				font-weight: normal;
 			}
 			.no-border{
@@ -302,8 +302,8 @@
 							var response = "Bain Marie: "+data[0]['value']+", carpaccio:"+ data[1]['value']+", Quennelle:"+data[2]['value']+", roulad:"+data[3]['value'];
 							//console.log(response);
 
-							var URL_INSERT = "http://api.foodtalkindia.com/user/"+id+"/rsvp";
-              				var URL_UPDATE = "http://api.foodtalkindia.com/user/"+id;
+							var URL_INSERT = "http://stg-api.foodtalk.in/user/"+id+"/rsvp";
+              				var URL_UPDATE = "http://stg-api.foodtalk.in/user/"+id;
               				var toinsertdata = {events_id: 74,
 				                    email: data[5]['value'],
 				                    contact: data[6]['value'],
