@@ -79,7 +79,6 @@ session_start();
         <section id="main" class="container 75%">
           <!-- Header -->
           <section class="box special">
-            <?php var_dump($result1); ?>
             <header class="major">
               <img src="<?php echo $icon; ?>" alt="">
               <h4><?php echo $msg; ?></h4>
