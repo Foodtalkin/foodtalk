@@ -127,12 +127,18 @@
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
 								<label for="" class="lab1">Q. Match the Gourmet word with the image: * <br>
+								<div class="6u 6u(mobilep)">
 									<ul>
 										<li>Roulad</li>
 										<li>Quennelle</li>
-										<li>Bain Marie</li>
-										<li>Carpaccio</li>
 									</ul>
+								</div>
+								<div class="6u 6u(mobilep)">
+									<ul>
+										<li>Roulad</li>
+										<li>Quennelle</li>
+									</ul>
+								</div>
 								</label>
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/BainMarie.jpg" alt="" /></span>
