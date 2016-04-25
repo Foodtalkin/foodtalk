@@ -1,9 +1,7 @@
 <?php 
 session_start();
-  print_r($_SESSION);
   $toins = $_SESSION['toinsertdata'];
   //var_dump($toins ["payment_id"]);
-    if($_SESSION['source'] != null || isset($_SESSION['source'])){
         if($_GET['payment_id'] != null || isset($_GET['payment_id'])){
           $toins = json_decode($_SESSION['toinsertdata']);
           $toins = (array)$toins;
@@ -32,8 +30,6 @@ session_start();
           );                                                                                                                   
           $result1 = curl_exec($ch1);
           curl_close($ch1);
-          print_r($result1);
-    }
     $icon = "";
     $msg = "";
       if ($_SESSION['type'] == "rsvp") {
