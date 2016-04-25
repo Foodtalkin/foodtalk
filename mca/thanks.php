@@ -31,6 +31,7 @@ session_start();
               'Content-Length: ' . strlen($toinsertdata))                                                                       
           );                                                                                                                   
           $result1 = curl_exec($ch1);
+          var_dump($result1);
           curl_close($ch1);
     }
     $icon = "";
