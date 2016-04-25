@@ -90,6 +90,9 @@
 			.left{
 				text-align: left;
 			}
+			#navButton{
+		display: none !important;
+    }
 		</style>
 	</head>
 	<body>
@@ -135,9 +138,9 @@
 							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City.
 							<strong> 20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
 							<div class="row uniform 50% dates">
-								<div class="4u 12u(mobilep)">Delhi- 5th April'16</div>
-								<div class="4u 12u(mobilep)">Mumbai- 8th April'16</div>
-								<div class="4u 12u(mobilep)">Bangalore- 9th April'16</div>
+								<div class="4u 12u(mobilep)">Delhi- 5th May'16</div>
+								<div class="4u 12u(mobilep)">Mumbai- 8th May'16</div>
+								<div class="4u 12u(mobilep)">Bangalore- 9th May'16</div>
 							</div>
 							<!-- <ul class="">
 								<li>Delhi- 5th April'16 </li>
@@ -250,14 +253,14 @@
 
 			<!-- Footer -->
 				<footer id="footer">
-					<ul class="icons">
+					<!-- <ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
+					</ul> -->
 					<ul class="copyright">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						<li><a href="">Terms & Conditions</a></li>
@@ -301,7 +304,7 @@
 
 							var URL_INSERT = "http://api.foodtalkindia.com/user/"+id+"/rsvp";
               				var URL_UPDATE = "http://api.foodtalkindia.com/user/"+id;
-              				var toinsertdata = {events_id: 1,
+              				var toinsertdata = {events_id: 74,
 				                    email: data[5]['value'],
 				                    contact: data[6]['value'],
 				                    source: source,
