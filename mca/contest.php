@@ -57,7 +57,7 @@
 			.no-border{
 				border:none !important;
 				font-size: 1em;
-				margin: 0 !important;
+				margin: 20px 0 0 0 !important;
 			}
 			.cdheading{
 				margin: 1em 0;
