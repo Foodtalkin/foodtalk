@@ -32,6 +32,7 @@ session_start();
           );                                                                                                                   
           $result1 = curl_exec($ch1);
           curl_close($ch1);
+          print_r($result1);
     }
     $icon = "";
     $msg = "";
