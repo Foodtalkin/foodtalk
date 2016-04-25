@@ -51,7 +51,6 @@
 				margin-left: 20px;
 			}
 			.dates{
-				list-style: none;
 				margin-bottom: 0;
 				font-weight: normal;
 			}
@@ -135,11 +134,16 @@
 							MasterChef Australia is back with another exciting </p>
 							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City.
 							<strong> 20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
-							<ul class="dates">
+							<div class="row uniform 50% dates">
+								<div class="4u 12u(mobilep)"></div>
+								<div class="4u 12u(mobilep)"></div>
+								<div class="4u 12u(mobilep)"></div>
+							</div>
+							<!-- <ul class="">
 								<li>Delhi- 5th April'16 </li>
 								<li>Mumbai- 8th April'16 </li>
 								<li>Bangalore- 9th April'16 </li>
-							</ul>
+							</ul> -->
 
 							<p class="no-border part">Participate Now!</p>
 						</header>
