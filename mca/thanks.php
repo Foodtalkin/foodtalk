@@ -45,20 +45,15 @@ session_start();
                 Stay tuned to know if you made it to 'The List'";
       } else{
         $icon = "img/thankyou.png";
-        $msg1 = "You just booked yourself a Food Talk Event <br>
+        $msg = "You just booked yourself a Food Talk Event <br>
       It's going to be one helluva ride";
-      $msg="";
       } 
  
 
 
 ?>
 <!DOCTYPE HTML>
-<!--
-  Alpha by HTML5 UP
-  html5up.net | @n33co
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
   <head>
     <title>Food Talk</title>

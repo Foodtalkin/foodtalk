@@ -264,52 +264,52 @@
 						$(this).attr("disabled", 'disabled');
 						if(validateForm() == true){
 							var data = $('#frm').serializeArray();
-							console.log(data);
+							//console.log(data);
 
 							var response = "Bain Marie: "+data[0]['value']+", carpaccio:"+ data[1]['value']+", Quennelle:"+data[2]['value']+", roulad:"+data[3]['value'];
-							console.log(response);
+							//console.log(response);
 
-							// var URL_INSERT = "http://api.foodtalkindia.com/user/"+id+"/rsvp";
-       //        				var URL_UPDATE = "http://api.foodtalkindia.com/user/"+id;
-       //        				var toinsertdata = {events_id: 1,
-				   //                  email: data[5]['value'],
-				   //                  contact: data[6]['value'],
-				   //                  source: source,
-				   //                  response: response,
-				   //                  payment_id: '',
-				   //                  subscribe: 0};
-				   //          var toupdate = {name: data[4]['value'],
-				   //                  email: data[5]['value'],
-				   //                  contact: data[6]['value'],
-				   //                  dob : data[7]['value'],
-				   //                  instagram_handle: data[9]['value'],
-				   //                  twitter_handle: data[10]['value'],
-				   //                  city: data[8]['value']};
+							var URL_INSERT = "http://api.foodtalkindia.com/user/"+id+"/rsvp";
+              				var URL_UPDATE = "http://api.foodtalkindia.com/user/"+id;
+              				var toinsertdata = {events_id: 1,
+				                    email: data[5]['value'],
+				                    contact: data[6]['value'],
+				                    source: source,
+				                    response: response,
+				                    payment_id: '',
+				                    subscribe: 0};
+				            var toupdate = {name: data[4]['value'],
+				                    email: data[5]['value'],
+				                    contact: data[6]['value'],
+				                    dob : data[7]['value'],
+				                    instagram_handle: data[9]['value'],
+				                    twitter_handle: data[10]['value'],
+				                    city: data[8]['value']};
 
-				   //          $.ajax({
-				   //              url: "createsession.php",
-				   //              type: 'POST',
-				   //              dataType: 'json',
-				   //              data: {URL_INSERT: URL_INSERT,
-				   //                     URL_UPDATE: URL_UPDATE,
-				   //                     toinsertdata: toinsertdata,
-				   //                     toupdate: toupdate,
-				   //                     venue : ''}
-				   //              })
-				   //              .done(function(response) {
-				   //                  if(response == 1){
-					  //                 $(location).attr('href', 'thanks.php');
-					  //               }
+				            $.ajax({
+				                url: "createsession.php",
+				                type: 'POST',
+				                dataType: 'json',
+				                data: {URL_INSERT: URL_INSERT,
+				                       URL_UPDATE: URL_UPDATE,
+				                       toinsertdata: toinsertdata,
+				                       toupdate: toupdate,
+				                       venue : ''}
+				                })
+				                .done(function(response) {
+				                    if(response == 1){
+					                  $(location).attr('href', 'thanks.php');
+					                }
 				                 
-				   //             	})
-				   //             	.fail(function(response) {
-				   //               	console.log(response);
-				   //               	$('#submit').attr('disabled',false);
-				   //             	})
-				   //             	.always(function() {
-				   //              	console.log("complete");
-				   //              	//$(location).attr('href', 'http://imojo.in/47vvf9');
-				   //            	});
+				               	})
+				               	.fail(function(response) {
+				                 	console.log(response);
+				                 	$('#submit').attr('disabled',false);
+				               	})
+				               	.always(function() {
+				                	console.log("complete");
+				                	//$(location).attr('href', 'http://imojo.in/47vvf9');
+				              	});
 						}
 						else{
 							$('#submit').attr('disabled',false);
