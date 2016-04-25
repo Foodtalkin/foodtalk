@@ -82,6 +82,8 @@
 			}
 			.sechead{
 				font-size: 1.1em;
+				padding: 20px;
+				border: solid 2px #e5e5e5;;
 			}
 			h2 {
 			    font-size: 1.5em;
@@ -89,9 +91,7 @@
 			.left{
 				text-align: left;
 			}
-			#navButton{
-		display: none !important;
-    }
+
 		</style>
 	</head>
 	<body>
