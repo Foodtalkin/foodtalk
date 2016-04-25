@@ -307,7 +307,6 @@
               				var toinsertdata = {events_id: 74,
 				                    email: data[5]['value'],
 				                    contact: data[6]['value'],
-				                    source: source,
 				                    response: response,
 				                    payment_id: '',
 				                    subscribe: 0};
