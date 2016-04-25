@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+  print_r($_SESSION);
   $toins = $_SESSION['toinsertdata'];
   //var_dump($toins ["payment_id"]);
     if($_SESSION['source'] != null || isset($_SESSION['source'])){
