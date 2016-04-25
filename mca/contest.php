@@ -4,7 +4,7 @@
    $user =(array) $_SESSION['USER']['result'];
     
     $metadata = (array) $user['metadata'];
-    var_dump($user);
+    // var_dump($user);
 ?>
 <!DOCTYPE HTML>
 
@@ -67,7 +67,9 @@
 			h2{
 				font-size: 2em;
 			}
-			
+			.borderR{
+				border : 3px solid red;
+			}
 		</style>
 	</head>
 	<body>
@@ -264,24 +266,25 @@
 							var data = $('#frm').serializeArray();
 							console.log(data);
 
-							// var response = "dish: "+data[0]['value']+", dish:"+ data[1]['value']+", dish:"+data[2]['value']+", dish:"+data[3]['value'];
+							var response = "Bain Marie: "+data[0]['value']+", carpaccio:"+ data[1]['value']+", Quennelle:"+data[2]['value']+", roulad:"+data[3]['value'];
+							console.log(response);
 
 							// var URL_INSERT = "http://api.foodtalkindia.com/user/"+id+"/rsvp";
        //        				var URL_UPDATE = "http://api.foodtalkindia.com/user/"+id;
        //        				var toinsertdata = {events_id: 1,
-				   //                  email: email,
-				   //                  contact: contact,
+				   //                  email: data[5]['value'],
+				   //                  contact: data[6]['value'],
 				   //                  source: source,
 				   //                  response: response,
 				   //                  payment_id: '',
 				   //                  subscribe: 0};
-				   //          var toupdate = {name: name,
-				   //                  email: email,
-				   //                  contact: contact,
-				   //                  dob : dob,
-				   //                  instagram_handle: insta,
-				   //                  twitter_handle: twitter_handle,
-				   //                  city: city};
+				   //          var toupdate = {name: data[4]['value'],
+				   //                  email: data[5]['value'],
+				   //                  contact: data[6]['value'],
+				   //                  dob : data[7]['value'],
+				   //                  instagram_handle: data[9]['value'],
+				   //                  twitter_handle: data[10]['value'],
+				   //                  city: data[8]['value']};
 
 				   //          $.ajax({
 				   //              url: "createsession.php",
