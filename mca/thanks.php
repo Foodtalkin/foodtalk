@@ -98,7 +98,7 @@ session_start();
             <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
           </ul> -->
           <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Untitled. All rights reserved.</li>
             <li><a href="">Terms & Conditions</a></li>
           </ul>
         </footer>
