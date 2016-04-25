@@ -88,6 +88,9 @@
 			h2 {
 			    font-size: 1.5em;
 			}
+			.left{
+				text-align: left;
+			}
 		</style>
 	</head>
 	<body>
@@ -130,7 +133,7 @@
 							<h2>Participate in the Gourmet Quiz and win an invite to the MasterChef Australia inspired Party</h2>
 							<p class="sechead"><i>"Let's talk Gourmet, let's talk MasterChef Australia"</i><br />
 							MasterChef Australia is back with another exciting </p>
-							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City
+							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City.
 							<strong> 20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
 							<ul class="dates">
 								<li>Delhi- 5th April'16 </li>
@@ -144,13 +147,13 @@
 							<div class="row uniform 50%">
 								<label for="" class="lab1">Q. Match the Gourmet word with the image: *</label>
 								<div class="6u 6u(mobilep)">
-									<ul>
+									<ul class="left">
 										<li>Roulad</li>
 										<li>Quennelle</li>
 									</ul>
 								</div>
 								<div class="6u 6u(mobilep)">
-									<ul>
+									<ul class="left">
 										<li>Bain Marie</li>
 										<li>Carpaccio</li>
 									</ul>
