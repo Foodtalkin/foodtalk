@@ -31,7 +31,6 @@ session_start();
               'Content-Length: ' . strlen($toinsertdata))                                                                       
           );                                                                                                                   
           $result1 = curl_exec($ch1);
-          var_dump($result1);
           curl_close($ch1);
     }
     $icon = "";
@@ -45,9 +44,9 @@ session_start();
         $msg = "Now that was a piece of cake right? <br>
                 Stay tuned to know if you made it to 'The List'";
       } else{
-        $icon = "img/thankyou.png";
-        $msg = "You just booked yourself a Food Talk Event <br>
-      It's going to be one helluva ride";
+        $icon = "img/goodluck.png";
+        $msg = "Now that was a piece of cake right? <br>
+                Stay tuned to know if you made it to 'The List'";
       } 
  
 
@@ -83,7 +82,7 @@ session_start();
         <section id="main" class="container 75%">
           <!-- Header -->
           <section class="box special">
-            
+            <?php var_dump($result1); ?>
             <header class="major">
               <img src="<?php echo $icon; ?>" alt="">
               <h4><?php echo $msg; ?></h4>
