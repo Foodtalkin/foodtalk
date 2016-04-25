@@ -52,7 +52,6 @@
 			}
 			.dates{
 				list-style: none;
-				text-align: left;
 				margin-bottom: 0;
 			}
 			.no-border{
@@ -69,6 +68,9 @@
 			}
 			.borderR{
 				border : 3px solid red;
+			}
+			#submit{
+				background-color: #F7030C;
 			}
 		</style>
 	</head>
@@ -110,7 +112,7 @@
 						<span class="image featured"><img src="images/cover.jpg" alt="" /></span>
 						<header class="major">
 							<h2>Participate in the Gourmet Quiz and win an invite to the MasterChef Australia inspired Party</h2>
-							<p>"Let's talk Gourmet, let's talk MasterChef Australia"<br />
+							<p><i>"Let's talk Gourmet, let's talk MasterChef Australia"</i><br />
 							MasterChef Australia is back with another exciting </p>
 							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City <br>
 							<strong>20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
