@@ -120,3 +120,9 @@ session_start();
       
   </body>
 </html>
+<?php 
+   $_SESSION['source'] = null;
+  $_SESSION['target'] = null;
+  $_SESSION['USER'] = null;
+  session_unset();
+  ?>
