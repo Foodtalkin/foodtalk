@@ -53,6 +53,7 @@
 			.dates{
 				list-style: none;
 				margin-bottom: 0;
+				font-weight: normal;
 			}
 			.no-border{
 				border:none !important;
@@ -70,7 +71,22 @@
 				border : 3px solid red;
 			}
 			#submit{
-				background-color: #F7030C;
+				background-color: #8D0106;
+			}
+			header.major p {
+			    margin: .5em 0 .5em 0;
+			    padding: .5em 0 0 0;
+			}
+			.part {
+			    color: #E01E2B;
+			    font-size: 1.5em;
+			    font-weight: normal;
+			}
+			.sechead{
+				font-size: 1.1em;
+			}
+			h2 {
+			    font-size: 1.5em;
 			}
 		</style>
 	</head>
@@ -112,21 +128,21 @@
 						<span class="image featured"><img src="images/cover.jpg" alt="" /></span>
 						<header class="major">
 							<h2>Participate in the Gourmet Quiz and win an invite to the MasterChef Australia inspired Party</h2>
-							<p><i>"Let's talk Gourmet, let's talk MasterChef Australia"</i><br />
+							<p class="sechead"><i>"Let's talk Gourmet, let's talk MasterChef Australia"</i><br />
 							MasterChef Australia is back with another exciting </p>
-							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City <br>
-							<strong>20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
+							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City
+							<strong> 20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
 							<ul class="dates">
 								<li>Delhi- 5th April'16 </li>
 								<li>Mumbai- 8th April'16 </li>
 								<li>Bangalore- 9th April'16 </li>
 							</ul>
 
-							<p class="no-border">Participate Now!</p>
+							<p class="no-border part">Participate Now!</p>
 						</header>
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
-								<label for="" class="lab1">Q. Match the Gourmet word with the image: * <br>
+								<label for="" class="lab1">Q. Match the Gourmet word with the image: *</label>
 								<div class="6u 6u(mobilep)">
 									<ul>
 										<li>Roulad</li>
@@ -139,7 +155,6 @@
 										<li>Carpaccio</li>
 									</ul>
 								</div>
-								</label>
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/BainMarie.jpg" alt="" /></span>
 									<input type="text" name="dname1" id="dname1" value="" placeholder="Dish Name" class="imp" />
