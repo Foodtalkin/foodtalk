@@ -51,7 +51,7 @@ if ( isset( $session ) ) {
       //checking if user exist or not
       
       //post rquest
-      $url = "http://api.foodtalk.in/user";    
+      $url = "http://stg-api.foodtalk.in/user";    
       $dataarray = array('facebook_id' => $_SESSION['FBID'],'name' => $_SESSION['FULLNAME'],'email' => $_SESSION['EMAIL'],'gender' => $_SESSION['GENDER']);
       $data_string = json_encode($dataarray);
                                                                                 
