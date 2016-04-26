@@ -1983,7 +1983,7 @@
 			display: inline-block;
 			border-top: solid 2px #e5e5e5;
 			color: #777;
-			margin: 1.5em 0 1.5em 0;
+			margin: 1.5em 0 0 0;
 			padding: 1.5em 0 0 0;
 			font-style: normal;
 		}
@@ -2005,7 +2005,6 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="date"],
 	input[type="tel"],
 	select,
 	textarea {
@@ -2027,6 +2026,7 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="tel"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -2035,6 +2035,7 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #e89980;
@@ -2077,7 +2078,6 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="date"],
 	input[type="tel"],
 	select {
 		height: 3em;
@@ -2805,9 +2805,9 @@
 		background: #444;
 		color: #bbb;
 		cursor: default;
-		height: 3.25em;
+		height: 4.25em;
 		left: 0;
-		line-height: 3.25em;
+		line-height: 4.25em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -2820,9 +2820,10 @@
 			left: 1.25em;
 			line-height: inherit;
 			margin: 0;
-			padding: 0;
+			padding: 7px 0;
 			position: absolute;
 			top: 0;
+			font-size: 2.3em;
 		}
 
 			#header h1 a {
@@ -3297,7 +3298,7 @@
 
 /* Narrower */
 
-	#navPanel {
+	#navPanel, #navButton {
 		display: none;
 	}
 
@@ -3379,7 +3380,7 @@
 			}
 
 			#navButton {
-				/*-moz-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
 				backface-visibility: hidden;
@@ -3393,25 +3394,18 @@
 				position: fixed;
 				top: 0;
 				width: 100%;
-				z-index: 10001;*/
-				    background: #444;
-				    color: #bbb;
-				    cursor: default;
-				    height: 3.25em;
-				    left: 0;
-				    line-height: 3.25em;
-				    position: fixed;
-				    top: 0;
-				    width: 100%;
-				    z-index: 10000;
-				    text-align: center;
+				z-index: 10001;
+				background: #444;
+    			padding: 9px 0;
 			}
-				#navButton a{
-					color: #fff;
-				    font-weight: 400;
-				    border: 0;
-				    font-size: 1em;
-				}
+
+			#navButton a{
+				color: #FFFFFF;
+			    text-decoration: none;
+			    border: none;
+			    margin: 10px;
+    			font-size: 26px;
+			}
 
 				#navButton .toggle {
 					text-decoration: none;
@@ -3780,5 +3774,3 @@
 			}
 
 	}
-
-

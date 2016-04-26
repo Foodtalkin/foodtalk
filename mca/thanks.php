@@ -61,9 +61,7 @@ session_start();
     <link rel="stylesheet" href="assets/css/jsDatePick_ltr.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <style>
-    #navButton{
-    display: none;
-    }
+    
     </style>
   </head>
   <body>
