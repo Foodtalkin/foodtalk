@@ -166,19 +166,47 @@
 								</div>
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/BainMarie.jpg" alt="" /></span>
-									<input type="text" name="dname1" id="dname1" value="" placeholder="Dish Name" class="imp" />
+									<div class="select-wrapper">
+										<select name="dname1" id="dname1">
+											<option value="Roulad">Roulad</option>
+											<option value="Quennelle">Quennelle</option>
+											<option value="Bain Marie">Bain Marie</option>
+											<option value="Carpaccio">Carpaccio</option>
+										</select>
+									</div>
 								</div>
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/carpaccio.jpg" alt="" /></span>
-									<input type="text" name="dname2" id="dname2" value="" placeholder="Dish Name" class="imp"/>
+									<div class="select-wrapper">
+										<select name="dname2" id="dname2">
+											<option value="Roulad">Roulad</option>
+											<option value="Quennelle">Quennelle</option>
+											<option value="Bain Marie">Bain Marie</option>
+											<option value="Carpaccio">Carpaccio</option>
+										</select>
+									</div>
 								</div>
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Quennelle.jpg" alt="" /></span>
-									<input type="text" name="dname3" id="dname3" value="" placeholder="Dish Name" class="imp"/>
+									<div class="select-wrapper">
+										<select name="dname3" id="dname3">
+											<option value="Roulad">Roulad</option>
+											<option value="Quennelle">Quennelle</option>
+											<option value="Bain Marie">Bain Marie</option>
+											<option value="Carpaccio">Carpaccio</option>
+										</select>
+									</div>
 								</div>
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/roulad.jpg" alt="" /></span>
-									<input type="text" name="dname4" id="dname4" value="" placeholder="Dish Name" class="imp"/>
+									<div class="select-wrapper">
+										<select name="dname4" id="dname4">
+											<option value="Roulad">Roulad</option>
+											<option value="Quennelle">Quennelle</option>
+											<option value="Bain Marie">Bain Marie</option>
+											<option value="Carpaccio">Carpaccio</option>
+										</select>
+									</div>
 								</div>
 							</div>
 							<h4 class="cdheading">You Contact Details:</h4>
