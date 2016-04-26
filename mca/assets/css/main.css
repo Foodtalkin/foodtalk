@@ -2801,9 +2801,9 @@
 		background: #444;
 		color: #bbb;
 		cursor: default;
-		height: 3.25em;
+		height: 4.25em;
 		left: 0;
-		line-height: 3.25em;
+		line-height: 4.25em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -2816,9 +2816,10 @@
 			left: 1.25em;
 			line-height: inherit;
 			margin: 0;
-			padding: 0;
+			padding: 7px 0;
 			position: absolute;
 			top: 0;
+			font-size: 2.3em;
 		}
 
 			#header h1 a {
@@ -3390,12 +3391,16 @@
 				top: 0;
 				width: 100%;
 				z-index: 10001;
+				background: #444;
+    			padding: 9px 0;
 			}
 
 			#navButton a{
 				color: #FFFFFF;
 			    text-decoration: none;
 			    border: none;
+			    margin: 10px;
+    			font-size: 26px;
 			}
 
 				#navButton .toggle {
