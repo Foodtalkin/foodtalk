@@ -3389,14 +3389,14 @@
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				display: block;
-				height: 44px;
+				height: 30px;
 				left: 0;
 				position: fixed;
 				top: 0;
 				width: 100%;
 				z-index: 10001;
 				background: #444;
-    			padding: 9px 0;
+    			padding: 4px 0;
 			}
 
 			#navButton a{
@@ -3404,7 +3404,7 @@
 			    text-decoration: none;
 			    border: none;
 			    margin: 10px;
-    			font-size: 26px;
+    			font-size: 18px;
 			}
 
 				#navButton .toggle {
@@ -3774,3 +3774,7 @@
 			}
 
 	}
+
+	#footer {
+    padding: 1em;
+}
