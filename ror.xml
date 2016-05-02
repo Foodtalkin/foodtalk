@@ -21,6 +21,14 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>http://foodtalkindia.com/about.html</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>http://foodtalkindia.com/experience.html</link>
      <title>Food Talk India</title>
      <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
@@ -28,8 +36,22 @@
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
-
-
+<item>
+     <link>http://foodtalkindia.com/service.html</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://foodtalkindia.com/clients.html</link>
+     <title>Food Talk India</title>
+     <description>An Invite-Only Social Food Community- where member’s come together to read and share genuine food experiences via real time recommendations.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
 <item>
      <link>http://foodtalkindia.com/contact.html</link>
      <title>Food Talk India</title>
