@@ -28,3 +28,25 @@
 .tabs .tab a{color:#EE6E73;}
 .tabs .tab a:hover{color:#EE6E73;}
 .tabs .indicator{background-color:#EE6E73 !important;}
+.subs{
+	background-color: #eeeeee;
+}
+.mar{margin-top: 10px !important;margin-bottom: 10px !important;}
+.subs1 select{
+	border: none;
+	border-bottom: 1px solid #9e9e9e;
+	background-color:  inherit;
+}
+@supports (-webkit-appearance:none) {
+    subscity {
+        display: none !important;
+    }
+}   
+_:-moz-tree-row(hover), subscity {
+    display: none !important;
+}    
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    subscity {
+       display: none !important;
+    }
+}  
