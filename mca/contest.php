@@ -132,15 +132,13 @@
 						<span class="image featured"><img src="images/cover.jpg" alt="" /></span>
 						<header class="major">
 							<h2>Participate in the Gourmet Quiz and win an invite to the MasterChef Australia inspired Party</h2>
-							<p class="sechead"><i>"Let's talk Gourmet, let's talk MasterChef Australia"</i><br />
-							Star World is back with another exciting Season of MasterChef Australia</p>
-							<p class="no-border">Pass the Gourmet Vacabulary test and win an invite to the exclusive Launch Party of MasterChef Australia Season 08 in your City.
-							<strong> 20 lucky winner from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India  at Olive</strong></p>
-							<div class="row uniform 50% dates">
+							<p class="sechead"><i>"SpeakGourmet with MasterChef Australia"</i></p>
+							<p class="no-border">Participate in the gourmet quiz and stand a chance to win an invite to the exclusive MasterChef Australia inspired Season 8 Gourmet Gala event. <strong>10 lucky winners from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India at Olive</strong></p>
+							<!-- <div class="row uniform 50% dates">
 								<div class="4u 12u(mobilep)">Delhi- 5th May'16</div>
 								<div class="4u 12u(mobilep)">Mumbai- 8th May'16</div>
 								<div class="4u 12u(mobilep)">Bangalore- 9th May'16</div>
-							</div>
+							</div> -->
 							<!-- <ul class="">
 								<li>Delhi- 5th April'16 </li>
 								<li>Mumbai- 8th April'16 </li>
@@ -151,7 +149,7 @@
 						</header>
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
-								<label for="" class="lab1">Q. Match the Gourmet word with the image: *</label>
+								<label for="" class="lab1">Q. Match the gourmet word with the image *</label>
 								<div class="6u 6u(mobilep)">
 									<ul class="left">
 										<li>Roulad</li>
