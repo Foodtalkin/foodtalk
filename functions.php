@@ -8,7 +8,7 @@ $config = array(
 function connect($config)
 {
 	try {
-		$conn = new PDO('mysql:host=localhost;dbname=batcave',
+		$conn = new PDO('mysql:host=localhost;dbname=shuchir_FTI',
 						$config['username'],
 						$config['password']);
 
