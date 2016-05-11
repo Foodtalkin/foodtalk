@@ -18,6 +18,9 @@
 			$headers = 'From: info@foodtalkindia.com' . "\r\n" .
 			    'Reply-To: info@foodtalkindia.com' . "\r\n" ;
 			mail($to, $subject, $message, $headers);
+
+
+			var_dump($_GET);
 			$query="INSERT INTO contact (
 				name, 
 				phone, 
