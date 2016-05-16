@@ -235,17 +235,21 @@
 								<div class="12u">
 									<label for="address" class="lab">City *</label>
 									<div class="row uniform 50%">
-										<div class="4u 12u(mobilep)">
+										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Delhi" id="Delhi" checked>
 											<label for="Delhi">Delhi</label>
 										</div>
-										<div class="4u 12u(mobilep)">
+										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Bombay" id="Bombay">
 											<label for="Bombay">Bombay</label>
 										</div>
-										<div class="4u 12u(mobilep)">
+										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Bangalore" id="Bangalore">
 											<label for="Bangalore">Bangalore</label>
+										</div>
+										<div class="3u 12u(mobilep)">
+											<input type="radio" name="city" value="Hyderabad" id="Hyderabad">
+											<label for="Hyderabad">Hyderabad</label>
 										</div>
 									</div>
 								</div>
