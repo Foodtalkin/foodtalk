@@ -358,7 +358,7 @@
 
 							var URL_INSERT = "http://stg-api.foodtalk.in/user/"+id+"/rsvp";
               				var URL_UPDATE = "http://stg-api.foodtalk.in/user/"+id;
-              				var toinsertdata = {events_id: 74,
+              				var toinsertdata = {events_id: 85,
 				                    email: data[5]['value'],
 				                    contact: data[6]['value'],
 				                    response: response,
