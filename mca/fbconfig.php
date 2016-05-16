@@ -16,7 +16,7 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '567830766693152','1a65bcf7762bec777087a127d26d6295' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('http://stg.foodtalk.in/mca/fbconfig.php' );
+    $helper = new FacebookRedirectLoginHelper('http://foodtalk.in/mca/fbconfig.php' );
 
 
 try {
@@ -51,7 +51,7 @@ if ( isset( $session ) ) {
       //checking if user exist or not
       
       //post rquest
-      $url = "http://stg-api.foodtalk.in/user";    
+      $url = "http://api.foodtalk.in/user";    
       $dataarray = array('facebook_id' => $_SESSION['FBID'],'name' => $_SESSION['FULLNAME'],'email' => $_SESSION['EMAIL'],'gender' => $_SESSION['GENDER']);
       $data_string = json_encode($dataarray);
                                                                                 

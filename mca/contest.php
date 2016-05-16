@@ -356,8 +356,8 @@
 							var response = "En Papillote: "+data[0]['value']+", Al Dente:"+ data[1]['value']+", Quenelle:"+data[2]['value']+", Consomme:"+data[3]['value'];
 							//console.log(response);
 
-							var URL_INSERT = "http://stg-api.foodtalk.in/user/"+id+"/rsvp";
-              				var URL_UPDATE = "http://stg-api.foodtalk.in/user/"+id;
+							var URL_INSERT = "http://api.foodtalk.in/user/"+id+"/rsvp";
+              				var URL_UPDATE = "http://api.foodtalk.in/user/"+id;
               				var toinsertdata = {events_id: 85,
 				                    email: data[5]['value'],
 				                    contact: data[6]['value'],
