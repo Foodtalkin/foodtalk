@@ -168,7 +168,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/EnPapillote.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname1" id="dname1">
+										<select name="dname1" id="dname1" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -179,7 +180,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Aldente.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname2" id="dname2">
+										<select name="dname2" id="dname2" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -190,7 +192,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Quenelle.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname3" id="dname3">
+										<select name="dname3" id="dname3" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -201,7 +204,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Consomme.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname4" id="dname4">
+										<select name="dname4" id="dname4" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
