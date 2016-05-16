@@ -139,70 +139,73 @@
 								<div class="4u 12u(mobilep)">Mumbai- 8th May'16</div>
 								<div class="4u 12u(mobilep)">Bangalore- 9th May'16</div>
 							</div> -->
-							<!-- <ul class="">
-								<li>Delhi- 5th April'16 </li>
-								<li>Mumbai- 8th April'16 </li>
-								<li>Bangalore- 9th April'16 </li>
-							</ul> -->
+							<p>Win an Invitation for a MasterChef Australia inspired Party at Olive</p>
+							<ul class="">
+								<li>Mumbai  Sunday, 22nd May'16, 7:30pm</li>
+								<li>Bangalore  Monday, 23rd May'16, 7:30pm</li>
+								<li>Hyderabad  Wednesday, 25th May'16, 7:30pm</li>
+								<li>Delhi  Wednesday, 1st June'16, 7:30pm</li>
+							</ul>
 
 							<p class="no-border part">Participate Now!</p>
 						</header>
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
-								<label for="" class="lab1">Q. Match the gourmet word with the image *</label>
+								<label for="" class="lab1">Q. The Gourmet Quiz <br>
+									Match the correct Gourmet Word with the image: *</label>
 								<div class="6u 6u(mobilep)">
 									<ul class="left">
-										<li>Roulad</li>
-										<li>Quennelle</li>
+										<li>Consomme</li>
+										<li>Quenelle</li>
 									</ul>
 								</div>
 								<div class="6u 6u(mobilep)">
 									<ul class="left">
-										<li>Bain Marie</li>
-										<li>Carpaccio</li>
+										<li>En Papillote</li>
+										<li>Al Dente</li>
 									</ul>
 								</div>
 								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/BainMarie.jpg" alt="" /></span>
+									<span class="image1"><img src="images/EnPapillote.jpg" alt="" /></span>
 									<div class="select-wrapper">
 										<select name="dname1" id="dname1">
-											<option value="Roulad">Roulad</option>
-											<option value="Quennelle">Quennelle</option>
-											<option value="Bain Marie">Bain Marie</option>
-											<option value="Carpaccio">Carpaccio</option>
+											<option value="Consomme">Consomme</option>
+											<option value="Quenelle">Quenelle</option>
+											<option value="En Papillote">En Papillote</option>
+											<option value="Al Dente">Al Dente</option>
 										</select>
 									</div>
 								</div>
 								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/carpaccio.jpg" alt="" /></span>
+									<span class="image1"><img src="images/Aldente.jpg" alt="" /></span>
 									<div class="select-wrapper">
 										<select name="dname2" id="dname2">
-											<option value="Roulad">Roulad</option>
-											<option value="Quennelle">Quennelle</option>
-											<option value="Bain Marie">Bain Marie</option>
-											<option value="Carpaccio">Carpaccio</option>
+											<option value="Consomme">Consomme</option>
+											<option value="Quenelle">Quenelle</option>
+											<option value="En Papillote">En Papillote</option>
+											<option value="Al Dente">Al Dente</option>
 										</select>
 									</div>
 								</div>
 								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/Quennelle.jpg" alt="" /></span>
+									<span class="image1"><img src="images/Quenelle.jpg" alt="" /></span>
 									<div class="select-wrapper">
 										<select name="dname3" id="dname3">
-											<option value="Roulad">Roulad</option>
-											<option value="Quennelle">Quennelle</option>
-											<option value="Bain Marie">Bain Marie</option>
-											<option value="Carpaccio">Carpaccio</option>
+											<option value="Consomme">Consomme</option>
+											<option value="Quenelle">Quenelle</option>
+											<option value="En Papillote">En Papillote</option>
+											<option value="Al Dente">Al Dente</option>
 										</select>
 									</div>
 								</div>
 								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/roulad.jpg" alt="" /></span>
+									<span class="image1"><img src="images/Consomme.jpg" alt="" /></span>
 									<div class="select-wrapper">
 										<select name="dname4" id="dname4">
-											<option value="Roulad">Roulad</option>
-											<option value="Quennelle">Quennelle</option>
-											<option value="Bain Marie">Bain Marie</option>
-											<option value="Carpaccio">Carpaccio</option>
+											<option value="Consomme">Consomme</option>
+											<option value="Quenelle">Quenelle</option>
+											<option value="En Papillote">En Papillote</option>
+											<option value="Al Dente">Al Dente</option>
 										</select>
 									</div>
 								</div>
@@ -324,7 +327,7 @@
 							var data = $('#frm').serializeArray();
 							//console.log(data);
 
-							var response = "Bain Marie: "+data[0]['value']+", carpaccio:"+ data[1]['value']+", Quennelle:"+data[2]['value']+", roulad:"+data[3]['value'];
+							var response = "En Papillote: "+data[0]['value']+", Al Dente:"+ data[1]['value']+", Quenelle:"+data[2]['value']+", Consomme:"+data[3]['value'];
 							//console.log(response);
 
 							var URL_INSERT = "http://stg-api.foodtalk.in/user/"+id+"/rsvp";
