@@ -16,7 +16,7 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '567830766693152','1a65bcf7762bec777087a127d26d6295' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('http://foodtalk.in/mca/fbconfig.php' );
+    $helper = new FacebookRedirectLoginHelper('http://www.foodtalk.in/mca/fbconfig.php' );
 
 
 try {
