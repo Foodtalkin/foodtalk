@@ -104,6 +104,7 @@
 				padding: 20px !important;
 				border: solid 2px #e5e5e5;;
 				color: #0e0e0e;
+				font-weight: bold;
 			}
 			h2 {
 			    font-size: 1.5em;
