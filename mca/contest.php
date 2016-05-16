@@ -20,6 +20,9 @@
 			/*.que-img{
 				width: 20%;
 			}*/
+			#main, h2, p{
+				color: #0e0e0e;
+			}
 			.image1{
 				border-radius: 2px;
 			}
@@ -39,31 +42,46 @@
 				margin-bottom: .3em;
 				width: 100%;
 				text-align: left;
+				color: #0e0e0e;
 			}
 			.lab1{
 				font-size: 1.2em;
 				margin-bottom: .3em;
 				width: 100%;
 				text-align: left;
+				color: #0e0e0e;
 			}
 			.lab1 ul{
 				margin-left: 20px;
 			}
+			.lab2{
+				font-size: 1.2em;
+				color: #0e0e0e;
+			}
 			.dates{
-				margin: 20px 0;
-				font-weight: normal;
+				margin: 20px !important;
+				padding: 10px;
+				color: #8D0106;
+				font-weight: bold;
+				border:3px solid #8D0106;
+			}
+			.dates div{
+				padding: 0;
 			}
 			.no-border{
 				border:none !important;
 				font-size: 1em;
 				margin: 20px 0 0 0 !important;
+				color: #0e0e0e;
 			}
 			.cdheading{
 				margin: 1em 0;
 				font-weight: 400;
+				color: #0e0e0e;
 			}
 			h2{
 				font-size: 2em;
+				color: #0e0e0e;
 			}
 			.borderR{
 				border : 3px solid red;
@@ -74,6 +92,7 @@
 			header.major p {
 			    margin: .5em 0 .5em 0;
 			    padding: .5em 0 0 0;
+			    color: #0e0e0e;
 			}
 			.part {
 			    color: #8D0106 !important;
@@ -84,9 +103,12 @@
 				font-size: 1.1em;
 				padding: 20px !important;
 				border: solid 2px #e5e5e5;;
+				color: #0e0e0e;
+				font-weight: bold;
 			}
 			h2 {
 			    font-size: 1.5em;
+			    color: #0e0e0e;
 			}
 			.left{
 				text-align: left;
@@ -134,18 +156,14 @@
 							<h2>Participate in the Gourmet Quiz and win an invite to the MasterChef Australia inspired Party</h2>
 							<p class="sechead"><i>"SpeakGourmet with MasterChef Australia"</i></p>
 							<p class="no-border">Participate in the gourmet quiz and stand a chance to win an invite to the exclusive MasterChef Australia inspired Season 8 Gourmet Gala event. <strong>10 lucky winners from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India at Olive</strong></p>
-							<!-- <div class="row uniform 50% dates">
-								<div class="4u 12u(mobilep)">Delhi- 5th May'16</div>
-								<div class="4u 12u(mobilep)">Mumbai- 8th May'16</div>
-								<div class="4u 12u(mobilep)">Bangalore- 9th May'16</div>
-							</div> -->
 							<p>Win an Invitation for a MasterChef Australia inspired Party at Olive</p>
-							<ul class="">
-								<li>Mumbai  Sunday, 22nd May'16, 7:30pm</li>
-								<li>Bangalore  Monday, 23rd May'16, 7:30pm</li>
-								<li>Hyderabad  Wednesday, 25th May'16, 7:30pm</li>
-								<li>Delhi  Wednesday, 1st June'16, 7:30pm</li>
-							</ul>
+							<div class="row uniform 50% dates">
+								<div class="12u 12u(mobilep)">Mumbai  Sunday, 22nd May'16, 7:30pm</div>
+								<div class="12u 12u(mobilep)">Bangalore  Monday, 23rd May'16, 7:30pm</div>
+								<div class="12u 12u(mobilep)">Hyderabad  Wednesday, 25th May'16, 7:30pm</div>
+								<div class="12u 12u(mobilep)">Delhi  Wednesday, 1st June'16, 7:30pm</div>
+							</div>
+
 
 							<p class="no-border part">Participate Now!</p>
 						</header>
@@ -153,13 +171,13 @@
 							<div class="row uniform 50%">
 								<label for="" class="lab1">Q. The Gourmet Quiz <br>
 									Match the correct Gourmet Word with the image: *</label>
-								<div class="6u 6u(mobilep)">
+								<div class="6u 6u(mobilep) lab2">
 									<ul class="left">
 										<li>Consomme</li>
 										<li>Quenelle</li>
 									</ul>
 								</div>
-								<div class="6u 6u(mobilep)">
+								<div class="6u 6u(mobilep) lab2">
 									<ul class="left">
 										<li>En Papillote</li>
 										<li>Al Dente</li>
@@ -168,7 +186,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/EnPapillote.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname1" id="dname1">
+										<select name="dname1" id="dname1" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -179,7 +198,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Aldente.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname2" id="dname2">
+										<select name="dname2" id="dname2" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -190,7 +210,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Quenelle.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname3" id="dname3">
+										<select name="dname3" id="dname3" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -201,7 +222,8 @@
 								<div class="6u 6u(mobilep)">
 									<span class="image1"><img src="images/Consomme.jpg" alt="" /></span>
 									<div class="select-wrapper">
-										<select name="dname4" id="dname4">
+										<select name="dname4" id="dname4" class="imp">
+											<option>--Select One--</option>
 											<option value="Consomme">Consomme</option>
 											<option value="Quenelle">Quenelle</option>
 											<option value="En Papillote">En Papillote</option>
@@ -235,17 +257,21 @@
 								<div class="12u">
 									<label for="address" class="lab">City *</label>
 									<div class="row uniform 50%">
-										<div class="4u 12u(mobilep)">
+										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Delhi" id="Delhi" checked>
 											<label for="Delhi">Delhi</label>
 										</div>
-										<div class="4u 12u(mobilep)">
+										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Bombay" id="Bombay">
 											<label for="Bombay">Bombay</label>
 										</div>
-										<div class="4u 12u(mobilep)">
+										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Bangalore" id="Bangalore">
 											<label for="Bangalore">Bangalore</label>
+										</div>
+										<div class="3u 12u(mobilep)">
+											<input type="radio" name="city" value="Hyderabad" id="Hyderabad">
+											<label for="Hyderabad">Hyderabad</label>
 										</div>
 									</div>
 								</div>
@@ -332,7 +358,7 @@
 
 							var URL_INSERT = "http://stg-api.foodtalk.in/user/"+id+"/rsvp";
               				var URL_UPDATE = "http://stg-api.foodtalk.in/user/"+id;
-              				var toinsertdata = {events_id: 74,
+              				var toinsertdata = {events_id: 85,
 				                    email: data[5]['value'],
 				                    contact: data[6]['value'],
 				                    response: response,
