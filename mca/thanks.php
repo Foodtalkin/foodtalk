@@ -30,6 +30,21 @@ session_start();
           );                                                                                                                   
           $result1 = curl_exec($ch1);
           curl_close($ch1);
+          echo $_SESSION['toupdate']['email'];
+          $to  = $_SESSION['toupdate']['email'];
+          $subject = "We will get back to you soon";
+          $message =  'Hello,'."\r\n \r\n".
+
+    'Thank you for reaching out to us. Our team will get back to you.'."\r\n \r\n".
+
+    'Regards'."\r\n".
+
+    'Food Talk India';
+          $headers = 'From: info@foodtalkindia.com' . "\r\n" .
+              'Reply-To: info@foodtalkindia.com' . "\r\n" ;
+          mail($to, $subject, $message, $headers);
+
+
     $icon = "";
     $msg = "";
       if ($_SESSION['type'] == "rsvp") {

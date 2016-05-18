@@ -113,7 +113,9 @@
 			.left{
 				text-align: left;
 			}
-
+			.right-a{
+				text-align: right;
+			}
 		</style>
 	</head>
 	<body>
@@ -301,6 +303,11 @@
 									</ul>
 								</div>
 							</div>
+							<div class="row uniform">
+								<div class="12u right-a">
+									<a href="">**Terms & Conditions Apply</a>
+								</div>
+							</div>
 						</form>
 					</section>
 				</section>
@@ -317,7 +324,7 @@
 					</ul> -->
 					<ul class="copyright">
 						<li>&copy; Untitled. All rights reserved.</li>
-						<li><a href="">Terms & Conditions</a></li>
+						<!-- <li><a href="">Terms & Conditions</a></li> -->
 					</ul>
 				</footer>
 
