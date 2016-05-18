@@ -102,7 +102,7 @@
               <div class="col s12 m12 l12 input-field">
                 <h4 class="center-align">We’d Love to Hear from You!</h4>
                 <div id="toste1" class="center-align hide"><h5 class="light green-text">Thank You</h5></div>
-                <div id="tos1" class="center-alig hide"><h5 class="light red-text">Please fill the form</h5></div>
+                <div id="tos1" class="center-alig hide"><h5 class="light red-text">Something Went wrong Plese try again</h5></div>
                 <p class="light justify" style="font-size :18px;">We can make some serious waves for your business.  We offer innovative solutions, and outstanding results that speak for themselves. There’s no reason to wait any longer. This is the perfect time to share your brand with a huge motivated audience and show the world what all the buzz is about.</p>
               </div>
             </div>
@@ -118,11 +118,12 @@
               </div>
               <div class="col s12 m6 l6 input-field">
                 <select name="pur" required>
-                  
-                  <option value="Advertisement Request">Advertising</option>
+                  <option value="" disabled selected>Purpose</option>
+                  <option value="Advertisement Request">Instagram Advertising</option>
                   <option value="Event Request">Event Request</option>
                   <option value="Collaboration">Collaboration</option>
-                  
+                  <option value="Corporate">Corporate</option>
+                  <option value="Promotions">Promotions</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
@@ -150,7 +151,7 @@
               <div class="col s12 m12 l12 input-field">
                 <h4 class="center-align">We’d Love to Hear from You!</h4>
                 <div id="toste2" class="center-align hide"><h5 class="light green-text">Thank You</h5></div>
-                <div id="tos2" class="center-align hide"><h5 class="light red-text">Please fill the form</h5></div>
+                <div id="tos2" class="center-align hide"><h5 class="light red-text">Something Went wrong Plese try again</h5></div>
                 <p class="flow-text justify">We can make some serious waves for your business.  We offer innovative solutions, and outstanding results that speak for themselves. There’s no reason to wait any longer. This is the perfect time to share your brand with a huge motivated audience and show the world what all the buzz is about.</p>
               </div>
             </div>
@@ -254,45 +255,79 @@
 
           $("#save1").click(function(){
             event.preventDefault();
-            console.log("submit");
+            
             $(this).attr("disabled", 'disabled');
             if(validateForm1() == true){
-            var data = $('#form1').serialize();
-            $.ajax("contact.php?"+data).done(function(result){
-              if (result == 1) {
-                $('#form1')[0].reset();
-                $("#tos1").addClass('hide');
-                $("#toste1").removeClass('hide');
-                $(location).attr('href', 'thanks.html');
-              }else{
-                $("#toste1").addClass('hide');
-                $("#tos1").removeClass('hide');
-                $('#save1').attr('disabled',false);
-              };
-            });
+            var data = $('#form1').serializeArray();
+            // console.log(data);
+            var data2 = {name: data[0]['value'],
+                        phone: data[1]['value'],
+                        email: data[2]['value'],
+                        purpose: data[3]['value'],
+                        web : data[4]['value'],
+                        location: data[5]['value'],
+                        message: data[6]['value']};
+
+            console.log("Log Entry");
+            data2 = JSON.stringify(data2);
+            $.ajax({
+                 url: "http://api.foodtalk.in/contact",
+                 type: 'POST',
+                 dataType: 'application/json',
+                 data: data2
+               })
+               .always(function(response){
+                  console.log("Sending data successfull");
+                  $('#form1')[0].reset();
+                  $("#tos1").addClass('hide');
+                  $("#toste1").removeClass('hide');
+                  $(location).attr('href', 'thanks.html');
+               });
+               // .done(function(response) {
+
+                 
+               // })
+               // .fail(function(response) {
+               //   console.log(response);
+               //   $("#toste1").addClass('hide');
+               //  $("#tos1").removeClass('hide');
+               //  $('#save1').attr('disabled',false);
+               // });
+           
           }else{
                 $('#save1').attr('disabled',false);
               }
           });
-
+          //Mobile Submit
           $("#save2").click(function(){
             event.preventDefault();
             console.log("submit");
             $(this).attr("disabled", 'disabled');
             if(validateForm2() == true){
-            var data = $('#form2').serialize();
-            $.ajax("contact.php?"+data).done(function(result){
-              if (result == 1) {
-                $('#form2')[0].reset();
-                $("#tos2").addClass('hide');
-                $("#toste2").removeClass('hide');
-                $(location).attr('href', 'thanks.html');
-              }else{
-                $("#toste2").addClass('hide');
-                $("#tos2").removeClass('hide');
-                $('#save2').attr('disabled',false);
-              };
-            });
+              var data = $('#form2').serializeArray();
+              console.log(data);
+              var data2 = {name: data[0]['value'],
+                        phone: data[1]['value'],
+                        email: data[2]['value'],
+                        purpose: data[3]['value'],
+                        web : data[4]['value'],
+                        location: data[5]['value'],
+                        message: data[6]['value']};
+              console.log("Log Entry");
+              data2 = JSON.stringify(data2);
+              $.ajax({
+                 url: "http://api.foodtalk.in/contact",
+                 type: 'POST',
+                 dataType: 'application/json',
+                 data: data2
+               })
+               .always(function(response) {
+                  $('#form2')[0].reset();
+                  $("#tos2").addClass('hide');
+                  $("#toste2").removeClass('hide');
+                  $(location).attr('href', 'thanks.html');
+               });
+            
           }else{
                 $('#save2').attr('disabled',false);
               }

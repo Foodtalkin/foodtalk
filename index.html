@@ -615,10 +615,7 @@
                       <div id="tos1" class="center-align hide"><h5 class="light red-text">Please fill the form</h5></div>
                       <div class="row">
                           <div class="col s12 m6 l6 input-field">
-                            <input id="name" type="text" class="validate" name="name" required/><label for="name">Name</label>
-                          </div>
-                          <div class="col s12 m6 l6 input-field">
-                            <input id="cname" type="text" class="validate" name="cname" required/><label for="cname">Company Name</label>
+                            <input id="name" type="text" class="validate" name="name" required/><label for="name">Name/Company Name</label>
                           </div>
                           <div class="col s12 m6 l6 input-field">
                             <input id="phone" type="text" class="validate" name="ph" required/><label for="phone">Phone</label>
@@ -757,15 +754,26 @@
             });
           });
           $("#save1").click(function(){
-            var data = $('#form1').serialize();
-            $.ajax("save.php?"+data).done(function(result){
-              if (result == 1) {
-                $('#modal1').closeModal();
-                $('#modal2').openModal();
-              }else{
-                $("#tos1").removeClass('hide');
-              };
-            });
+            var data = $('#form1').serializeArray();
+            var data2 = {name: data[0]['value'],
+                        email: data[2]['value'],
+                        phone: data[1]['value'],
+                        purpose: "Advertising",
+                        web : data[4]['value'],
+                        location: data[5]['value']};
+
+            console.log("Log Entry");
+            data2 = JSON.stringify(data2);
+            $.ajax({
+                 url: "http://api.foodtalk.in/contact",
+                 type: 'POST',
+                 dataType: 'application/json',
+                 data: data2
+               })
+               .always(function(response){
+                  $(location).attr('href', 'thanks.html');
+               });
+            
           });
         })
       </script>
