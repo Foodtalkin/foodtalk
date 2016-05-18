@@ -305,7 +305,7 @@
 							</div>
 							<div class="row uniform">
 								<div class="12u right-a">
-									<a href="">**Terms & Conditions Apply</a>
+									<a href="https://www.facebook.com/notes/food-talk-india/masterchef-australia-gourmet-quiz-terms-conditions/856723447790308" target="_BLANK">**Terms & Conditions Apply</a>
 								</div>
 							</div>
 						</form>
