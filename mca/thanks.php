@@ -125,7 +125,10 @@ session_start();
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
-      
+      <script>
+      var delay = 10000; //Your delay in milliseconds
+      setTimeout(function(){ window.location = 'http://www.foodtalk.in'; }, delay);
+      </script>
   </body>
 </html>
 <?php 
