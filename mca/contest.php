@@ -323,7 +323,7 @@
 						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul> -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li>
+						<li>MasterChef® is a registered trademark of Shine (Aust) Pty Ltd. All rights reserved.</li>
 						<!-- <li><a href="">Terms & Conditions</a></li> -->
 					</ul>
 				</footer>
