@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/fancybox/source/jquery.fancybox.css">
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper" class="mobile">
+
+				<div id="main" class="v-align">
+					<div class="inner">
+						<div class="login_block">
+							<img src="images/logo1.png" alt="">
+							<h1>Foodtalk</h1>
+							<h4>Find & share Awesome Dishes</h4>
+							
+							<div class="downloads">
+								<a href="">
+									<img src="images/download.png" alt="">
+								</a>
+								<a href="">
+									<img src="images/android.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/fancybox/source/jquery.fancybox.js"></script>
+			<script src="assets/fancybox/source/jquery.fancybox.pack.js"></script>
+			<script src="assets/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function() {
+					$('.mymodal').hide();
+					$('.get-app').on('click', function(event) {
+						event.preventDefault();
+						$('.mymodal').fadeIn('slow', function() {
+							
+						});
+					});
+					$('.close').on('click', function(event) {
+						event.preventDefault();
+						$('.mymodal').hide();
+					});
+					$(document).bind("contextmenu",function(e){
+					     e.preventDefault();//or return false;
+					 });
+					$(".iframe")
+						.attr('rel', 'gallery')
+						.fancybox({
+							maxWidth	: 800,
+							maxHeight	: 600,
+							closeBtn	: false,
+							fitToView	: false,
+							width		: '70%',
+							height		: '70%',
+							autoSize	: false,
+							closeClick	: false,
+							openEffect	: 'none',
+							closeEffect	: 'none',
+							nextEffect  : 'none',
+					        prevEffect  : 'none',
+					        padding     : 0,
+					        margin      : [20, 60, 20, 60] // Increase left/right margin
+						});
+				});
+			</script>
+	</body>
+</html>
