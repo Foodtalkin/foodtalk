@@ -23,7 +23,7 @@ IIIII NN   NN DDDDDD  IIIII AA   AA
   Twitter: @himvais
   
 /* SITE */
-  Last update: 22/05/2015
+  Last update: 30/05/2016
   Doctype: HTML5, css3
   IDE: Sublime, Photoshop, Sketch, materializecss
 
