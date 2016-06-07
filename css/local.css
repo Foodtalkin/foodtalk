@@ -1,6 +1,6 @@
 .navbar-fixed, .nav, nav{
 
-	background-color: #6dc066 !important;
+	background-color: #000108 !important;
 
 }
 
@@ -78,7 +78,7 @@
 
 .button{
 
-	background-color: #6dc066;
+	background-color: #000108;
 
 }
 
@@ -86,23 +86,23 @@
 
 .button:hover{
 
-	background-color: #6dc066;
+	background-color: #000108;
 
 }
 
 .button:visited {
-  background-color: #6dc066;
+  background-color: #000108;
 }
 
 .button:active {
-  background-color: #6dc066;
+  background-color: #000108;
 }
 
 .divider{
 
-	color: #6dc066;
+	color: #000108;
 
-	background-color: #6dc066;
+	background-color: #000108;
 
 }
 
@@ -123,5 +123,5 @@
 }
 
 .spinner-green, .spinner-green-only{
-  border-color: #6dc066 !important;
+  border-color: #000108 !important;
 }
