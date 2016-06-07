@@ -2,9 +2,9 @@
     font-family: esta;
     src: url(../font/estanoche/EstaNoche.ttf);
 }
-.navbar-fixed, .nav, nav{background-color:#040404 !important;}
-.logo img{width:200px;height:auto;}
-.fb, .tw,.ins{width:50px;display:inline-block;margin-left:7px;margin-right:7px;margin-top:30px;}
+.navbar-fixed, .nav, nav{background-color:#000108 !important;}
+.logo img{width:240px;height:auto; margin-bottom: 20px;}
+.fb, .tw,.ins{width:50px;display:inline-block;margin-left:9px;margin-right:9px;margin-top:20px;}
 .logo-line{margin-top:-15px;}
 .brand-logo{margin-left:20px;font-size:22px !important;}
 p{line-height:2rem;}
@@ -14,9 +14,9 @@ p{line-height:2rem;}
 @media only screen and (max-width:992px){.parallax-container .section{position:absolute;top:40%;}
 #index-banner .section{top:10%;}
 }
-.page-footer, footer{margin-top:0 !important;background-color:#040404 !important;}
-.button{background-color:#040404;}
-.button:hover{background-color:#040404;}
+.page-footer, footer{margin-top:0 !important;background-color:#000108 !important;}
+.button{background-color:#000108;}
+.button:hover{background-color:#000108;}
 #index-banner{height:100vh !important;
 }
 @media only screen 
@@ -27,12 +27,12 @@ p{line-height:2rem;}
 }
 }
 
-.button:visited{background-color:#040404;}
-.button:active{background-color:#040404;}
+.button:visited{background-color:#000108;}
+.button:active{background-color:#000108;}
 #preloader{position:fixed;top:0;left:0;text-align:center;z-index:999;width:100vw;height:100vh;background-color:rgba(255, 255, 255, .8);}
 .load{margin:0 auto;}
 .spinner-green, .spinner-green-only{border-color:#6dc066 !important;}
-.spinner-yellow, .spinner-yellow-only{border-color:#040404 !important;}
+.spinner-yellow, .spinner-yellow-only{border-color:#000108 !important;}
 .spinner-red, .spinner-red-only{border-color:#EE6E73 !important;}
 .spinner-blue, .spinner-blue-only{border-color:#008080 !important;}
 .footer-copyright{height:auto !important;}

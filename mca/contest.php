@@ -264,8 +264,8 @@
 											<label for="Delhi">Delhi</label>
 										</div>
 										<div class="3u 12u(mobilep)">
-											<input type="radio" name="city" value="Bombay" id="Bombay">
-											<label for="Bombay">Bombay</label>
+											<input type="radio" name="city" value="Mumbai" id="Mumbai">
+											<label for="Mumbai">Mumbai</label>
 										</div>
 										<div class="3u 12u(mobilep)">
 											<input type="radio" name="city" value="Bangalore" id="Bangalore">
