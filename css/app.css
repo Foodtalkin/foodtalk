@@ -85,4 +85,24 @@ html::-webkit-scrollbar {
 .patt {
     background-image: url('../img/food.png');
 }
-.custom-padd-index{padding:6% 10%;}
+.custom-padd-index{padding:5% 15%;}
+
+.margin-top-30{
+  margin-top: 30px;
+}
+.margin-bottom-30{
+  margin-bottom: 30px;
+}
+.loginbtn{
+      margin-right: 10px;
+    background-color: inherit;
+    border: 1px solid #fff;
+    margin-left: 30px;
+}
+.loginbtn:hover,.loginbtn:active{
+      margin-right: 10px;
+    background-color: #FFF;
+    border: 1px solid #fff;
+    margin-left: 30px;
+    color:#000108;
+}

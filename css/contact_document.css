@@ -1,6 +1,4 @@
-.navbar-fixed, .nav, nav{
-	background-color: #616161 !important;
-}
+
 
 .intro{
 	position: absolute;
@@ -39,16 +37,16 @@
 
 
 .button{
-	background-color: #EE6E73;
+	background-color: #000108;
 }
 
 .button:hover{
-	background-color: #EE6E73;
+	background-color: #000108;
 }
 
 .divider{
-	color: #EE6E73;
-	background-color: #EE6E73;
+	color: #000108;
+	background-color: #000108;
 }
 
 .menu{
