@@ -4,7 +4,7 @@
 }
 .navbar-fixed, .nav, nav{background-color:#000108 !important;}
 .logo img{width:240px;height:auto; margin-bottom: 20px;}
-.fb, .tw,.ins{width:50px;display:inline-block;margin-left:9px;margin-right:9px;margin-top:20px;}
+.fb, .tw,.ins, .snap{width:50px;display:inline-block;margin-left:9px;margin-right:9px;margin-top:20px;}
 .logo-line{margin-top:-15px;}
 .brand-logo{margin-left:20px;font-size:22px !important;}
 p{line-height:2rem;}
@@ -43,6 +43,7 @@ p{line-height:2rem;}
 .facebook{background:url(../img/icn-facebook.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
 .instgram{background:url(../img/icn-instagram.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
 .twitter{background:url(../img/icn-twitter.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
+.snapchat{background:url(../img/icn-snap.png) no-repeat 0 0;width:50px;height:51px;display:inline-block;}
 .subs{
 	background-color: #eeeeee;
 }
@@ -69,18 +70,6 @@ p{line-height:2rem;}
 	height: auto;
 }
 
-/*.subscity{
-	margin-bottom: 10px !important;
-	padding-bottom: 10px !important;
-}*/
-/*@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .subscity {
-     display: none !important;
-    }
-    ::i-block-chrome, .subscity {
-    display: block !important;
-    }
-}*/
 @supports (-webkit-appearance:none) {
     subscity {
         display: none !important;
@@ -95,3 +84,11 @@ _:-moz-tree-row(hover), subscity {
     }
 }  
 
+  .patt{
+            background-image: url('../img/food.png');
+          }
+
+            .fill{height: 20px;}.mar{margin-top: 10px !important;margin-bottom: 10px !important;}
+            html::-webkit-scrollbar { 
+          display: none; 
+      }

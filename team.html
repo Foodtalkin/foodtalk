@@ -40,138 +40,14 @@
   ga('send', 'pageview');
 
 </script>
-      <script>
-            // This is called with the results from from FB.getLoginStatus().
-
-            // This function is called when someone finishes with the Login
-            // Button.  See the onlogin handler attached to it in the sample
-            // code below.
-            function checkLoginState() {
-              FB.getLoginStatus(function(response) {
-                statusChangeCallback(response);
-              });
-            }
-
-            window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '567830766693152',
-              cookie     : true,  // enable cookies to allow the server to access 
-                                  // the session
-              xfbml      : true,  // parse social plugins on this page
-              version    : 'v2.2' // use version 2.2
-            });
-
-
-            FB.getLoginStatus(function(response) {
-              console.log("response working");
-            });
-
-            };
-
-
-            (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_US/sdk.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-
-
-            function LoginProcess() {
-              FB.getLoginStatus(function(response) {
-              if (response.status === 'connected') {
-                alert("Already requested an invite");
-              } else if (response.status === 'not_authorized') {
-              FB.login(function(response) {
-                if (response.authResponse) {
-                    FB.api('/me', function(response) {
-                        if (window.XMLHttpRequest) {
-                            // code for IE7+, Firefox, Chrome, Opera, Safari
-                            xmlhttp = new XMLHttpRequest();
-                        } else {
-                            // code for IE6, IE5
-                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                        }
-                        xmlhttp.onreadystatechange = function() {
-                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                            }
-                        }
-                        xmlhttp.open("GET","API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender,true);
-                        xmlhttp.send();
-                        console.log("API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender);
-                        alert('Hello, ' + response.name + '!, You will receive an invite soon!!!');
-                    });
-                } else {
-                    alert('You canceled the request process.');
-                }
-              }, {scope: 'public_profile, email'});
-              } else {
-                FB.login(function(response) {
-                if (response.authResponse) {
-                    FB.api('/me', function(response) {
-                        if (window.XMLHttpRequest) {
-                            // code for IE7+, Firefox, Chrome, Opera, Safari
-                            xmlhttp = new XMLHttpRequest();
-                        } else {
-                            // code for IE6, IE5
-                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                        }
-                        xmlhttp.onreadystatechange = function() {
-                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                            }
-                        }
-                        xmlhttp.open("GET","API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender,true);
-                        xmlhttp.send();
-                        console.log("API/save.php?name="+response.name+'&email='+response.email+'&gender='+response.gender);
-                        alert('Hello, ' + response.name + '!, You will receive an invite soon!!!');
-                    });
-                } else {
-                    alert('You canceled the request process.');
-                }
-              }, {scope: 'public_profile, email'});
-              }
-              });
-            }
-          </script>
+      
   <style>
-  #dropdown2{margin-top: 64px;}.navbar-fixed, .nav, nav{background-color: #101125 !important;}body{background-color: #f8f8f8 !important;}
-  .santa{
-  display: inline-block;
-  position: absolute;
-  left: 190px;
-}
-.santa1{
-  display: inline-block;
-}
+ 
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQQHDN"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MQQHDN');</script>
-  <!-- End Google Tag Manager -->
+  
       <div class="navbar-fixed">
-        <!-- <ul id="dropdown1" class="dropdown-content">
-              <li><a href="cityguide.html">Delhi</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">two</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">three</a></li>
-            </ul>
-            <ul id="dropdown2" class="dropdown-content">
-              <li><a href="cityguide.html">Delhi</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">two</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">three</a></li>
-            </ul> -->
-
         <nav>
           <div class="nav-wrapper">
             <span class="santa1 hide-on-large-only right"></span>
@@ -196,7 +72,7 @@
               <li><a href="service.html">Services</a></li>
               <li><a href="clients.html">Clients</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <!-- <li><a href="http://foodtalk.in/login" class="waves-effect waves-light btn loginbtn">LOGIN</a></li> -->
+            
             </ul>
           </div>
         </nav>
@@ -305,17 +181,6 @@
                   </p>
                   <button data-target="modal1" class="btn modal-trigger">Advertise</button>
                 </div>
-               <!--  <div class="col l3 s6 hide-on-small-only justify">
-                  <h5 class="white-text">Links</h5>
-                  <ul>
-                    <li><a class="white-text light" href="http://www.foodtalkplus.com" target="_blank">FoodTalkPlus</a></li>
-                    <li><a class="white-text light" href="badcustomer/index.html" target="_blank">Bad Customer</a></li>
-                    <li><a class="white-text light" href="request/index.html" target="_blank">Facebook Invites</a></li>
-                    <li><a class="white-text light" href="subscribe/index.html" target="_blank">Subscribe</a></li>
-                    <li><a class="white-text light" href="contact.html" target="_blank">Contact</a></li>
-                    <li><a class="white-text light" href="sitemap.html" target="_blank">Sitemap</a></li>
-                  </ul>
-                </div> -->
                 <div class="col l3 s6 offset-l3 hide-on-small-only justify">
                   <h5 class="white-text">Social</h5>
                   <ul>
@@ -327,15 +192,7 @@
                     </li>
                   </ul>
                 </div>
-                <!-- <div class="col l3 s6 center-align hide-on-med-and-up">
-                  <h5 class="white-text">Links</h5>
-                  <ul>
-                    <li><a class="white-text light" href="http://www.foodtalkplus.com/" target="_blank">FoodTalkPlus</a></li>
-                    <li><a class="white-text light" href="document.html" target="_blank">Legal</a></li>
-                    <li><a class="white-text light" href="contact.html" target="_blank">Contact</a></li>
-                    <li><a class="white-text light" href="sitemap.html" target="_blank">Sitemap</a></li>
-                  </ul>
-                </div> -->
+            
                 <div class="col l3 s6 center-align hide-on-med-and-up">
                   <h5 class="white-text">Social</h5>
                   <ul>
@@ -364,17 +221,14 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
-          $(".dropdown-button").dropdown({ hover: false });
           $('select').material_select();
           $(".button-collapse").sideNav();
           $('.parallax').parallax();
           
-          $(document).ready(function(){
             // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
             $('.modal-trigger').leanModal({
               dismissible: true
             });
-          });
           $("#save1").click(function(){
             var data = $('#form1').serialize();
             $.ajax("save.php?"+data).done(function(result){
