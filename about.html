@@ -23,30 +23,9 @@
 </script>
     </head>
     <body class="patt">
-      <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQQHDN"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MQQHDN');</script>
-  <!-- End Google Tag Manager -->
+     
        <div class="navbar-fixed">
-        <!-- <ul id="dropdown1" class="dropdown-content">
-              <li><a href="cityguide.html">Delhi</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">two</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">three</a></li>
-            </ul>
-            <ul id="dropdown2" class="dropdown-content">
-              <li><a href="cityguide.html">Delhi</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">two</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">three</a></li>
-            </ul> -->
+        
         <nav>
           <div class="nav-wrapper">
           <span class="santa1 hide-on-large-only right"></span>
@@ -58,7 +37,6 @@
               <li><a href="http://foodtalk.in/mca/">MCA</a></li>
               <li class="active"><a href="about.html">About</a></li>
               <li><a href="experience.html">Events</a></li>
-              <!-- <li><a href="http://www.foodtalkplus.com/" target="_blank">App <sub>BETA</sub></a></li> -->
               <li><a href="service.html">Services</a></li>
               <li><a href="clients.html">Clients</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -72,7 +50,6 @@
               <li><a href="service.html">Services</a></li>
               <li><a href="clients.html">Clients</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <!-- <li><a href="http://foodtalk.in/login">LOGIN</a></li> -->
             </ul>
           </div>
         </nav>
@@ -106,27 +83,14 @@
                     <h2 class="center"><img src="img/about/food_community_india.png" alt="Delhi Events, Food Events, Largest Food Community India">&nbsp;</h2> 
                     <p class="center-align">India's most active food Community where members come together to ask and share food recommendations.</p>
                   </div>
-                  <!-- <div class="col s12 m12 l12 center hide-on-med-and-up">
-                    <div class="col s12 m4 l4 offset-m2 offset-l2 center"><a class="btn-large waves-effect waves-light button" onclick="LoginProcess();">Request invite</a></div>
-                  </div> -->
                 </div>
                 <div class="col s12 m4 l4 margin-bottom-30">
                   <div class="icon-block">
-                    <!-- <h5 class="header col s12 m12 light center">Social Media</h5> -->
                     <h2 class="center"><img src="img/about/food_community_india_media.png" alt="Food Community India, Cocktail Events Delhi, Best Brunches in Delhi, Blindfolded Dinner">&nbsp;</h2>
                     <p class="center-align">India's largest digital food community across all social medias.</p>
                   </div>
-                  <!-- <div class="col s12 m12 l12 center hide-on-med-and-up">
-                    <div class="col s12 m4 l4 center"><button data-target="modal1" class="btn-large modal-trigger blue waves-effect waves-light button">Advertise</button></div>
-                  </div> -->
                 </div>
-                <!-- <div class="col s12 m4 l4">
-                  <div class="icon-block">
-                    <h5 class="header col s12 m12 light center">Events</h5>
-                    <h2 class="center"><img src="img/about/food_events_delhi.png" alt="Food Talk Events in Delhi">&nbsp;</h2>
-                    <p class="center-align">Food Talk curates interactive concept experiences at venues across India.</p>
-                  </div>
-                </div> -->
+
               </div>
 
          
@@ -137,30 +101,11 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
-          // $('#delhiLive').openModal();
-          $(".dropdown-button").dropdown({ hover: false });
           $('select').material_select();
-          $("#tos1").addClass('hide');
           $(".button-collapse").sideNav();
           $('.parallax').parallax();
           
-          $(document).ready(function(){
-            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-            $('.modal-trigger').leanModal({
-              dismissible: true
-            });
-          });
-          $("#save1").click(function(){
-            var data = $('#form1').serialize();
-            $.ajax("save.php?"+data).done(function(result){
-              if (result == 1) {
-                $('#modal1').closeModal();
-                $('#modal2').openModal();
-              }else{
-                $("#tos1").removeClass('hide');
-              };
-            });
-          });
+          
         })
       </script>
     </body>
