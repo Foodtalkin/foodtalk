@@ -124,29 +124,7 @@
 			<!-- Header -->
 				<header id="header">
 					<h1><a href="http://foodtalk.in/">FOODTALK</a></h1>
-					<!-- <nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon fa-angle-down">Layouts</a>
-								<ul>
-									<li><a href="generic.html">Generic</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="elements.html">Elements</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option One</a></li>
-											<li><a href="#">Option Two</a></li>
-											<li><a href="#">Option Three</a></li>
-											<li><a href="#">Option Four</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
-						</ul>
-					</nav> -->
+					
 				</header>
 
 			<!-- Main -->
@@ -314,14 +292,7 @@
 
 			<!-- Footer -->
 				<footer id="footer">
-					<!-- <ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul> -->
+					
 					<ul class="copyright">
 						<li>MasterChef® is a registered trademark of Shine (Aust) Pty Ltd. All rights reserved.</li>
 						<!-- <li><a href="">Terms & Conditions</a></li> -->
