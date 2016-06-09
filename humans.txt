@@ -4,11 +4,6 @@ FFFF    OO   OO OO   OO DD   DD    TTT   AA   AA LL      KKKK
 FF      OO   OO OO   OO DD   DD    TTT   AAAAAAA LL      KK KK  
 FF       OOOO0   OOOO0  DDDDDD     TTT   AA   AA LLLLLLL KK  KK 
                                                                 
-IIIII NN   NN DDDDD   IIIII   AAA   
- III  NNN  NN DD  DD   III   AAAAA  
- III  NN N NN DD   DD  III  AA   AA 
- III  NN  NNN DD   DD  III  AAAAAAA 
-IIIII NN   NN DDDDDD  IIIII AA   AA 
 
 
 
