@@ -52,7 +52,11 @@
         </nav>
       </div>
       <div class="container">
-        <a href="" class="downloadlink"></a>
+        <div class="row">
+          <div class="col s12 m12 l12 center">
+            <a href="" class="downloadlink">Download App</a>
+          </div>
+        </div>
       </div>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -82,7 +86,7 @@
           }
         };
         if(isMobile.Android()) {
-             alert("This is a Android");
+             $('.downloadlink').attr('href', 'https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjP6-22-MzNAhUGs48KHUryA-AQFgghMAE&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.tinder%26hl%3Den&usg=AFQjCNGb2574SPK6KCRRR7jD7_SITohRkQ&sig2=-WSKPhe4DXct_iOoJ_j_tQ&bvm=bv.125801520,d.dGo');
           }
           if(isMobile.iOS()) {
              alert("This is a iOS");
