@@ -95,21 +95,21 @@
 									<div class="form-group myformgroup">
 										<div class="radio">
 										  	<label class="control control--radio">Set a budget Limit
-										      	<input type="radio" name="radio" checked="checked"/>
+										      	<input type="radio" name="radio" class="set-limit" checked="checked" id="points-l"/>
 										      	<div class="control__indicator"></div>
 										  	</label>
 										</div>
 										<div class="col-sm-10">
-									      <input type="text" class="form-control ml25" placeholder="Enter limit in Points">
+									      <input type="number" class="form-control ml25" id="points" placeholder="Enter limit in Points">
 									    </div>
 									    <div class="col-sm-2">
 									    	<h6><a href="" class="ml15">Set</a></h6>
 									    </div>
-									    <div class="col-md-10">
+									    <div class="col-md-10 reach-point">
 									    	<div class="reachbar ml25">
 									    		<div class="reach"></div>
 									    	</div>
-									    	<div class="ml25">
+									    	<div class="ml25 reachcount">
 									    		Total Reach : 5000
 									    	</div>
 									    </div>
@@ -118,21 +118,21 @@
 									<div class="form-group myformgroup">
 										<div class="radio">
 											<label class="control control--radio">Set a time Limit
-										      	<input type="radio" name="radio" checked="checked"/>
+										      	<input type="radio" name="radio" class="set-limit" checked="checked" id="time-l"/>
 										      	<div class="control__indicator"></div>
 										  	</label>
 										</div>
 										<div class="col-sm-10">
-									      <input type="text" class="form-control ml25" placeholder="Enter limit in Days">
+									      <input type="number" class="form-control ml25" id="time" placeholder="Enter limit in Days">
 									    </div>
 									    <div class="col-sm-2">
 									    	<h6><a href="" class="ml15">Set</a></h6>
 									    </div>
-									    <div class="col-md-10">
+									    <div class="col-md-10 reach-time">
 									    	<div class="reachbar ml25">
 									    		<div class="reach"></div>
 									    	</div>
-									    	<div class="ml25">
+									    	<div class="ml25 reachcount">
 									    		Total Reach : 5000
 									    	</div>
 									    </div>
@@ -141,7 +141,7 @@
 									<div class="form-group myformgroup">
 										<div class="radio">
 										 	<label class="control control--radio">Run Indefinitely
-										      	<input type="radio" name="radio" checked="checked"/>
+										      	<input type="radio" name="radio" class="set-limit" checked="checked" id="no-l"/>
 										      	<div class="control__indicator"></div>
 										  	</label>
 										</div>
@@ -160,8 +160,50 @@
 			</div>
 			<!-- end -->
 			
-			
 		</div>
-		
+		<script>
+			$(document).ready(function() {
+				$('#points, #time').attr('disabled', 'disabled');
+				$('.reach-point, .reach-time').hide();
+				$('.set-limit').change(function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					console.log('event');
+					var set = $(this).attr('id');
+					if(set == 'points-l'){
+						console.log('points');
+						$('#points').attr('disabled', false);
+						$('#time').attr('disabled', 'disabled');
+						$('.reach-point, .reach-time').hide();
+					}
+					else if(set == 'time-l'){
+						console.log('time');
+						$('#time').attr('disabled', false);
+						$('#points').attr('disabled', 'disabled');
+						$('.reach-point, .reach-time').hide();
+					}
+					else if(set == 'no-l'){
+						console.log('no-limit');
+						$('#points, #time').attr('disabled', 'disabled');
+						$('.reach-point, .reach-time').hide();
+					}
+					else{
+						console.log('somting wrong');
+					}
+				});
+				$('#points').keyup(function(event) {
+					/* Act on the event */
+					$('.reach-point').show();
+					$('.reach-point .reachbar .reach').width('40%');
+					$('.reach-point .reachcount').html('Total Reach : 5000')
+				});
+				$('#time').keyup(function(event) {
+					/* Act on the event */
+					$('.reach-time').show();
+					$('.reach-time .reachbar .reach').width('40%');
+					$('.reach-time .reachcount').html('Total Reach : 2000')
+				});
+			});
+		</script>
 	</body>
 </html>
