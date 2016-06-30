@@ -434,13 +434,17 @@ margin-bottom:5px;
 	-webkit-box-shadow: inset 0px 0px 6px 0px rgba(94,94,94,1);
 -moz-box-shadow: inset 0px 0px 6px 0px rgba(94,94,94,1);
 box-shadow: inset 0px 0px 6px 0px rgba(94,94,94,1);
+
 }
 .reach{
 	background-color: #4f9d00;
 	padding: 0;
 	height: 6px;
 	border-radius: 3px;
-	width: 40%;
+	transition-duration:2s;
+	transition-delay:1s;
+	transition-timing-function: ease;
+	width: 0;
 }
 /*adverts end*/
 
@@ -759,3 +763,9 @@ box-shadow: inset 0px 0px 6px 0px rgba(94,94,94,1);
 	height: auto;
 }
 /*end*/
+
+.transition{
+	transition-duration:2s;
+	transition-delay:1s;
+	transition-timing-function: ease;
+}
