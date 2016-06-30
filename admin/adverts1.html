@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<title>FOOD TALK</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Nav start -->
+			<nav class="my-navbar">
+			  <div class="container">
+			  	<div class="mynav-header">
+			      <a class="mynav-brand pull-left" href="index.html">
+			        <img alt="Brand" src="assets/images/logo.png" class="logo">
+			      </a>
+			      <ul class="mynav-links">
+			      	<li><a href="index.html"><h6>	Home </h6></a></li>
+			      	<li class="active-link"><a href="adverts.html"><h6>	Advert </h6></a></li>
+			      	<li><a href="funds.html"><h6>	Funds </h6></a></li>
+			      	<li><a href="support.html"><h6>	Support </h6></a></li>
+			      	<li><a href="outlet.html"><h6>	Outlets(Instapizza,galleria) </h6></a></li>
+			      </ul>
+			      <ul class="mynav-links pull-right">
+			      	<li class="right-link ">
+			      		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			      			<span class="username">
+			      				Himanshu
+			      			</span>
+			      			<!-- <br> -->
+			      			<span class="company">
+			      				Food Talk India
+			      			</span>
+			      			<span class="glyphicon glyphicon-chevron-down chevron" aria-hidden="true"></span>
+			      		</a>
+			      		<ul class="dropdown-menu">
+				            <li><a href="#">Add Restaurant</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="login.html">Logout</a></li>
+				        </ul>
+			      	</li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+			<!-- nav End -->
+			<!-- start -->
+			<div class="row ">
+				<div class="col-md-12">
+					<div class="col-md-12 margin-top-2em">
+						<h4 class="margin-top-2em display-inline">Creating new advert for instapizza, Gurgaon</h4>
+						<a href="adverts.html" class="btn btn-default cncl-btn"><h4>Cancel</h4></a>
+					</div>
+					<div class="col-md-12 margin-top-2em">
+						<div class="col-md-12 wizard">
+							<div class="blue col-md-3 wizard-step"><h6><span class="regulerfont">Step 1</span><br><span class="active-step">Select an Outlet</span></h6></div>
+							<div class="light-gray col-md-3 wizard-step center"><h6><span class="regulerfont">Step 2</span><br><span>Select a Target</span></h6></div>
+							<div class="light-gray col-md-3 wizard-step center"><h6><span class="regulerfont">Step 3</span><br><span>Create Advert</span></h6></div>
+							<div class="light-gray col-md-3 wizard-step right"><h6><span class="regulerfont">Step 4</span><br><span>Allocate Budget</span></h6></div>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3 form1">
+									<div class="bold">New Advert</div>
+									<form action="">
+										<input type="text" placeholder="Name your advert" id="Name">
+										<select class="selectpicker" data-live-search="true" >
+											<option value="">Select Restaurant Name</option>
+										    <option>Alabama</option>
+										    <option>Alaska </option>
+										    <option selected>Instapizza, Gurgaon </option>
+										    <option>Arkansas </option>
+										</select>
+										<div class="row center">
+											<div class="col-md-6 padding-1em">
+												<h6 class="regulerfont">Overall Audience</h6>
+												<h6 class="green regulerfont">1456</h6>
+											</div>
+											<div class="col-md-6 padding-1em">
+												<h6 class="regulerfont">Engagement</h6>
+												<h6 class="green regulerfont">3445</h6>
+											</div>
+											<div class="col-md-6 padding-1em">
+												<h6 class="regulerfont">Profile viwes</h6>
+												<h6 class="green regulerfont">345</h6>
+											</div>
+											<div class="col-md-6 padding-1em">
+												<h6 class="regulerfont">Checkins</h6>
+												<h6 class="green regulerfont">3243</h6>
+											</div>
+										</div>
+										<div class="button-con margin-top-2em">
+											<a class="btn post-button" type="button" id="submit" href="adverts2.html"> Next</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end -->
+			
+			
+		</div>
+		
+	</body>
+</html>
