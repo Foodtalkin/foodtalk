@@ -53,8 +53,10 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col s12 m12 l12 center">
-            <a href="" class="downloadlink">Download App</a>
+          <div class="col s12 m12 l12 center ">
+            <h2>Sorry</h2>
+            <img src="img/sorry.gif" alt="">
+            <h4>App is only available on Android and iOS</h4>
           </div>
         </div>
       </div>
@@ -86,10 +88,10 @@
           }
         };
         if(isMobile.Android()) {
-             $('.downloadlink').attr('href', 'https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjJkpSvgc3NAhVFkZQKHfF9DyUQFggdMAA&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.facebook.katana%26hl%3Den&usg=AFQjCNHqPRKOM43CFYuARF7DNzfqGU0Myw&sig2=oW6orjoX4nxDBBMJWMQhYw');
+             $(location).attr('href', 'https://play.google.com/store/apps/details?id=in.foodtalk.android&hl=en');
           }
           if(isMobile.iOS()) {
-             alert("This is a iOS");
+             $(location).attr('href', 'https://itunes.apple.com/in/app/food-talk-plus/id923340748?mt=8')
           }
       });
       </script>
