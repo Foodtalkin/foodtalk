@@ -31,14 +31,14 @@ session_start();
           $result1 = curl_exec($ch1);
           curl_close($ch1);
           $to  = $_SESSION['toupdate']['email'];
-          $subject = "MasterChef Australia Gourmet Quiz";
-          $message =  'Thank you for Participating in the Gourmet Quiz!'."\r\n \r\n".
+          $subject = "MasterChef Australia #HestonWeek challenge";
+          $message =  'Thank you for Participating in the #MasterChefQuiz.'."\r\n \r\n".
 
-    'Stay Tuned to know if you are one of our Lucky Winners to get an invitation for the MasterChef Australia Inspired Party at Olive '."\r\n ".
+    'Stay Tuned to know if you are one of our lucky winners of the #HestonWeek challenge.'."\r\n ".
 
-    'In the mean time- don`t forget to tune in to catch the MasterChef S8 action on Star World & Star World HD Mon-Fri 9pm.'."\r\n".
+    'Each day 2 contestants will win themselves a Limited Edition MasterChef Cheese Board. '."\r\n".
 
-    '#SpeakGourmet with MasterChef Australia';
+    'Winners will be informed via email. ';
           $headers = 'From: info@foodtalkindia.com' . "\r\n" .
               'Reply-To: info@foodtalkindia.com' . "\r\n" ;
           mail($to, $subject, $message, $headers);
