@@ -293,9 +293,10 @@
 					}
 					$('.city').change(function(event) {
 						/* Act on the event */
-						$('#othcity').val($('.city').val());
+						console.log($(this).val());
+						$('#othcity').val($(this).val());
 						$('#othcity').attr('disabled', 'disabled');
-						if($('.city').val()=="other"){
+						if(this.checked && this.value =="other"){
 							$('#othcity').removeAttr('disabled');
 						}
 					});
