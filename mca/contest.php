@@ -145,7 +145,7 @@
 							<p class="sechead"><i>#MasterChefAuQuiz with Food Talk India</i></p>
 							<p class="no-border">It's the biggest week in MasterChef history <br>
 								4 Pop-up restaurants in secret locations over 4 big days with one of the best Chef's in the world...Heston Blumenthal.
-								<br>And thing's just got a little more exciting.</p>
+								<br>And we have a Special surprise for you!</p>
 
 							
 							<p></p>
@@ -159,6 +159,7 @@
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
 								<div class="12u(mobilep)">
+									<p class="lab">Day 1:</p>
 									<label for="name" class="lab">Name the Dish *</label>
 									<img src="images/Day1.jpg" alt="" class="que-img">
 									<input type="text" name="dish" id="dish" value="" placeholder="Your Answer" class="imp"/>
