@@ -32,6 +32,7 @@
 				border-radius: 2px;
 
 			}
+
 			input[type="checkbox"], input[type="radio"]{
 				text-align: left;
 				margin-left: 0;
@@ -43,6 +44,7 @@
 				width: 100%;
 				text-align: left;
 				color: #0e0e0e;
+				font-weight: 500;
 			}
 			.lab1{
 				font-size: 1.2em;
@@ -80,8 +82,10 @@
 				color: #0e0e0e;
 			}
 			h2{
-				font-size: 2em;
+				font-size: 2.2em;
 				color: #0e0e0e;
+				font-weight: 700;
+				letter-spacing: 2px;
 			}
 			.borderR{
 				border : 3px solid red;
@@ -116,6 +120,10 @@
 			.right-a{
 				text-align: right;
 			}
+			.que-img{
+				width: 70%;
+				margin: 20px 15%;
+			}
 		</style>
 	</head>
 	<body>
@@ -133,15 +141,16 @@
 					<section class="box special">
 						<span class="image featured"><img src="images/cover.jpg" alt="" /></span>
 						<header class="major">
-							<h2>Participate in the Gourmet Quiz and win an invite to the MasterChef Australia inspired Party</h2>
-							<p class="sechead"><i>"SpeakGourmet with MasterChef Australia"</i></p>
-							<p class="no-border">Participate in the gourmet quiz and stand a chance to win an invite to the exclusive MasterChef Australia inspired Season 8 Gourmet Gala event. <strong>10 lucky winners from each city will be invited by Star World for a MasterChef inspired experience Co-Curated by Food Talk India at Olive</strong></p>
-							<p>Win an Invitation for a MasterChef Australia inspired Party at Olive</p>
+							<h2>Heston Week</h2>
+							<p class="sechead"><i>#MasterChefAuQuiz with Food Talk India</i></p>
+							<p class="no-border">It's the biggest week in MasterChef history <br>
+								4 Pop-up restaurants in secret locations over 4 big days with one of the best Chef's in the world...Heston Blumenthal.
+								<br>And thing's just got a little more exciting.</p>
+
+							
+							<p></p>
 							<div class="row uniform 50% dates">
-								<div class="12u 12u(mobilep)">Mumbai  Sunday, 22nd May'16, 7:30pm</div>
-								<div class="12u 12u(mobilep)">Bangalore  Monday, 23rd May'16, 7:30pm</div>
-								<div class="12u 12u(mobilep)">Hyderabad  Wednesday, 25th May'16, 7:30pm</div>
-								<div class="12u 12u(mobilep)">Delhi  Wednesday, 1st June'16, 7:30pm</div>
+								<div class="12u 12u(mobilep)">Answer the Quiz of the Day and stand a chance to win a Ltd Edition MasterChef Cheese Platter.</div>
 							</div>
 
 
@@ -149,68 +158,12 @@
 						</header>
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
-								<label for="" class="lab1">Q. The Gourmet Quiz <br>
-									Match the correct Gourmet Word with the image: *</label>
-								<div class="6u 6u(mobilep) lab2">
-									<ul class="left">
-										<li>Consomme</li>
-										<li>Quenelle</li>
-									</ul>
+								<div class="12u(mobilep)">
+									<label for="name" class="lab">Name the Dish *</label>
+									<img src="images/Day1.jpg" alt="" class="que-img">
+									<input type="text" name="dish" id="dish" value="" placeholder="Your Answer" class="imp"/>
 								</div>
-								<div class="6u 6u(mobilep) lab2">
-									<ul class="left">
-										<li>En Papillote</li>
-										<li>Al Dente</li>
-									</ul>
-								</div>
-								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/EnPapillote.jpg" alt="" /></span>
-									<div class="select-wrapper">
-										<select name="dname1" id="dname1" class="imp">
-											<option>--Select One--</option>
-											<option value="Consomme">Consomme</option>
-											<option value="Quenelle">Quenelle</option>
-											<option value="En Papillote">En Papillote</option>
-											<option value="Al Dente">Al Dente</option>
-										</select>
-									</div>
-								</div>
-								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/Aldente.jpg" alt="" /></span>
-									<div class="select-wrapper">
-										<select name="dname2" id="dname2" class="imp">
-											<option>--Select One--</option>
-											<option value="Consomme">Consomme</option>
-											<option value="Quenelle">Quenelle</option>
-											<option value="En Papillote">En Papillote</option>
-											<option value="Al Dente">Al Dente</option>
-										</select>
-									</div>
-								</div>
-								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/Quenelle.jpg" alt="" /></span>
-									<div class="select-wrapper">
-										<select name="dname3" id="dname3" class="imp">
-											<option>--Select One--</option>
-											<option value="Consomme">Consomme</option>
-											<option value="Quenelle">Quenelle</option>
-											<option value="En Papillote">En Papillote</option>
-											<option value="Al Dente">Al Dente</option>
-										</select>
-									</div>
-								</div>
-								<div class="6u 6u(mobilep)">
-									<span class="image1"><img src="images/Consomme.jpg" alt="" /></span>
-									<div class="select-wrapper">
-										<select name="dname4" id="dname4" class="imp">
-											<option>--Select One--</option>
-											<option value="Consomme">Consomme</option>
-											<option value="Quenelle">Quenelle</option>
-											<option value="En Papillote">En Papillote</option>
-											<option value="Al Dente">Al Dente</option>
-										</select>
-									</div>
-								</div>
+								
 							</div>
 							<h4 class="cdheading">You Contact Details:</h4>
 							<div class="row uniform 50%">
@@ -238,32 +191,32 @@
 									<label for="address" class="lab">City *</label>
 									<div class="row uniform 50%">
 										<div class="3u 12u(mobilep)">
-											<input type="radio" name="city" value="Delhi" id="Delhi" checked>
+											<input type="radio" class="city" name="city" value="Delhi" id="Delhi">
 											<label for="Delhi">Delhi</label>
 										</div>
 										<div class="3u 12u(mobilep)">
-											<input type="radio" name="city" value="Mumbai" id="Mumbai">
+											<input type="radio" class="city" name="city" value="Mumbai" id="Mumbai">
 											<label for="Mumbai">Mumbai</label>
 										</div>
 										<div class="3u 12u(mobilep)">
-											<input type="radio" name="city" value="Bangalore" id="Bangalore">
+											<input type="radio" class="city" name="city" value="Bangalore" id="Bangalore">
 											<label for="Bangalore">Bangalore</label>
 										</div>
 										<div class="3u 12u(mobilep)">
-											<input type="radio" name="city" value="Hyderabad" id="Hyderabad">
-											<label for="Hyderabad">Hyderabad</label>
+											<input type="radio" class="city" name="city" value="other" id="other">
+											<label for="other">Other</label>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="row uniform 50%">
 								<div class="6u 12u(mobilep)">
-									<label for="insta" class="lab">Instagram handle</label>
-									<input type="text" name="insta" id="insta" value="<?php echo $user['instagram_handle']; ?>" placeholder="Instagram Handle" />
+									<label for="othcity" class="lab">Other City</label>
+									<input type="text" name="othcity" id="othcity" placeholder="Your City" class="imp" />
 								</div>
 								<div class="6u 12u(mobilep)">
-									<label for="twitter" class="lab">Twitter Handle</label>
-									<input type="text" name="twitter" id="twitter" value="<?php echo $user['twitter_handle']; ?>" placeholder="Twitter Handle" />
+									<label for="insta" class="lab">Instagram handle</label>
+									<input type="text" name="insta" id="insta" value="<?php echo $user['instagram_handle']; ?>" placeholder="Instagram Handle" />
 								</div>
 							</div>
 							
@@ -323,6 +276,27 @@
 			<script>
 				$(document).ready(function() {
 					var id= <?php echo $user['id']; ?>;
+					var usercity= <?php echo $user['city_id']; ?>;
+					$('#othcity').attr('disabled', 'disabled');
+					if(usercity == 1){
+						$("#Delhi").attr('checked', 'checked');
+						$('#othcity').val('Delhi');							
+					}else if(usercity == 2){
+						$("#Mumbai").attr('checked', 'checked');
+						$('#othcity').val('Mumbai');	
+					}else if(usercity == 4){
+						$("#Bangalore").attr('checked', 'checked');
+						$('#othcity').val('Bangalore');
+					}else{
+						$("#other").attr('checked', 'checked');
+						$('#othcity').val('other');
+					}
+					$('.city').change(function(event) {
+						/* Act on the event */
+						if($('.city').val()=="other"){
+							$('#othcity').attr('disabled', false);
+						}
+					});
 					$('#submit').on('click', function(event) {
 						event.preventDefault();
 						/* Act on the event */
@@ -331,24 +305,23 @@
 							var data = $('#frm').serializeArray();
 							//console.log(data);
 
-							var response = "En Papillote: "+data[0]['value']+", Al Dente:"+ data[1]['value']+", Quenelle:"+data[2]['value']+", Consomme:"+data[3]['value'];
+							var response = "day1 : "+$('#dish').val();
 							//console.log(response);
 
 							var URL_INSERT = "http://api.foodtalk.in/user/"+id+"/rsvp";
               				var URL_UPDATE = "http://api.foodtalk.in/user/"+id;
-              				var toinsertdata = {events_id: 85,
-				                    email: data[5]['value'],
-				                    contact: data[6]['value'],
+              				var toinsertdata = {events_id: 94,
+				                    email: $('#email').val(),
+				                    contact: $('#phone').val(),
 				                    response: response,
 				                    payment_id: '',
 				                    subscribe: 0};
-				            var toupdate = {name: data[4]['value'],
-				                    email: data[5]['value'],
-				                    contact: data[6]['value'],
-				                    dob : data[7]['value'],
-				                    instagram_handle: data[9]['value'],
-				                    twitter_handle: data[10]['value'],
-				                    city: data[8]['value']};
+				            var toupdate = {name: $('#name').val(),
+				                    email: $('#email').val(),
+				                    contact: $('#phone').val(),
+				                    dob : $('#dob').val(),
+				                    instagram_handle: $('#insta').val(),
+				                    city: $('#othcity').val()};
 
 				            $.ajax({
 				                url: "createsession.php",
