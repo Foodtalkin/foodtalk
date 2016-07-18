@@ -293,8 +293,10 @@
 					}
 					$('.city').change(function(event) {
 						/* Act on the event */
+						$('#othcity').val($('.city').val());
+						$('#othcity').attr('disabled', 'disabled');
 						if($('.city').val()=="other"){
-							$('#othcity').attr('disabled', false);
+							$('#othcity').removeAttr('disabled');
 						}
 					});
 					$('#submit').on('click', function(event) {
