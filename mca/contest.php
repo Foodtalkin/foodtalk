@@ -290,7 +290,7 @@
 						$('#othcity').val('Bangalore');
 					}else{
 						$("#other").attr('checked', 'checked');
-						$('#othcity').val('other');
+						$('#othcity').val('');
 					}
 					$('.city').change(function(event) {
 						/* Act on the event */
