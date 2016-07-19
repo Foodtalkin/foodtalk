@@ -299,6 +299,7 @@
 						$('#othcity').attr('disabled', 'disabled');
 						if(this.checked && this.value =="other"){
 							$('#othcity').removeAttr('disabled');
+							$('#othcity').val('');
 						}
 					});
 					$('#submit').on('click', function(event) {
