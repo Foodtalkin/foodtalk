@@ -162,7 +162,7 @@
 									<p class="lab">Day 2:</p>
 									<label for="name" class="lab">A Savoury Ice Cream Challenge! <br>
 									Name the Dish of the Day- what flavour took the judges right back to their childhood? *</label>
-									<img src="images/day2.jpg" alt="" class="que-img">
+									<img src="images/day2.JPG" alt="" class="que-img">
 									<input type="text" name="dish" id="dish" value="" placeholder="Your Answer" class="imp"/>
 								</div>
 								
