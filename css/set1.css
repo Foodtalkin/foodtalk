@@ -453,7 +453,7 @@ figure.effect-layla img {
 }
 
 figure.effect-layla figcaption {
-	padding: 3em;
+	padding: 1.6em;
 }
 
 figure.effect-layla figcaption::before,
@@ -491,12 +491,13 @@ figure.effect-layla figcaption::after {
 
 figure.effect-layla h2 {
 	padding-top: 26%;
+	padding-bottom: 0;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
 figure.effect-layla p {
-	padding: 0.5em 2em;
+	padding: 0.2em 2em;
 	text-transform: none;
 	opacity: 0;
 	-webkit-transform: translate3d(0,-10px,0);
@@ -533,9 +534,19 @@ figure.effect-layla:hover figcaption::after {
 figure.effect-layla:hover h2,
 figure.effect-layla:hover p {
 	opacity: 1;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+figure.effect-layla h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+/*figure.effect-layla:hover h2{
+	padding: 30px 0 0 0;
+	opacity: 1;
+	-webkit-transform: translate3d(0,-26%,0);
+	transform: translate3d(0,-26%,0);
+}*/
 
 figure.effect-layla:hover figcaption::after,
 figure.effect-layla:hover h2,
