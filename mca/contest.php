@@ -159,10 +159,9 @@
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
 								<div class="12u(mobilep)">
-									<p class="lab">Day 2:</p>
-									<label for="name" class="lab">A Savoury Ice Cream Challenge! <br>
-									Name the Dish of the Day- what flavour took the judges right back to their childhood? *</label>
-									<img src="images/day2.JPG" alt="" class="que-img">
+									<p class="lab">Day 3:</p>
+									<label for="name" class="lab">A Chocolate Marvel- Name the dish that had the judges blown away? *</label>
+									<img src="images/day3.JPG" alt="" class="que-img">
 									<input type="text" name="dish" id="dish" value="" placeholder="Your Answer" class="imp"/>
 								</div>
 								
@@ -311,7 +310,7 @@
 							var data = $('#frm').serializeArray();
 							//console.log(data);
 
-							var response = "day2 : "+$('#dish').val();
+							var response = "day3 : "+$('#dish').val();
 							//console.log(response);
 
 							var URL_INSERT = "http://api.foodtalk.in/user/"+id+"/rsvp";
