@@ -401,6 +401,76 @@ h2 {
     margin-bottom: 20px
 }
 
+
+
+.text-anchor a {
+    color: #000!important;
+}
+
+.downloadbar{
+    width: 100%;
+    background: #232323;
+    margin-bottom: 10px;
+    position: relative;
+}
+.downloadbar h5{
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 0;
+    display: inline;
+    float: left;
+}
+.downloadbar .custom-padd{
+    display: inline;
+    height: 45px;
+    margin: 10px 20px;
+    float: left;
+}
+.downloadbar span{
+    padding: 10px;
+    float: left;
+}
+.downloader .middil{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 40px;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+}
+.grid-for-home{
+    padding: 40px 5%;
+}
+.dishcard{
+    /*border: 1px solid #232323;*/
+    border-radius: 4px;
+    width: 90%;
+    margin: 20px 5%;
+    background: #fff;
+}
+.dishcard .dishname{
+    color: #232323;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin: 7px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.dishcard .dishimage{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+
+
 @media only screen and (max-width:992px) {
     .parallax-container .section {
         position: absolute;
@@ -409,15 +479,25 @@ h2 {
     #index-banner .section {
         top: 10%
     }
+    .grid-for-home{
+       padding: 5px;
+    }
+    
 }
 
 @media only screen and (min-device-width:320px) and (max-device-width:480px) {
     #index-banner {
         height: 150vh!important
     }
+    .grid-for-home{
+       padding: 5px;
+    }
+    
+    .downloadbar h5{
+        padding: 0;
+    }
+    .downloadbar span{
+    display: block;
+    text-align: center;
+    }
 }
-
-.text-anchor a {
-    color: #000!important;
-}
-
