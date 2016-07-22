@@ -159,9 +159,9 @@
 						<form method="post" action="" id="frm">
 							<div class="row uniform 50%">
 								<div class="12u(mobilep)">
-									<p class="lab">Day 3:</p>
-									<label for="name" class="lab">A Chocolate Marvel- Name the dish that had the judges blown away? *</label>
-									<img src="images/day3.JPG" alt="" class="que-img">
+									<p class="lab">Day 4:</p>
+									<label for="name" class="lab"> Heston loves History almost as much as he loves food! <br>Name the inspiration behind Mimi's dish? *</label>
+									<img src="images/day4.jpg" alt="" class="que-img">
 									<input type="text" name="dish" id="dish" value="" placeholder="Your Answer" class="imp"/>
 								</div>
 								
@@ -310,7 +310,7 @@
 							var data = $('#frm').serializeArray();
 							//console.log(data);
 
-							var response = "day3 : "+$('#dish').val();
+							var response = "day4 : "+$('#dish').val();
 							//console.log(response);
 
 							var URL_INSERT = "http://api.foodtalk.in/user/"+id+"/rsvp";
