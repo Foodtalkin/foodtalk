@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 html::-webkit-scrollbar {
     display: none
 }
@@ -414,18 +415,17 @@ h2 {
     position: relative;
 }
 .downloadbar h5{
-    font-size: 18px;
+    font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 8px 0;
-    display: inline;
-    float: left;
+   
 }
 .downloadbar .custom-padd{
     display: inline;
     height: 45px;
-    margin: 10px 20px;
-    float: left;
+    margin: 10px auto;
+    
 }
 .downloadbar span{
     padding: 10px;
@@ -440,8 +440,16 @@ h2 {
     width: 100%;
     text-align: center;
 }
+.block{
+    display: block !important;
+    height: auto !important;
+    padding: 3px 0;
+}
 .grid-for-home{
-    padding: 40px 5%;
+    font-size: 14pt;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+        line-height: 1.75;
 }
 .dishcard{
     /*border: 1px solid #232323;*/
@@ -449,27 +457,57 @@ h2 {
     width: 90%;
     margin: 20px 5%;
     background: #fff;
+    transition: transform 0.5s ease;
 }
 .dishcard .dishname{
     color: #232323;
-    font-size: 12px;
+    font-size: 0.9em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1em;
-    margin: 7px;
-    font-weight: 500;
+    letter-spacing: 0.35em;
+    margin-top: 5px;
+    font-weight: 900;
+    line-height: 1.7;
     padding-bottom: 10px;
 }
 
 .dishcard .dishimage{
     width: 100%;
     height: auto;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius: 4px;
 }
 
-
-
+.filters li a{
+    color: #232323;
+    font-size: 0.9em;
+    font-weight: 900;
+    line-height: 1.7;
+    letter-spacing: 0.25em;
+}
+.filters li{
+    padding: 6px;
+}
+.filters li:hover a{
+    color: #3879ad;
+}
+.filters1 li a{
+    color: #232323;
+    font-size: 0.7em;
+    font-weight: 900;
+    line-height: 1.7;
+    letter-spacing: 0.15em;
+}
+.filters1 li{
+    padding: 6px 0;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.filters1 li:hover a{
+    color: #3879ad;
+}
+.filters1{
+    margin-top: 0;
+}
 
 @media only screen and (max-width:992px) {
     .parallax-container .section {
