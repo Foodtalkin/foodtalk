@@ -2,15 +2,16 @@
 	<div class="login-container">
 		<img src="img/foodtalk.png" alt="" class="logo">
 		<div class="form">
+			<div class="alert alert-danger" role="alert" ng-show="loginerror">Oops!!! Wrong Username or Password</div>	
 			<form action="" autocomplete="off">
 				<div class="input">
-					<input type="text" placeholder="Username">
+					<input type="text" placeholder="Username" ng-model="user">
 				</div>
 				<div class="input">
-					<input type="password" placeholder="Password">
+					<input type="password" placeholder="Password" ng-model="pass">
 				</div>
 				<div class="input">
-					<button class="login-btn" ui-sref="setting">Login</button>
+					<button class="login-btn" ng-click="authCheck()">Login</button>
 				</div>
 			</form>
 		</div>
