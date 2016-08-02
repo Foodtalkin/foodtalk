@@ -1,6 +1,6 @@
 <div class="main slideshow">
 <div class="logo-slider">
-  <img src="img/foodtalk.png" alt="">
+  <!-- <img src="img/foodtalk.png" alt=""> -->
 </div>
 	<div class="mid">
 		<div class="slideshowcontainer" id="slides_control">
@@ -8,13 +8,13 @@
 				<slide ng-repeat="sld in slides" id="{{sld.id}}" class="li-hide " ng-class="sld.actv? 'fadein' : 'fadeout'">
 					<div class="slide animated">
 						<div class="username">
-							<img src="{{sld.userimage}}" alt="">
-							<span>{{sld.username}}{{sld.restro}}</span>
+							<img src="{{sld.userimage}}" alt="" ng-show="sld.rating">
+							<span ng-show="sld.rating">{{sld.username}}{{sld.restro}}</span>
 						</div>
 						<div class="main-image">
 							<img src="{{sld.image}}" alt="">
-							<div class="img-grd"></div>
-							<p id="stars" class="star-{{sld.rating}} stars">
+							<div class="img-grd" ng-show="sld.rating"></div>
+							<p id="stars" class="star-{{sld.rating}} stars" ng-show="sld.rating">
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
@@ -23,7 +23,7 @@
 							</p>
 						</div>
 						<div class="dishname">
-							<h2>{{sld.dishname}}</h2>
+							<h2 ng-show="sld.rating">{{sld.dishname}}</h2>
 						</div>
 					</div>
 				</slide>

@@ -82,6 +82,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
   function mainfun () {
     $scope.slides = [];
     console.log('loading');
+
     if($scope.dataconfig.type == '2'){
      
       getlatestpost();
@@ -128,7 +129,17 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
        $scope.slides.push(img);
        postid = postid+1;
      });
-
+     var img1 = {
+         id: postid,
+         userimage: "",
+         username: "",
+         restro: "",
+         image: "img/slide.png",
+         rating: false,
+         dishname: "",
+         actv:false
+       }
+      $scope.slides.push(img1);
      $scope.count = $scope.slides.length;
       $scope.i = 1;
      slider();
