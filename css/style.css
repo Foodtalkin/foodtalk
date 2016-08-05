@@ -539,3 +539,13 @@ h2 {
     text-align: center;
     }
 }
+
+.serviceicon{
+    width: 50%;
+    margin: 10px 25%;
+}
+.servicetext{
+    padding: 5px 20px;
+    line-height: 1.4em;
+    text-align: justify;
+}
