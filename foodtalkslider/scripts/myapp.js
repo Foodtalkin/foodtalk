@@ -254,7 +254,16 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
             postid = postid+1;
          }
       });
-      
+      var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
       $scope.slides.push(img1);
     }else if(len == 15){
        var postid = 1;
