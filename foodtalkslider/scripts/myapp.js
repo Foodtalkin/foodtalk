@@ -45,6 +45,7 @@ app.controller('authCtrl', ['$scope', '$state', function($scope,$state){
   $scope.authstring = "Dragon";
   $scope.loginerror = false;
   $scope.authCheck = function () {
+
      if($scope.user == $scope.authname){
         if($scope.pass == $scope.authstring){
           $state.go('setting');
@@ -81,7 +82,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
     timeFunctions.$setInterval(mainfun, 300000, $scope);
   function mainfun () {
     $scope.slides = [];
-    console.log('loading');
+    // console.log('loading');
 
     if($scope.dataconfig.type == '2'){
      
@@ -97,39 +98,279 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
   function getrestropost (id) {
      dataFact.getrestropost(id,function(response) {
           var data = response.data.images;
-          // console.log(data);
+          // console.log(response);
           sort(data);
       });
   }
   function getlatestpost () {
      dataFact.getlatestpost(function(response) {
           var data = response.data.posts;
+          // console.log(response);
           sort(data);
     });
   }
   function sort (data) {
-    var postid = 1;
-     angular.forEach(data, function(index) {
-      if(index.restaurantName == ''){
-        var rest = '';
-      }else{
-        var rest = ' @ '+index.restaurantName;
-      }
-        
-       var img = {
-         id: postid,
-         userimage: index.userImage,
-         username: index.userName,
-         restro: rest,
-         image: index.postImage,
-         rating: index.rating,
-         dishname: index.dishName,
-         actv:false
-       }
-       $scope.slides.push(img);
-       postid = postid+1;
-     });
-     var img1 = {
+    var len = data.length;
+
+    if(len == 20){
+      var postid = 1;
+      angular.forEach(data, function(index) {
+        if(index.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+index.restaurantName;
+        }
+          
+         var img = {
+           id: postid,
+           userimage: index.userImage,
+           username: index.userName,
+           restro: rest,
+           image: index.postImage,
+           rating: index.rating,
+           dishname: index.dishName,
+           actv:false
+         }
+         $scope.slides.push(img);
+         postid = postid+1;
+         if(postid == 6){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 12){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 18){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 24){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+      });
+    }else if(len > 15){
+      var postid = 1;
+      angular.forEach(data, function(index) {
+        if(index.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+index.restaurantName;
+        }
+          
+         var img = {
+           id: postid,
+           userimage: index.userImage,
+           username: index.userName,
+           restro: rest,
+           image: index.postImage,
+           rating: index.rating,
+           dishname: index.dishName,
+           actv:false
+         }
+         $scope.slides.push(img);
+         postid = postid+1;
+         if(postid == 6){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 12){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 18){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+      });
+      
+      $scope.slides.push(img1);
+    }else if(len == 15){
+       var postid = 1;
+      angular.forEach(data, function(index) {
+        if(index.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+index.restaurantName;
+        }
+          
+         var img = {
+           id: postid,
+           userimage: index.userImage,
+           username: index.userName,
+           restro: rest,
+           image: index.postImage,
+           rating: index.rating,
+           dishname: index.dishName,
+           actv:false
+         }
+         $scope.slides.push(img);
+         postid = postid+1;
+         if(postid == 6){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 12){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 18){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+      });
+    }else if(len > 10 ){
+      var postid = 1;
+      angular.forEach(data, function(index) {
+        if(index.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+index.restaurantName;
+        }
+          
+         var img = {
+           id: postid,
+           userimage: index.userImage,
+           username: index.userName,
+           restro: rest,
+           image: index.postImage,
+           rating: index.rating,
+           dishname: index.dishName,
+           actv:false
+         }
+         $scope.slides.push(img);
+         postid = postid+1;
+         if(postid == 6){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 12){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+      });
+      var img1 = {
          id: postid,
          userimage: "",
          username: "",
@@ -138,9 +379,94 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
          rating: false,
          dishname: "",
          actv:false
-       }
+      }
       $scope.slides.push(img1);
-     $scope.count = $scope.slides.length;
+    }else if (len == 10) {
+      var postid = 1;
+      angular.forEach(data, function(index) {
+        if(index.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+index.restaurantName;
+        }
+          
+         var img = {
+           id: postid,
+           userimage: index.userImage,
+           username: index.userName,
+           restro: rest,
+           image: index.postImage,
+           rating: index.rating,
+           dishname: index.dishName,
+           actv:false
+         }
+         $scope.slides.push(img);
+         postid = postid+1;
+         if(postid == 6){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+         if(postid == 12){
+            var img1 = {
+               id: postid,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+            $scope.slides.push(img1);
+            postid = postid+1;
+         }
+      });
+      
+    }else{
+      var postid = 1;
+      angular.forEach(data, function(index) {
+        if(index.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+index.restaurantName;
+        }
+          
+         var img = {
+           id: postid,
+           userimage: index.userImage,
+           username: index.userName,
+           restro: rest,
+           image: index.postImage,
+           rating: index.rating,
+           dishname: index.dishName,
+           actv:false
+         }
+         $scope.slides.push(img);
+         postid = postid+1;
+      });
+      var img1 = {
+         id: postid,
+         userimage: "",
+         username: "",
+         restro: "",
+         image: "img/slide.png",
+         rating: false,
+         dishname: "",
+         actv:false
+      }
+      $scope.slides.push(img1);
+    }
+      $scope.count = $scope.slides.length;
       $scope.i = 1;
      slider();
      timeFunctions.$setInterval(slider, 5000, $scope);
