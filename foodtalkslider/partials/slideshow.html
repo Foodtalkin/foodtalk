@@ -8,11 +8,11 @@
 				<slide ng-repeat="sld in slides" id="{{sld.id}}" class="li-hide " ng-class="sld.actv? 'fadein' : 'fadeout'">
 					<div class="slide animated">
 						<div class="username">
-							<img src="{{sld.userimage}}" alt="" ng-show="sld.rating">
+							<img ng-src="{{sld.userimage}}" on-error-src="" alt="" ng-show="sld.rating">
 							<span ng-show="sld.rating">{{sld.username}}{{sld.restro}}</span>
 						</div>
 						<div class="main-image">
-							<img src="{{sld.image}}" alt="">
+							<img ng-src="{{sld.image}}" alt="" on-error-src="">
 							<div class="img-grd" ng-show="sld.rating"></div>
 							<p id="stars" class="star-{{sld.rating}} stars" ng-show="sld.rating">
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>

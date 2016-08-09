@@ -122,7 +122,7 @@
 
 .slide{
 	background-color: #fff;
-	border: 2px solid #009BE4;
+	border: 2px solid #707070;
 	border-radius: 6px;
 	-webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.59);
 	-moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.59);
@@ -242,11 +242,12 @@
 	color: #FAD84B;
 }
 .slideshow{
-	background: url('../img/bg.jpg');
+	background-color: #000;
+	/*background: url('../img/bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center;*/
 }
 .slideshowcontainer li{
 	list-style-type: none;
