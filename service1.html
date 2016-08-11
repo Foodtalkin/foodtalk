@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
       <meta name="description" content="Food Talk is one of the largest food community of India, providing services like Restaurant Reviews, Restaurant Marketing, Restaurant promotion, Blindfolded dinner, event curation etc.">
       <meta name="keyword" content="Food Talk, food groups delhi, restaurant reviews, food events delhi, cocktail events, blind tasting, food community delhi, delhi food events, mumbai food events, restaurant marketing, cocktail making workshops, largest food community india, Blindfolded dinner, delhifood, sharing, restaurant, zomato, restaurant delhi, near, discover, times city, events, Best Brunches in delhi, street, burrp, yelp, delhi event, mumbai event"> 
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
       <link rel="shortcut icon" href="img/favicon.png" />
       <link type="text/css" rel="stylesheet" href="css/style.css">
       <script>
@@ -90,16 +90,53 @@
                 </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col s12 m12 l12 center grey-text text-darken-2 mt1em">
+            <h5>Testimonies</h5>
+          </div>
+          <div class="col s12 m12 l12">
+              <div class="carousel carousel-slider center grey-text text-darken-3" data-indicators="true">
+                <div class="carousel-fixed-item center">
+                  <!-- <a class="btn waves-effect white grey-text darken-text-2">button</a> -->
+                </div>
+                <div class="carousel-item valignc" href="#one!">
+                  <div class="valin">
+                    <h6 class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</h6>
+                    <h5 class="right">richa sharma</h5>
+                  </div>
+                  
+                </div>
+                <div class="carousel-item valignc" href="#two!">
+                  <div class="valin">
+                    <h6 class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</h6>
+                    <h5 class="right">richa sharma</h5>
+                  </div>
+                </div>
+                <div class="carousel-item valignc" href="#three!">
+                  <div class="valin">
+                    <h6 class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</h6>
+                    <h5 class="right">richa sharma</h5>
+                  </div>
+                </div>
+                <div class="carousel-item valignc" href="#four!">
+                  <div class="valin">
+                    <h6 class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</h6>
+                    <h5 class="right">richa sharma</h5>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
           $('select').material_select();
           $(".button-collapse").sideNav();
           $('.parallax').parallax();
-          
+          $('.carousel').carousel({full_width: true, indicators:true});
         })
       </script>
     </body>

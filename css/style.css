@@ -549,3 +549,19 @@ h2 {
     line-height: 1.4em;
     text-align: justify;
 }
+.carousel .indicators .indicator-item{
+    background-color: rgb(155, 155, 155);
+     -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.valignc{
+    position: relative;
+}
+.valin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

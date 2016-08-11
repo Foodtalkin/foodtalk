@@ -1,4 +1,4 @@
-<div class="main slideshow">
+<div class="main slideshow" ng-style="colormain">
 <div class="logo-slider">
   <!-- <img src="img/foodtalk.png" alt=""> -->
 </div>
@@ -13,7 +13,7 @@
 						</div>
 						<div class="main-image">
 							<img ng-src="{{sld.image}}" alt="" on-error-src="">
-							<div class="img-grd" ng-show="sld.rating"></div>
+							<!-- <div class="img-grd" ng-show="sld.rating"></div> -->
 							<p id="stars" class="star-{{sld.rating}} stars" ng-show="sld.rating">
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>

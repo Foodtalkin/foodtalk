@@ -77,7 +77,8 @@ app.controller('settingCtrl', ['$scope','dataFact','$rootScope','$state', functi
 app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParams','$state','dataFact', function($scope, timeFunctions, $rootScope,$stateParams,$state, dataFact){
   $scope.dataconfig = $stateParams;
   $scope.slides = [];
-
+  $scope.colormain = {'background-color':'#946183'};
+  $scope.ftisldnum = [];
     mainfun();
     timeFunctions.$setInterval(mainfun, 300000, $scope);
   function mainfun () {
@@ -145,6 +146,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 12){
@@ -159,6 +161,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 18){
@@ -173,6 +176,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 24){
@@ -187,6 +191,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
       });
@@ -223,6 +228,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 12){
@@ -237,6 +243,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 18){
@@ -251,6 +258,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
       });
@@ -265,6 +273,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
       $scope.slides.push(img1);
+      $scope.ftisldnum.push(postid);
     }else if(len == 15){
        var postid = 1;
       angular.forEach(data, function(index) {
@@ -298,6 +307,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 12){
@@ -312,6 +322,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 18){
@@ -326,6 +337,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
       });
@@ -362,6 +374,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 12){
@@ -376,6 +389,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
       });
@@ -390,6 +404,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
          actv:false
       }
       $scope.slides.push(img1);
+      $scope.ftisldnum.push(postid);
     }else if (len == 10) {
       var postid = 1;
       angular.forEach(data, function(index) {
@@ -423,6 +438,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
          if(postid == 12){
@@ -437,6 +453,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
                actv:false
             }
             $scope.slides.push(img1);
+            $scope.ftisldnum.push(postid);
             postid = postid+1;
          }
       });
@@ -474,6 +491,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
          actv:false
       }
       $scope.slides.push(img1);
+      $scope.ftisldnum.push(postid);
     }
       $scope.count = $scope.slides.length;
       $scope.i = 1;
@@ -487,12 +505,40 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
           angular.forEach($scope.slides, function(index, el) {
           if(index.id == $scope.i){
             index.actv = true;
+            // console.log($scope.ftisldnum.length);
+            // angular.forEach($scope.ftisldnum, function(element, index) {
+            //   console.log(element);
+            //   if(element == $scope.i){
+            //     $scope.colormain = {'background-color':'#67c2be'}
+            //   }else{
+            //     $scope.colormain = {'background-color':'#6c7b8a'};
+            //   }
+            // });
+            if($scope.ftisldnum.indexOf($scope.i) != -1){
+                $scope.colormain = {'background-color':'#49274a'}
+              }else{
+                $scope.colormain = {'background-color':'#946183'};
+              }
           }else{
             index.actv = false;
           }
           
           });
           $scope.i = $scope.i+1;
+       }
+       // colorchange($scope.i);
+    }
+    function colorchange (sldnum) {
+       if(sldnum == 1 || sldnum == 6 || sldnum == 11 || sldnum == 16 || sldnum == 21 || sldnum == 26){
+          $scope.colormain = {'background-color':'#6c7b8a'}
+       }else if(sldnum == 2 || sldnum == 7 || sldnum == 12 || sldnum == 17 || sldnum == 22 || sldnum == 27){
+          $scope.colormain = {'background-color':'#ffed00'}
+       }else if (sldnum == 3 || sldnum == 8 || sldnum == 13 || sldnum == 18 || sldnum == 23 || sldnum == 28) {
+          $scope.colormain = {'background-color':'#005b7f'}         
+       }else if (sldnum == 4 || sldnum == 9 || sldnum == 14 || sldnum == 19 || sldnum == 24 || sldnum == 29) {
+          $scope.colormain = {'background-color':'#e54d4a'}         
+       }else if (sldnum == 5 || sldnum == 10 || sldnum == 15 || sldnum == 20 || sldnum == 26 || sldnum == 30) {
+          $scope.colormain = {'background-color':'#67c2be'}         
        }
     }
   }
