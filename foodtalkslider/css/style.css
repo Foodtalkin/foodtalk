@@ -290,10 +290,15 @@
 
 .logo-slider{
 	position: fixed;
-	top: 10px;
-	left: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .logo-slider img{
-	width: 100px;
+	width: 200px;
 	height: auto;
+}
+.logo-slider div{
+	text-align: center;
+	color: #fff;
 }
