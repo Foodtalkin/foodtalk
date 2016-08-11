@@ -189,60 +189,61 @@
 }
 .stars i{
 	margin-left: 5px;
+	color: #1c1e20;
 }
 /*1 star*/
 .star-1 i:nth-child(1){
-	color: #FAD84B;
+	color: #ffe900;
 }
 
 /*2 star*/
 .star-2 i:nth-child(1){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-2 i:nth-child(2){
-	color: #FAD84B;
+	color: #ffe900;
 }
 /*3 star*/
 .star-3 i:nth-child(1){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-3 i:nth-child(2){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-3 i:nth-child(3){
-	color: #FAD84B;
+	color: #ffe900;
 }
 /*4 star*/
 .star-4 i:nth-child(1){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-4 i:nth-child(2){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-4 i:nth-child(3){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-4 i:nth-child(4){
-	color: #FAD84B;
+	color: #ffe900;
 }
 /*5 star*/
 .star-5 i:nth-child(1){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-5 i:nth-child(2){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-5 i:nth-child(3){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-5 i:nth-child(4){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .star-5 i:nth-child(5){
-	color: #FAD84B;
+	color: #ffe900;
 }
 .slideshow{
-	background-color: #000;
+	/*background-color: #000;*/
 	/*background: url('../img/bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
