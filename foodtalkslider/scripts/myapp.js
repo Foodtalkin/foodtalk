@@ -77,8 +77,9 @@ app.controller('settingCtrl', ['$scope','dataFact','$rootScope','$state', functi
 app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParams','$state','dataFact', function($scope, timeFunctions, $rootScope,$stateParams,$state, dataFact){
   $scope.dataconfig = $stateParams;
   $scope.slides = [];
-  $scope.colormain = {'background-color':'#946183'};
+  $scope.colormain = {'background-color':'#49274a'};
   $scope.ftisldnum = [];
+  $scope.loader = true;
     mainfun();
     timeFunctions.$setInterval(mainfun, 300000, $scope);
   function mainfun () {
@@ -495,6 +496,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
     }
       $scope.count = $scope.slides.length;
       $scope.i = 1;
+      $scope.loader = false;
      slider();
      timeFunctions.$setInterval(slider, 5000, $scope);
      function slider () {
