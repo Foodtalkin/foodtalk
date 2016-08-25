@@ -2997,9 +2997,9 @@
 		padding: 6em 0 6em 0 ;
 		background-color: #333;
 			color: rgba(255, 255, 255, 0.75);
-			background-attachment: fixed,							fixed;
-			background-image: url("images/overlay1.png"), url("../../images/header.jpg");
-			background-size: auto,							cover;
+			font-weight: 500;
+			background-image: url("../../images/wood.png");
+			background-repeat: repeat;
 
 		text-align: center;
 	}
