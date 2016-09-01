@@ -81,7 +81,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
   $scope.ftisldnum = [];
   $scope.loader = true;
     mainfun();
-    timeFunctions.$setInterval(mainfun, 300000, $scope);
+    timeFunctions.$setInterval(mainfun, 120000, $scope);
   function mainfun () {
     $scope.slides = [];
     // console.log('loading');
@@ -90,7 +90,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
      
       getlatestpost();
     }else if($scope.dataconfig.type == '1'){
-      
+      console.log($scope.dataconfig.id);
       getrestropost($scope.dataconfig.id);
     }else{
       console.log('error');
@@ -498,7 +498,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
       $scope.i = 1;
       $scope.loader = false;
      slider();
-     timeFunctions.$setInterval(slider, 5000, $scope);
+     timeFunctions.$setInterval(slider, 9000, $scope);
      function slider () {
         
       if($scope.i > $scope.count){
@@ -517,7 +517,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
             //   }
             // });
             if($scope.ftisldnum.indexOf($scope.i) != -1){
-                $scope.colormain = {'background-color':'#49274a'}
+                $scope.colormain = {'background-color':'#49274a'};
               }else{
                 $scope.colormain = {'background-color':'#946183'};
               }
