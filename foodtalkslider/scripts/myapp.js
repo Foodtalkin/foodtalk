@@ -74,14 +74,15 @@ app.controller('settingCtrl', ['$scope','dataFact','$rootScope','$state', functi
   
   
 }])
-app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParams','$state','dataFact', function($scope, timeFunctions, $rootScope,$stateParams,$state, dataFact){
+app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParams','$state','dataFact','$interval', function($scope, timeFunctions, $rootScope,$stateParams,$state, dataFact,$interval){
   $scope.dataconfig = $stateParams;
   $scope.slides = [];
   $scope.colormain = {'background-color':'#49274a'};
   $scope.ftisldnum = [];
   $scope.loader = true;
     mainfun();
-    timeFunctions.$setInterval(mainfun, 120000, $scope);
+    // timeFunctions.$setInterval(mainfun, 120000, $scope);
+    $interval(mainfun, 120000);
   function mainfun () {
     $scope.slides = [];
     // console.log('loading');
@@ -498,7 +499,8 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
       $scope.i = 1;
       $scope.loader = false;
      slider();
-     timeFunctions.$setInterval(slider, 9000, $scope);
+     // timeFunctions.$setInterval(slider, 9000, $scope);
+     $interval(slider, 9000);
      function slider () {
         
       if($scope.i > $scope.count){
