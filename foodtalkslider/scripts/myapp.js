@@ -112,7 +112,7 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
           sort(data);
     });
   }
-  function sort (data) {
+  function sort (data){
     var len = data.length;
 
     if(len == 20){
@@ -499,11 +499,12 @@ app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParam
       $scope.i = 1;
       $scope.loader = false;
      slider();
-     // timeFunctions.$setInterval(slider, 9000, $scope);
+     // var intvl = timeFunctions.$setInterval(slider, 9000, $scope);
      $interval(slider, 9000);
      function slider () {
         
       if($scope.i > $scope.count){
+        // timeFunctions.$clearInterval(intvl);
         $scope.i = 1;
        }else{
           angular.forEach($scope.slides, function(index, el) {
