@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'reis';
+  src: url("font/reis2.otf");
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'vbook2';
+  src: url("font/Verlag-Book_2.ttf");
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'vlight2';
+  src: url("font/Verlag-Light_2.ttf");
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sanchez';
+  src: url("font/sanchez-regular_2.otf");
+  
+  font-weight: normal;
+  font-style: normal;
+}
+.zindex999{
+	position: relative;
+	z-index: 999;
+}
+.vbook2{
+	font-family: 'vbook2';
+}
+.vlight2{
+	font-family: 'vlight2';
+}
+.sanchez{
+	font-family: 'sanchez';
+}
+.main{
+	min-height: 100vh;
+	/*width: 100vw;*/
+	background-color: #e54d4a;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+.center{
+	text-align: center;
+}
+.mt-50px{
+	margin-top: 50px;
+}
+.mt-70px{
+	margin-top: 70px;
+}
+.button{
+	margin-top: 20px;
+}
+.button img{
+	max-width: 240px;
+	width: 90%;
+	margin: auto;
+}
+.leaf{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 20%;
+}
+.reis{
+	font-family: 'reis';
+	font-size: 80px;
+	letter-spacing: 3px;
+}
+.phone{
+	width: 34%;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	min-width: 520px;
+}
+.phone1{
+	max-width: 400;
+	position: relative;
+	bottom: 0;
+	
+}
+h1{
+	font-size: 50px;
+	font-weight: 100;
+}
+h2{
+	font-size: 35px;
+	font-weight: 200;
+}
+strong{
+	font-weight: 400;
+}
+h3{
+	font-size: 18px;
+    line-height: 23px;
+}
+
+@media (max-width: 767px) {
+	h2{
+		font-size: 22px;
+	}
+	h3 {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 1px;}
+    .mt-50px{
+	margin-top: 20px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+	h2{
+		font-size: 26px;
+	}
+	h3 {
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 1px;}
+    .mt-50px{
+	margin-top: 40px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+	h2{
+		font-size: 29px;
+	}
+	h3 {
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 1px;}
+	.phone {
+    right: 0px;
+    min-width: 450px;
+	}
+}
+@media (min-width: 1200px) { 
+	.phone {
+    right: 0;
+    min-width: 450px;
+	}
+}
