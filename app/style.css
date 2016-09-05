@@ -93,11 +93,11 @@
 	
 }
 h1{
-	font-size: 50px;
+	font-size: 35px;
 	font-weight: 100;
 }
 h2{
-	font-size: 35px;
+	font-size: 28px;
 	font-weight: 200;
 }
 strong{
@@ -109,8 +109,12 @@ h3{
 }
 
 @media (max-width: 767px) {
-	h2{
+	h1{
 		font-size: 22px;
+	}
+	h2{
+	font-size: 20px;
+	font-weight: 200;
 	}
 	h3 {
     font-size: 18px;
@@ -121,8 +125,12 @@ h3{
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) { 
-	h2{
+	h1{
 		font-size: 26px;
+	}
+	h2{
+	font-size: 22px;
+	font-weight: 200;
 	}
 	h3 {
     font-size: 18px;
@@ -133,13 +141,17 @@ h3{
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
-	h2{
+	h1{
 		font-size: 29px;
 	}
 	h3 {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 1px;}
+    h2{
+	font-size: 25px;
+	font-weight: 200;
+	}
 	.phone {
     right: 0px;
     min-width: 450px;
@@ -149,5 +161,9 @@ h3{
 	.phone {
     right: 0;
     min-width: 450px;
+	}
+	h2{
+	font-size: 28px;
+	font-weight: 200;
 	}
 }
