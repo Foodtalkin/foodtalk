@@ -8,17 +8,17 @@
 </div>
 	<div class="mid">
 		<div class="slideshowcontainer" id="slides_control">
-			<carousel interval="myInterval">
-				<slide ng-repeat="sld in slides" id="{{sld.id}}" class="li-hide " ng-class="sld.actv? 'fadein' : 'fadeout'">
+			<carousel>
+				<slide id="{{slide.id}}" >
 					<div class="slide animated">
 						<div class="username">
-							<img ng-src="{{sld.userimage}}" on-error-src="" alt="" ng-show="sld.rating">
-							<span ng-show="sld.rating">{{sld.username}}{{sld.restro}}</span>
+							<img ng-src="{{slide.userimage}}" on-error-src="" alt="" ng-show="slide.rating">
+							<span ng-show="slide.rating">{{slide.username}}{{slide.restro}}</span>
 						</div>
 						<div class="main-image">
-							<img ng-src="{{sld.image}}" alt="" on-error-src="">
-							<div class="img-grd" ng-show="sld.rating"></div>
-							<p id="stars" class="star-{{sld.rating}} stars" ng-show="sld.rating">
+							<img ng-src="{{slide.image}}" alt="" on-error-src="">
+							<div class="img-grd" ng-show="slide.rating"></div>
+							<p id="stars" class="star-{{slide.rating}} stars" ng-show="slide.rating">
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
 								<i class="fa fa-star fa-2x" aria-hidden="true"></i>
@@ -27,7 +27,7 @@
 							</p>
 						</div>
 						<div class="dishname">
-							<h2 ng-show="sld.rating">{{sld.dishname}}</h2>
+							<h2 ng-show="slide.rating">{{slide.dishname}}</h2>
 						</div>
 					</div>
 				</slide>

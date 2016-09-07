@@ -74,489 +74,167 @@ app.controller('settingCtrl', ['$scope','dataFact','$rootScope','$state', functi
   
   
 }])
-app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParams','$state','dataFact','$interval', function($scope, timeFunctions, $rootScope,$stateParams,$state, dataFact,$interval){
-  $scope.dataconfig = $stateParams;
-  $scope.slides = [];
-  $scope.colormain = {'background-color':'#49274a'};
-  $scope.ftisldnum = [];
-  $scope.loader = true;
-    mainfun();
-    // timeFunctions.$setInterval(mainfun, 120000, $scope);
-    $interval(mainfun, 120000);
-  function mainfun () {
-    $scope.slides = [];
-    // console.log('loading');
-
-    if($scope.dataconfig.type == '2'){
-     
-      getlatestpost();
-    }else if($scope.dataconfig.type == '1'){
-      console.log($scope.dataconfig.id);
-      getrestropost($scope.dataconfig.id);
-    }else{
-      console.log('error');
-    }
-  }
-   
-  function getrestropost (id) {
-     dataFact.getrestropost(id,function(response) {
-          var data = response.data.images;
-          // console.log(response);
-          sort(data);
+app.controller('slidectrl', ['$scope', 'timeFunctions','$rootScope','$stateParams','$state','dataFact','$q','$timeout','$interval', 
+                    function($scope, timeFunctions, $rootScope,$stateParams,$state, dataFact, $q, $timeout,$interval){
+  var dataconfig = $stateParams;
+  $rootScope.configration = dataconfig;
+  $scope.promisemain = {};
+  $scope.sorteddata = getData(dataconfig);
+  init($rootScope.configration);
+  // $interval(init($rootScope.configration),60000);
+  $interval(function() {
+     getData( $rootScope.configration).then(function (response) {
+        console.log('calling');
+        var imgdata = convert(response);        
+        var finalslides = insertAds (imgdata, imgdata.length);
+        $interval.cancel($scope.promisemain);
+        displaySlides(finalslides);
+      }, function (err) {
+         // console.log(err);
+         init($rootScope.configration);
+         $scope.sorteddata.then(function (response) {
+            var imgdata = convert(response);        
+            var finalslides = insertAds (imgdata, imgdata.length);
+            $interval.cancel($scope.promisemain);
+            displaySlides(finalslides);
+         }, function (err) {
+            /* body... */ 
+         })
       });
-  }
-  function getlatestpost () {
-     dataFact.getlatestpost(function(response) {
-          var data = response.data.posts;
-          // console.log(response);
-          sort(data);
-    });
-  }
-  function sort (data){
-    var len = data.length;
-
-    if(len == 20){
-      var postid = 1;
-      angular.forEach(data, function(index) {
-        if(index.restaurantName == ''){
-          var rest = '';
-        }else{
-          var rest = ' @ '+index.restaurantName;
-        }
-          
-         var img = {
-           id: postid,
-           userimage: index.userImage,
-           username: index.userName,
-           restro: rest,
-           image: index.postImage,
-           rating: index.rating,
-           dishname: index.dishName,
-           actv:false
-         }
-         $scope.slides.push(img);
-         postid = postid+1;
-         if(postid == 6){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 12){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 18){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 24){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
+  },60000);
+  //Main function wrapper - this does everything
+  function init (config) {
+    getData(config).then(function (response) {
+        console.log($scope.promisemain);
+        var imgdata = convert(response);        
+        var finalslides = insertAds (imgdata, imgdata.length);
+        // $interval.cancel($scope.promisemain);
+        displaySlides(finalslides);
+      }, function (err) {
+         // console.log(err);
+         init($rootScope.configration);
+         $scope.sorteddata.then(function (response) {
+            var imgdata = convert(response);        
+            var finalslides = insertAds (imgdata, imgdata.length);
+            $interval.cancel($scope.promisemain);
+            displaySlides(finalslides);
+         }, function (err) {
+            /* body... */ 
+         })
       });
-    }else if(len > 15){
-      var postid = 1;
-      angular.forEach(data, function(index) {
-        if(index.restaurantName == ''){
-          var rest = '';
-        }else{
-          var rest = ' @ '+index.restaurantName;
-        }
-          
-         var img = {
-           id: postid,
-           userimage: index.userImage,
-           username: index.userName,
-           restro: rest,
-           image: index.postImage,
-           rating: index.rating,
-           dishname: index.dishName,
-           actv:false
-         }
-         $scope.slides.push(img);
-         postid = postid+1;
-         if(postid == 6){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 12){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 18){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-      });
-      var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-      $scope.slides.push(img1);
-      $scope.ftisldnum.push(postid);
-    }else if(len == 15){
-       var postid = 1;
-      angular.forEach(data, function(index) {
-        if(index.restaurantName == ''){
-          var rest = '';
-        }else{
-          var rest = ' @ '+index.restaurantName;
-        }
-          
-         var img = {
-           id: postid,
-           userimage: index.userImage,
-           username: index.userName,
-           restro: rest,
-           image: index.postImage,
-           rating: index.rating,
-           dishname: index.dishName,
-           actv:false
-         }
-         $scope.slides.push(img);
-         postid = postid+1;
-         if(postid == 6){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 12){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 18){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-      });
-    }else if(len > 10 ){
-      var postid = 1;
-      angular.forEach(data, function(index) {
-        if(index.restaurantName == ''){
-          var rest = '';
-        }else{
-          var rest = ' @ '+index.restaurantName;
-        }
-          
-         var img = {
-           id: postid,
-           userimage: index.userImage,
-           username: index.userName,
-           restro: rest,
-           image: index.postImage,
-           rating: index.rating,
-           dishname: index.dishName,
-           actv:false
-         }
-         $scope.slides.push(img);
-         postid = postid+1;
-         if(postid == 6){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 12){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-      });
-      var img1 = {
-         id: postid,
-         userimage: "",
-         username: "",
-         restro: "",
-         image: "img/slide.png",
-         rating: false,
-         dishname: "",
-         actv:false
-      }
-      $scope.slides.push(img1);
-      $scope.ftisldnum.push(postid);
-    }else if (len == 10) {
-      var postid = 1;
-      angular.forEach(data, function(index) {
-        if(index.restaurantName == ''){
-          var rest = '';
-        }else{
-          var rest = ' @ '+index.restaurantName;
-        }
-          
-         var img = {
-           id: postid,
-           userimage: index.userImage,
-           username: index.userName,
-           restro: rest,
-           image: index.postImage,
-           rating: index.rating,
-           dishname: index.dishName,
-           actv:false
-         }
-         $scope.slides.push(img);
-         postid = postid+1;
-         if(postid == 6){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-         if(postid == 12){
-            var img1 = {
-               id: postid,
-               userimage: "",
-               username: "",
-               restro: "",
-               image: "img/slide.png",
-               rating: false,
-               dishname: "",
-               actv:false
-            }
-            $scope.slides.push(img1);
-            $scope.ftisldnum.push(postid);
-            postid = postid+1;
-         }
-      });
-      
-    }else{
-      var postid = 1;
-      angular.forEach(data, function(index) {
-        if(index.restaurantName == ''){
-          var rest = '';
-        }else{
-          var rest = ' @ '+index.restaurantName;
-        }
-          
-         var img = {
-           id: postid,
-           userimage: index.userImage,
-           username: index.userName,
-           restro: rest,
-           image: index.postImage,
-           rating: index.rating,
-           dishname: index.dishName,
-           actv:false
-         }
-         $scope.slides.push(img);
-         postid = postid+1;
-      });
-      var img1 = {
-         id: postid,
-         userimage: "",
-         username: "",
-         restro: "",
-         image: "img/slide.png",
-         rating: false,
-         dishname: "",
-         actv:false
-      }
-      $scope.slides.push(img1);
-      $scope.ftisldnum.push(postid);
-    }
-      $scope.count = $scope.slides.length;
-      $scope.i = 1;
-      $scope.loader = false;
-     slider();
-     // var intvl = timeFunctions.$setInterval(slider, 9000, $scope);
-     $interval(slider, 9000);
-     function slider () {
-        
-      if($scope.i > $scope.count){
-        // timeFunctions.$clearInterval(intvl);
-        $scope.i = 1;
-       }else{
-          angular.forEach($scope.slides, function(index, el) {
-          if(index.id == $scope.i){
-            index.actv = true;
-            // console.log($scope.ftisldnum.length);
-            // angular.forEach($scope.ftisldnum, function(element, index) {
-            //   console.log(element);
-            //   if(element == $scope.i){
-            //     $scope.colormain = {'background-color':'#67c2be'}
-            //   }else{
-            //     $scope.colormain = {'background-color':'#6c7b8a'};
-            //   }
-            // });
-            if($scope.ftisldnum.indexOf($scope.i) != -1){
-                $scope.colormain = {'background-color':'#49274a'};
-              }else{
-                $scope.colormain = {'background-color':'#946183'};
-              }
-          }else{
-            index.actv = false;
-          }
-          
-          });
-          $scope.i = $scope.i+1;
-       }
-       // colorchange($scope.i);
-    }
-    function colorchange (sldnum) {
-       if(sldnum == 1 || sldnum == 6 || sldnum == 11 || sldnum == 16 || sldnum == 21 || sldnum == 26){
-          $scope.colormain = {'background-color':'#6c7b8a'}
-       }else if(sldnum == 2 || sldnum == 7 || sldnum == 12 || sldnum == 17 || sldnum == 22 || sldnum == 27){
-          $scope.colormain = {'background-color':'#ffed00'}
-       }else if (sldnum == 3 || sldnum == 8 || sldnum == 13 || sldnum == 18 || sldnum == 23 || sldnum == 28) {
-          $scope.colormain = {'background-color':'#005b7f'}         
-       }else if (sldnum == 4 || sldnum == 9 || sldnum == 14 || sldnum == 19 || sldnum == 24 || sldnum == 29) {
-          $scope.colormain = {'background-color':'#e54d4a'}         
-       }else if (sldnum == 5 || sldnum == 10 || sldnum == 15 || sldnum == 20 || sldnum == 26 || sldnum == 30) {
-          $scope.colormain = {'background-color':'#67c2be'}         
-       }
-    }
-  }
-
     
+  }
+
+  // getting data from server
+
+  function getData(config) {
+    if(config.type == 1){
+      
+      return dataFact.getrestropost(config.id)
+      .then(function (response) {
+
+         return response.images;
+      }, function (err) {
+         console.log(err);
+      })
+    }else {
+      return dataFact.getlatestpost()
+      .then(function (response) {
+        
+         return response.posts;
+      }, function (err) {
+         /* body... */ 
+      })
+    }
+    
+  }
+
+  // converting data from server
+  function convert (jsonData) {
+    var imgobj = [];
+      angular.forEach(jsonData, function(element,index) {
+        if(element.restaurantName == ''){
+          var rest = '';
+        }else{
+          var rest = ' @ '+element.restaurantName;
+        }
+        var temp = {
+            id: element.id,
+            userimage: element.userImage,
+            username: element.userName,
+            restro: rest,
+            image: element.postImage,
+            rating: element.rating,
+            dishname: element.dishName,
+            actv:false
+          };
+        imgobj.push(temp);
+      });
+      return imgobj;
+  }
   
+  // insert ads
+  function insertAds (slidearray, count) {
+    
+    var slide = [];
+    var ind = 1;
+    var adpoint = [];
+    var ads = {
+               id: ind,
+               userimage: "",
+               username: "",
+               restro: "",
+               image: "img/slide.png",
+               rating: false,
+               dishname: "",
+               actv:false
+            }
+    if(count == 20){
+      adpoint = [0,6,12,18];
+    }else if (count == 15 || count > 15) {
+      adpoint = [0,6,12];
+    }else if (count == 10 || count > 10) {
+      adpoint = [0,6];
+    }else if (count == 5 || count > 5) {
+      adpoint = [0];
+    }
+
+    angular.forEach(adpoint, function(element, index) {
+      // console.log(adpoint);
+      ind = element;
+      
+      if(adpoint.indexOf(ind) != -1){
+        slidearray.splice(ind, 0, ads);
+      }
+      
+      });
+    return slidearray;
+  }
+
+
+  // display function
+  function displaySlides (slidearray) {
+      var i = 0;
+      var last = slidearray.length;
+      $scope.slide = slidearray[i];
+      $scope.promisemain = $interval(function () {
+         i++;
+         if(i == last){
+          i = 0;
+         }
+         $scope.slide = slidearray[i];
+      },5000);
+
+  }
     
 }]);
 
-app.factory('dataFact', ['$http', function($http){
-  var data = {};
-  data.getrestropost = function (id, callback) {
+app.factory('dataFact', ['$http','$q', function($http,$q){
+  var data = this;
+  data.posts = {};
+  data.getrestropost = function (id) {
      /* body... */ 
+     var defer = $q.defer();
      $http({
       method: 'POST',
       url: 'http://52.74.136.146/index.php/service/restaurant/getImagePosts',
@@ -566,13 +244,19 @@ app.factory('dataFact', ['$http', function($http){
               "page":"1",
               "sessionId":"GUEST"
             }
-     }).then(function (response) {
-        /* body... */ 
-        callback(response);
+     }).success(function (response) {
+         data.posts = response;
+         defer.resolve(response);
+     }).error(function(err, status) {
+       // defer.reject(err);
+       throw err;
      })
+
+     return defer.promise;
   }
-  data.getlatestpost = function (callback) {
+  data.getlatestpost = function () {
      /* body... */ 
+     var defer = $q.defer();
      $http({
       method: 'POST',
       url: 'http://52.74.136.146/index.php/service/post/list',
@@ -584,10 +268,14 @@ app.factory('dataFact', ['$http', function($http){
               "includeFollowed":"1",
               "sessionId":"GUEST"
             }
-     }).then(function (response) {
-        /* body... */ 
-        callback(response);
+     }).success(function (response) {
+         data.posts = response;
+         defer.resolve(response);
+     }).error(function(err, status) {
+       // defer.reject(err);
+       throw err;
      })
+     return defer.promise;
   }
   return data;
 }])
