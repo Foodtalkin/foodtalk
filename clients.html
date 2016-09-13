@@ -10,6 +10,7 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
       <link rel="shortcut icon" href="img/favicon.png" />
       <link type="text/css" rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
       <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -117,84 +118,71 @@
               </div>
             </div>
           </div> 
-    <div id="modal2" class="modal">
-      <div class="modal-content center-align green-text"><h5>Thank You.</h5><h6> We will get in touch with you soon.</h6></div>
-      <div class="modal-footer"><a href="" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a></div></div>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-               <h4>Advertise With Us</h4>
-                <form id="form1">
-                  <div id="tos1" class="center-align hide"><h5 class="light red-text">Please fill the form</h5></div>
-                    <div class="row">
-                      <div class="col s12 m6 l6 input-field">
-                        <input id="name" type="text" class="validate" name="name" required/><label for="name">Name</label>
+     <!-- notification after form fill -->
+          <div id="modal2" class="modal">
+            <div class="modal-content center-align green-text">
+              <h5>Thank You.</h5><h6> We will get in touch with you soon.</h6>
+            </div>
+            <div class="modal-footer">
+              <a href="" class="modal-action modal-close waves-effect waves-green btn-flat ">Ok</a>
+            </div>
+          </div>
+          <!-- advertise ment form -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Advertise With Us</h4>
+                    <form id="form1">
+                      <div id="tos1" class="center-align hide"><h5 class="light red-text">Please fill the form</h5></div>
+                      <div class="row">
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="name" type="text" class="validate" name="name" required/><label for="name">Name/Company Name</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="phone" type="text" class="validate" name="ph" required/><label for="phone">Phone</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="email" type="email" class="validate" name="email" required/>
+                            <label for="email">Email</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field">
+                            <input id="web" type="text" class="validate"  name="web"><label for="web">Website</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field" >
+                            <input id="loc" type="text" class="validate" name="loc" required/><label for="loc">City</label>
+                          </div>
+                          <div class="col s12 m6 l6 input-field" >
+                            <button class="btn waves-effect waves-light center button" type="button" name="action" id="save1">Submit</button>
+                          </div>
                       </div>
-                      <div class="col s12 m6 l6 input-field">
-                        <input id="cname" type="text" class="validate" name="cname" required/><label for="cname">Company Name</label>
-                      </div>
-                      <div class="col s12 m6 l6 input-field">
-                        <input id="phone" type="text" class="validate" name="ph" required/><label for="phone">Phone</label>
-                      </div>
-                      <div class="col s12 m6 l6 input-field">
-                        <input id="email" type="email" class="validate" name="email" required/><label for="email">Email</label>
-                      </div>
-                      <div class="col s12 m6 l6 input-field">
-                        <input id="web" type="text" class="validate"  name="web"><label for="web">Website</label>
-                      </div>
-                      <div class="col s12 m6 l6 input-field" >
-                        <input id="loc" type="text" class="validate" name="loc" required/><label for="loc">City</label>
-                      </div>
-                      <div class="col s12 m6 l6 input-field" >
-                        <button class="btn waves-effect waves-light center button" type="button" name="action" id="save1">Submit
-                        </button>
-                      </div>
+                     </form>
                     </div>
-                  </form>
-                </div>
-              </div>
-     <footer class="page-footer">
+                  </div>
+          <footer class="page-footer">
             <div class="container">
               <div class="row">
-                <div class="col l6 s12 hide-on-med-and-up center-align">
+                <div class="col l12 m12 s12 center-align center">
+                    <a class="white-text light social-icon-footer fbchnge" href="https://www.facebook.com/foodtalkindia" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="white-text light social-icon-footer instachange" href="https://instagram.com/foodtalkindia/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="white-text light social-icon-footer twchange" href="https://twitter.com/foodtalkindia" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="white-text light social-icon-footer snapchange" href="https://www.snapchat.com/add/snapfoodtalk" target="_blank"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+                                    
+                </div>
+                <div class="col l12 m12 s12 center-align">
                   <h5 class="white-text center">Advertise With Us</h5>
-                  <p class="grey-text text-lighten-4 light justify">Food Talk is here to create a buzz and promote your brand and nobody does it better. Contact us and let’s create something disruptive today!</p>
+                  <p class="grey-text text-lighten-4 light center">Food Talk is here to create a buzz and promote your brand and nobody does it better. Contact us and let’s create something disruptive today!</p>
                   <button data-target="modal1" class="btn modal-trigger">Advertise</button>
                 </div>
-                <div class="col l6 s12 hide-on-small-only">
-                  <h5 class="white-text">Advertise With Us</h5>
-                  <p class="grey-text text-lighten-4 light justify">Food Talk is here to create a buzz and promote your brand and nobody does it better. Contact us and let’s create something disruptive today!</p>
-                  <button data-target="modal1" class="btn modal-trigger">Advertise</button>
-                </div>  
-                <div class="col l3 s6 offset-l3 hide-on-small-only justify">
-                  <h5 class="white-text">Social</h5>
-                  <ul>
-                    <li><a class="white-text light" href="https://www.facebook.com/foodtalkindia" target="_blank" title="Restaurant Marketing">Facebook</a></li>
-                    <li><a class="white-text light" href="https://instagram.com/foodtalkindia/" target="_blank">Instagram</a></li>
-                    <li><a class="white-text light" href="https://twitter.com/foodtalkindia" target="_blank">Twitter</a></li>
-                    <li><a class="white-text light" href="https://www.youtube.com/channel/UCjSJcg7rNI_K-FFRm8Nk4Gw" target="_blank">Youtube</a></li>
-                    <li><a class="white-text light" href="http://chats.viber.com/foodtalkindia" target="_blank" title="Restaurant Promotion">Viber</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col l3 s6 center-align hide-on-med-and-up">
-                  <h5 class="white-text">Social</h5>
-                  <ul>
-                    <li><a class="white-text light" href="https://www.facebook.com/foodtalkindia" target="_blank">Facebook</a></li>
-                    <li><a class="white-text light" href="https://instagram.com/foodtalkindia/" target="_blank">Instagram</a></li>
-                    <li><a class="white-text light" href="https://twitter.com/foodtalkindia" target="_blank">Twitter</a></li>
-                    <li><a class="white-text light" href="https://www.youtube.com/channel/UCjSJcg7rNI_K-FFRm8Nk4Gw" target="_blank">Youtube</a></li>
-                    <li><a class="white-text light" href="http://chats.viber.com/foodtalkindia" title="Restaurant Marketing" target="_blank">Viber</a>
-                    </li>
-                  </ul>
-                </div>
+                    
+                
               </div>
             </div>
             <div class="footer-copyright">
               <div class="container">
                <div class="row foot1 center-align">
-                 <div class="col s12 m4 l4 foot"><a href="mailto:info@foodtalkindia.com" class=" light-blue-text text-lighten-3"> info@foodtalkindia.com </a></div>
-                 <div class="col s12 m4 l4 foot"><a href="tel:+911244225022" class=" light-blue-text text-lighten-3">+91 124 422 5022</a></div>
-                 <div class="col s12 m4 l4 foot">&copy; Digital Food Talk Pvt Ltd</div>
+                 <div class="col s12 m3 l3 foot"><a href="mailto:info@foodtalkindia.com" class=" light-blue-text text-lighten-3"> info@foodtalkindia.com </a></div>
+                 <div class="col s12 m3 l3 foot"><a href="tel:+911244225022" class=" light-blue-text text-lighten-3">+91 124 422 5022</a></div>
+                 <div class="col s12 m3 l3 foot">&copy; Digital Food Talk Pvt Ltd</div>
+                 <div class="col s12 m3 l3 foot"><a href="document.html" class=" light-blue-text text-lighten-3"> Legal </a></div>
                </div>
               </div>
             </div>
@@ -205,22 +193,34 @@
       <script type="text/javascript">
         $(document).ready(function(){
           $('select').material_select();
-          $("#tos1").addClass('hide');
           $(".button-collapse").sideNav();
-          $('.parallax').parallax();
-            $('.modal-trigger').leanModal({
+
+
+          $("#tos1").addClass('hide');
+          $('.modal-trigger').leanModal({
               dismissible: true
             });
           $("#save1").click(function(){
-            var data = $('#form1').serialize();
-            $.ajax("save.php?"+data).done(function(result){
-              if (result == 1) {
-                $('#modal1').closeModal();
-                $('#modal2').openModal();
-              }else{
-                $("#tos1").removeClass('hide');
-              };
-            });
+            var data = $('#form1').serializeArray();
+            var data2 = {name: data[0]['value'],
+                        email: data[2]['value'],
+                        phone: data[1]['value'],
+                        purpose: "Advertising",
+                        web : data[4]['value'],
+                        location: data[5]['value']};
+
+            console.log("Log Entry");
+            data2 = JSON.stringify(data2);
+            $.ajax({
+                 url: "http://api.foodtalk.in/contact",
+                 type: 'POST',
+                 dataType: 'application/json',
+                 data: data2
+               })
+               .always(function(response){
+                  $(location).attr('href', 'thanks.html');
+               });
+            
           });
         })
       </script>

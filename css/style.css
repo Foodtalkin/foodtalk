@@ -1,10 +1,26 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+@font-face {
+    font-family: verlag;
+    src: url('../font/verlag.ttf');
+}
+@font-face {
+    font-family: sanchez;
+    src: url('../font/sanchez-regular_2.otf');
+}
+.shenchez{
+    font-family: 'sanchez';
+}
+html{
+    font-family: 'verlag';font-size: 18px;
+
+}
 html::-webkit-scrollbar {
     display: none
 }
 
 p {
-    line-height: 2rem
+    line-height: 2rem;
+    
 }
 
 .button,
@@ -254,11 +270,10 @@ footer {
 }
 
 .intro {
-    position: absolute;
-    left: 0;
-    top: 0;
+    
     width: 100%;
-    height: 75vh;
+    height: 60vh;
+    padding-top: 64px;
     background-image: url(../img/bg2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -272,9 +287,9 @@ footer {
 }
 
 .main {
-    position: relative;
-    top: 75vh;
-    text-align: center
+    /*position: relative;
+    top: 60vh;
+    text-align: center*/
 }
 
 .card,
@@ -564,4 +579,32 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.social-icon-footer{
+    
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    
+}
+.social-icon-footer i{
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.fbchnge:hover i{
+    color: #3c5b9b;
+}
+.instachange:hover i{
+    color: #517fa4;
+}
+.twchange:hover i{
+    color: #2daae1;
+}
+.snapchange:hover i{
+    color: #fffa37;
+}
+
+.page-footer-adjust{
+    position: relative;
 }
