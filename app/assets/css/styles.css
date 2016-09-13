@@ -1,3 +1,7 @@
+@font-face {
+    font-family: verlag;
+    src: url('verlag.ttf');
+}
 
 ::-webkit-scrollbar { 
     display: none; 
@@ -7,9 +11,9 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: 'verlag', arial, sans-serif;
   color: #666;
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2893,22 +2897,7 @@ li.active {
     background-color: #232323 !important;
 }
 .side-nav a {
-    color: #444
-}
-
-.loginbtn {
-    margin-right: 10px;
-    background-color: inherit;
-    border: 1px solid #fff;
-    margin-left: 30px
-}
-
-.loginbtn:active,
-.loginbtn:hover {
-    margin-right: 10px;
-    background-color: #FFF;
-    margin-left: 30px;
-    color: #000108
+    color: #444;
 }
 
 .button-collapse {
@@ -2929,7 +2918,7 @@ li.active {
   list-style: none;
 }
 .navul li a{
-  font-size: 14px;
+  font-size: 1em;
   text-decoration: none;
 }
 .navul li a:hover{
@@ -2948,4 +2937,64 @@ li.active {
 .navul2 li a{
   font-size: 14px;
   text-decoration: none;
+}
+.social-icon-footer{
+    color: #fff !important;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    
+}
+.social-icon-footer i{
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.fbchnge:hover i{
+    color: #3c5b9b;
+}
+.instachange:hover i{
+    color: #517fa4;
+}
+.twchange:hover i{
+    color: #2daae1;
+}
+.snapchange:hover i{
+    color: #fffa37;
+}
+.loginbtn {
+    margin-right: 10px !important;
+    background-color: inherit !important;
+        padding: 5px 36px;
+    border: 1px solid #fff !important;
+    margin-left: 30px !important;
+}
+
+.loginbtn:active,
+.loginbtn:hover {
+    margin-right: 10px !important;
+    background-color: #FFF !important;
+        padding: 5px 36px;
+    margin-left: 30px !important;
+    color: #000108 !important;
+}
+footer {
+    margin-top: 0!important;
+    background-color: #000108!important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+.foot {
+    padding-top: 0!important;
+    padding-bottom: 0!important
+}
+
+.foot1 {
+    margin-bottom: 0!important
+}
+
+.foot1 a{
+  color: #81d4fa;
 }
