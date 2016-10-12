@@ -18,7 +18,7 @@ FF       OOOO0   OOOO0  DDDDDD     TTT   AA   AA LLLLLLL KK  KK
   Twitter: @himvais
   
 /* SITE */
-  Last update: 30/05/2016
+  Last update: 12/10/2016
   Doctype: HTML5, css3
   IDE: Sublime, Photoshop, Sketch, materializecss
 
