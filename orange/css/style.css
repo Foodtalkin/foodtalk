@@ -133,6 +133,7 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 20px 0;
     top: 0;
   }
+
 }
 .fh5co-nav .left-menu, .fh5co-nav .right-menu, .fh5co-nav .logo {
   display: inline-block;
@@ -176,7 +177,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav ul li a {
   font-size: 18px;
-  padding: 30px 15px;
+  padding: 30px 10px;
   color: rgba(255, 255, 255, 0.8);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;

@@ -5,12 +5,23 @@ $(document).ready(function() {
             $("#navigation").css("background-color","#e54c4a");
             $("#logonav").show('slow');
             $("#logonav").attr('height', '50px');
-            $('#logotxt, #logobig').hide('slow');
+            
+            if($(window).width() >= 768){
+              $('#logotxt, #logobig').hide('slow');
+            }else{
+              $('#logotxt, #logobig').hide();
+            }
         } else {
             $("#navigation").css("background-color","rgba(16, 22, 54, 0)");
             // $("#fh5co-logo a").html("FoodTalk");
-            $('#logotxt, #logobig').show('slow');
-            $('#logonav').hide('slow');
+            
+            if($(window).width() >= 768){
+              $('#logotxt, #logobig').show('slow');
+              $('#logonav').hide('slow');
+            }else{
+              $('#logotxt, #logobig').show();
+              $('#logonav').hide();
+            }
 
         }
     });
