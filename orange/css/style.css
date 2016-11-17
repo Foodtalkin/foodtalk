@@ -123,9 +123,9 @@ h1, h2, h3, h4, h5, h6, figure {
   /*top: 2em;*/
   font-family: "verlag-book", "Work Sans", Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/
   width: 100%;
-  padding: 30px 0;
+  padding: 15px 0;
   z-index: 1001;
 }
 @media screen and (max-width: 768px) {
@@ -1437,4 +1437,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 }
 .header-social:hover{
   
+}
+
+.hidden{
+  display: none;
 }
