@@ -478,6 +478,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07f7f', end
 .fh5co-staff {
   text-align: center;
   margin-bottom: 30px;
+  border: 1px solid #ededed;
+    padding: 15px 10px;
+    border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
 }
 .fh5co-staff img {
   width: 170px;
@@ -520,11 +526,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07f7f', end
   zoom: 1;
   *display: inline;
   color: #F36363;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .fh5co-social-icons li a i {
-  font-size: 20px;
+  font-size: 35px;
 }
 
 .fh5co-contact-info ul {
