@@ -123,9 +123,9 @@ h1, h2, h3, h4, h5, h6, figure {
   /*top: 2em;*/
   font-family: "verlag-book", "Work Sans", Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/
   width: 100%;
-  padding: 30px 0;
+  padding: 15px 0;
   z-index: 1001;
 }
 @media screen and (max-width: 768px) {
@@ -133,6 +133,7 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 20px 0;
     top: 0;
   }
+
 }
 .fh5co-nav .left-menu, .fh5co-nav .right-menu, .fh5co-nav .logo {
   display: inline-block;
@@ -176,7 +177,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav ul li a {
   font-size: 18px;
-  padding: 30px 15px;
+  padding: 30px 10px;
   color: rgba(255, 255, 255, 0.8);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -478,6 +479,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07f7f', end
 .fh5co-staff {
   text-align: center;
   margin-bottom: 30px;
+  border: 1px solid #ededed;
+    padding: 15px 10px;
+    border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
 }
 .fh5co-staff img {
   width: 170px;
@@ -520,11 +527,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07f7f', end
   zoom: 1;
   *display: inline;
   color: #F36363;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .fh5co-social-icons li a i {
-  font-size: 20px;
+  font-size: 35px;
 }
 
 .fh5co-contact-info ul {
@@ -1431,4 +1438,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 }
 .header-social:hover{
   
+}
+
+.hidden{
+  display: none;
 }
