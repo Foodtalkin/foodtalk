@@ -23,9 +23,22 @@
 		  ga('send', 'pageview');
 
 		</script>
+		<style>
+		.santa{
+			position: fixed;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+		@media screen and (max-width: 736px){
+			.santa{
+				display: none;
+			}
+		}
+		</style>
 	</head>
 	<body>
-
+		<img src="images/giphy.gif" alt="" class="santa">
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
