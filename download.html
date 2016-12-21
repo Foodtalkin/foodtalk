@@ -176,10 +176,11 @@
         if(isMobile.Android()) {
              $(location).attr('href', 'https://ad.apps.fm/9MpxPO99wKQgBEPRqzDo815KLoEjTszcQMJsV6-2VnHFDLXitVHB6BlL95nuoNYfYvrzlFgS_zzkrHYzgzi8dsJvx-g4JaFUTDh_-g1MzffBHpUDVnJfCIp-45MBCvZW0EBbbxphpu_GHoB5DVgsXw');
              $('.container, .navbar-fixed').addClass('hide');
-          }
-          if(isMobile.iOS()) {
+          }else if(isMobile.iOS()) {
              $(location).attr('href', 'https://ad.apps.fm/jmXM2toyVlrwIvmv8VZDkPE7og6fuV2oOMeOQdRqrE125Vg6lhH50uF5NCjHXTL9ndN7N82s3TL60zJZOK6POUBYEUDp6GpykR5a_XD8NGKkdSPWlsFH6ajCbGh5uIRv');
              $('.container, .navbar-fixed').addClass('hide');
+          }else{
+            $(location).attr('href', 'http://foodtalk.in/app/index.html');
           }
       });
       </script>
