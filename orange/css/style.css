@@ -474,6 +474,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07f7f', end
 }
 .about-content .desc {
   margin-bottom: 3em;
+  padding-left: 1em;
 }
 
 .fh5co-staff {
@@ -532,6 +533,9 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.34);
 }
 .fh5co-social-icons li a i {
   font-size: 35px;
+}
+.fh5co-social-icons li a:hover i {
+  transform: scale(1.1, 1.1);
 }
 
 .fh5co-contact-info ul {
@@ -1442,4 +1446,84 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 .hidden{
   display: none;
+}
+
+
+
+
+
+.box-testimony {
+  margin-bottom: 2.2em;
+  float: left;
+}
+.box-testimony a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.box-testimony a:hover, .box-testimony a:focus, .box-testimony a:active {
+  color: white;
+  text-decoration: none;
+}
+.box-testimony blockquote {
+  padding-left: 0;
+  border-left: none;
+  padding: 40px;
+  background: #fafafa;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.10);
+-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.10);
+box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.10);
+
+}
+.box-testimony blockquote:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 40px;
+  border-top: 15px solid black;
+  border-top-color: #fafafa;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+}
+.box-testimony blockquote .quote {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 0;
+  display: table;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  margin-top: -30px;
+  background: #F36363;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.box-testimony blockquote .quote > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.box-testimony blockquote p {
+  letter-spacing: 1px;
+  font-family: "Playfair Display", Arial, serif;
+  padding-bottom: 25px;
+}
+.box-testimony .author {
+  line-height: 20px;
+  color: #F36363;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.box-testimony .author .subtext {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
 }
