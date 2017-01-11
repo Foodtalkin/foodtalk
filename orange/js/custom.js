@@ -5,7 +5,6 @@ $(document).ready(function() {
             $("#navigation").css("background-color","#e54c4a");
             $("#logonav").show('slow');
             $("#logonav").attr('height', '50px');
-            
             if($(window).width() >= 768){
               $('#logotxt, #logobig').hide('slow');
             }else{
