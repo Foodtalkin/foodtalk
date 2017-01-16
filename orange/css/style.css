@@ -43,6 +43,7 @@ html::-webkit-scrollbar {
 * 	Template Style 
 *
 * ======================================================= */
+html{font-family: "verlag-Light", "Work Sans", Arial, sans-serif;}
 body {
   font-family: "verlag-Light", "Work Sans", Arial, sans-serif;
   font-weight: normal;
@@ -94,6 +95,8 @@ a:hover, a:active, a:focus {
 
 p {
   margin-bottom: 20px;
+  font-family: "verlag-Light", "Work Sans", Arial, sans-serif;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6, figure {
