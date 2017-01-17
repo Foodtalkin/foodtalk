@@ -1,28 +1,30 @@
-FFFFFFF  OOOOO   OOOOO  DDDDD    TTTTTTT   AAA   LL      KK  KK 
-FF      OO   OO OO   OO DD  DD     TTT    AAAAA  LL      KK KK  
-FFFF    OO   OO OO   OO DD   DD    TTT   AA   AA LL      KKKK   
-FF      OO   OO OO   OO DD   DD    TTT   AAAAAAA LL      KK KK  
-FF       OOOO0   OOOO0  DDDDDD     TTT   AA   AA LLLLLLL KK  KK 
-                                                                
+
+                            
+/* TEAM */
+
+                            
+Web designer & developer: Richa Sharma.                  
+Contact: rchshrm16@gmail.com.                   
+Twitter: @rchshrm16.                            
+Location: Gurgaon, India.
 
 
+              
+/* THANKS */
 
-/* MAIN */
-  Designer: Shalga
-  Twitter: @shalvishnoi
+              
 
-  Develop: Richa
-  Twitter: @rchshrm16
-
-  Designer: himvais
-  Twitter: @himvais
-  
 /* SITE */
-  Last update: 12/10/2016
-  Doctype: HTML5, css3
-  IDE: Sublime, Photoshop, Sketch, materializecss
 
+                            
+Last update: 2017/01/17
 
-  And, of course, all Digital Food Talk pvt ltd team!
+                            
+Standards: HTML5, CSS3.
 
+                            
+Components: animate.css, jQuery, bootstrap, font-awesome, modernizr.
 
+                            
+Software: sublime text, photoshop.
+   
