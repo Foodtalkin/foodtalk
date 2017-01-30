@@ -481,4 +481,12 @@
   <loc>http://foodtalk.in/forms/Events.html</loc>
   <expires>2017-01-27</expires>
 </url>
+<url>
+  <loc>http://foodtalk.in/experience.html</loc>
+  <expires>2017-01-27</expires>
+</url>
+<url>
+  <loc>http://foodtalk.in/service.html</loc>
+  <expires>2017-01-27</expires>
+</url>
 </urlset>
