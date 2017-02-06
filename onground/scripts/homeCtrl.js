@@ -80,6 +80,7 @@ app.controller('homeCtrl', ['$scope','homeFact', 'authFact', '$window', function
 	            	$scope.defaultpage = false;
 	            	$scope.Reedeemfail = false;
 					$scope.Reedeemsuccess = true;
+					$scope.Iagree = false;
 				}else{
 					console.log($scope.reedeemed.apiMessage);
 					$scope.invaliddata = false;
@@ -87,6 +88,7 @@ app.controller('homeCtrl', ['$scope','homeFact', 'authFact', '$window', function
 	            	$scope.defaultpage = false;
 	            	$scope.Reedeemfail = true;
 					$scope.Reedeemsuccess = false;
+					$scope.Iagree = false;
 				}
 			})
 		}
