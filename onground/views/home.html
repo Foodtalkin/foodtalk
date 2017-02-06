@@ -64,7 +64,7 @@ Begin page -->
                             <!-- coupon code enter -->
                               <div class="col-md-8 col-md-offset-2">
                                 <div class="input-group m-t-10">
-                                  <input type="text" class="form-control" ng-model="couponcode" placeholder="Coupon code" style="text-transform:uppercase">
+                                  <input type="text" class="form-control" ng-model="couponcode" placeholder="Coupon code" style="text-transform:uppercase" id="myinput" >
                                   <span class="input-group-btn">
                                     <button type="button" ng-click="getCodeData()" class="btn waves-effect waves-light btn-primary">Submit</button>
                                   </span>
@@ -123,13 +123,13 @@ Begin page -->
                                   <img src="assets/images/default.png" alt="" style="width: 70%;height: auto;">
                                 </div>
                                 <div class="m-t-30 text-center" ng-show="invaliddata">
-                                  <img src="assets/images/invalidcode.png" alt="" style="width: 70%;height: auto;">
+                                  <img src="assets/images/invalid.png" alt="" style="width: 70%;height: auto;">
                                 </div>
                                 <div class="m-t-30 text-center" ng-show="Reedeemfail">
-                                  <img src="assets/images/invalidcode.png" alt="" style="width: 70%;height: auto;">
+                                  <img src="assets/images/invalid.png" alt="" style="width: 70%;height: auto;">
                                 </div>
                                 <div class="m-t-30 text-center" ng-show="Reedeemsuccess">
-                                  <img src="assets/images/successcode.png" alt="" style="width: 70%;height: auto;">
+                                  <img src="assets/images/success.png" alt="" style="width: 70%;height: auto;">
                                 </div>
                                 <div class="m-t-30" ng-show="alldatatrue">
                                   <div class="card-box p-0 m-t-30" >

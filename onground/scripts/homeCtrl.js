@@ -1,4 +1,4 @@
-app.controller('homeCtrl', ['$scope','homeFact', 'authFact', function($scope,homeFact,authFact){
+app.controller('homeCtrl', ['$scope','homeFact', 'authFact', '$window', function($scope,homeFact,authFact,$window){
 	$scope.couponcode = "";
 	$scope.Iagree = false;
 	$scope.couponDetails = {};
@@ -8,6 +8,14 @@ app.controller('homeCtrl', ['$scope','homeFact', 'authFact', function($scope,hom
 	$scope.Reedeemfail = false;
 	$scope.Reedeemsuccess = false;
 	$scope.reedeemed = {};
+	$scope.focus = true;
+
+	var myin = $window.document.getElementById('myinput');
+        if(myin){
+        	myin.focus();
+        }
+          
+
 	$scope.getCodeData = function(){
 		if($scope.couponcode == ""){
 			alert("Coupon code Can't be empty");
