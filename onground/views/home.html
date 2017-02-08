@@ -62,7 +62,7 @@ Begin page -->
                           <div class="col-md-12">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                             <!-- coupon code enter -->
-                              <div class="col-md-8 col-md-offset-2">
+                              <div class="col-md-8 col-md-offset-2" ng-show="couponInput">
                                 <div class="input-group m-t-10">
                                   <input type="text" class="form-control" ng-model="couponcode" placeholder="Coupon code" style="text-transform:uppercase" id="myinput" >
                                   <span class="input-group-btn">
@@ -121,17 +121,39 @@ Begin page -->
                               <div class="col-md-8 col-md-offset-2">
                                 <div class="m-t-30 text-center " ng-show="defaultpage">
                                   <img src="assets/images/default.png" alt="" style="width: 70%;height: auto;">
+
                                 </div>
                                 <div class="m-t-30 text-center" ng-show="invaliddata">
                                   <img src="assets/images/invalid.png" alt="" style="width: 70%;height: auto;">
+                                  <p>{{errorMsg}}</p>
+                                  <div>
+                                    <button class="btn btn-primary" style="width: 100%" ng-click="newCode()" >Enter New Coupon Code</button>
+                                  </div>
+                                </div>
+                                <div class="m-t-30 text-center" ng-show="couponisused">
+                                  <img src="assets/images/redeemed.png" alt="" style="width: 70%;height: auto;">
+                                  <p>{{errorMsg}}</p>
+                                  <div>
+                                    <button class="btn btn-primary" style="width: 100%" ng-click="newCode()" >Enter New Coupon Code</button>
+                                  </div>
                                 </div>
                                 <div class="m-t-30 text-center" ng-show="Reedeemfail">
                                   <img src="assets/images/invalid.png" alt="" style="width: 70%;height: auto;">
+                                  <p>{{errorMsg}}</p>
+                                  <div>
+                                    <button class="btn btn-primary" style="width: 100%" ng-click="newCode()" >Enter New Coupon Code</button>
+                                  </div>
                                 </div>
                                 <div class="m-t-30 text-center" ng-show="Reedeemsuccess">
                                   <img src="assets/images/success.png" alt="" style="width: 70%;height: auto;">
+                                  <div>
+                                    <button class="btn btn-primary" style="width: 100%" ng-click="newCode()" >Enter New Coupon Code</button>
+                                  </div>
                                 </div>
                                 <div class="m-t-30" ng-show="alldatatrue">
+                                  <div class="" style="margin-bottom: 20px; text-align: right;">
+                                      <i class="fa fa-2x fa-close" style="cursor: pointer;" ng-click="newCode()"></i>
+                                  </div>
                                   <div class="card-box p-0 m-t-30" >
                                     <div class="row">
                                       <div class="col-md-12 text-center">
@@ -159,10 +181,10 @@ Begin page -->
                                   </div>
                                   <div >
                                     <label>
-                                      <input type="checkbox" ng-model="Iagree"> Check me out
+                                      <input type="checkbox" ng-model="Iagree"> I agree to terms &amp; conditions
                                     </label>
                                   </div>
-                                  <button class="btn btn-success" style="width: 100%" ng-click="Reedeemcoupon()">Reedeem</button>
+                                  <button class="btn btn-success" style="width: 100%" ng-click="Reedeemcoupon()" title="Please agree to the terms and conditions">Reedeem</button>
                                 </div>
                               </div>
                             </div>
