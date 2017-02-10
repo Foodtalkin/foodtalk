@@ -60,65 +60,22 @@ Begin page -->
                         
                         <div class="row">
                           <div class="col-md-12">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                            <!-- coupon code enter -->
-                              <div class="col-md-8 col-md-offset-2" ng-show="couponInput">
-                                <div class="input-group m-t-10">
-                                  <input type="text" class="form-control" ng-model="couponcode" placeholder="Coupon code" style="text-transform:uppercase" id="myinput" >
-                                  <span class="input-group-btn">
-                                    <button type="button" ng-click="getCodeData()" class="btn waves-effect waves-light btn-primary">Submit</button>
-                                  </span>
+                            <div class="col-md-6 col-md-offset-3">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-5">
+                              <div class="col-md-12">
+                                <!-- coupon code enter -->
+                                <div class="col-md-10 col-md-offset-2" ng-show="couponInput">
+                                  <div class="input-group m-t-10">
+                                    <input type="text" class="form-control" ng-model="couponcode" placeholder="Coupon code" style="text-transform:uppercase" id="myinput" >
+                                    <span class="input-group-btn">
+                                      <button type="button" ng-click="getCodeData()" class="btn waves-effect waves-light btn-primary">Submit</button>
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
-
-                              <!-- history -->
-                              <!-- <div class="col-md-12">
-                                <div class="card-box m-t-30">
-                                  <h4 class="text-dark header-title m-t-0">History</h4>
-                                  <p class="text-muted font-13">
-                                    Your awesome text goes here.
-                                  </p>
-                                  
-                                  <div class="nicescroll p-20" style="height: 300px;">
-                                    <div class="timeline-2">
-
-
-                                      <div class="time-item">
-                                          <div class="item-info">
-                                              <div class="text-info">DSC000586</div>
-                                              <h5 class="m-0">Buy one get One free</h5>
-                                              <p class="text-muted"><small>12 Aug. 2016</small></p>
-                                          </div>
-                                      </div>
-                                      <div class="time-item">
-                                          <div class="item-info">
-                                              <div class="text-info">DSC000586</div>
-                                              <h5 class="m-0">Buy one get One free</h5>
-                                              <p class="text-muted"><small>12 Aug. 2016</small></p>
-                                          </div>
-                                      </div>
-                                      <div class="time-item">
-                                          <div class="item-info">
-                                              <div class="text-info">DSC000586</div>
-                                              <h5 class="m-0">Buy one get One free</h5>
-                                              <p class="text-muted"><small>12 Aug. 2016</small></p>
-                                          </div>
-                                      </div>
-                                      <div class="time-item">
-                                          <div class="item-info">
-                                              <div class="text-info">DSC000586</div>
-                                              <h5 class="m-0">Buy one get One free</h5>
-                                              <p class="text-muted"><small>12 Aug. 2016</small></p>
-                                          </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                        
-                                </div>
-                              </div> -->
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                              <div class="col-md-8 col-md-offset-2">
+                              <div class="col-md-10 col-md-offset-2">
                                 <div class="m-t-30 text-center " ng-show="defaultpage">
                                   <img src="assets/images/default.png" alt="" style="width: 70%;height: auto;">
 
@@ -150,11 +107,11 @@ Begin page -->
                                     <button class="btn btn-primary" style="width: 100%" ng-click="newCode()" >Enter New Coupon Code</button>
                                   </div>
                                 </div>
-                                <div class="m-t-30" ng-show="alldatatrue">
-                                  <div class="" style="margin-bottom: 20px; text-align: right;">
+                                <div class="" ng-show="alldatatrue">
+                                  <div class="" style="text-align: right;">
                                       <i class="fa fa-2x fa-close" style="cursor: pointer;" ng-click="newCode()"></i>
                                   </div>
-                                  <div class="card-box p-0 m-t-30" >
+                                  <div class="card-box p-0 " >
                                     <div class="row">
                                       <div class="col-md-12 text-center">
                                         <img src="{{couponDetails.storeOffer.coverImage}}" alt="" class="img-responsive" >
@@ -188,6 +145,36 @@ Begin page -->
                                 </div>
                               </div>
                             </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 ">
+                              <!-- history -->
+                              <div class="col-md-9 col-md-offset-1 ">
+                                <div class="card-box m-t-20">
+                                  <h4 class="text-dark header-title m-t-0">Stats</h4>
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-center">#</th>
+                                        <th class="text-center">Offer Name</th>
+                                        <th class="text-center">Total</th>
+                                        <th class="text-center">Claimed </th>
+                                        <th class="text-center">Redeemed</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr ng-repeat="dinein in stats">
+                                        <td class="text-center">{{ dinein.storeItemId }}</td>
+                                        <td >{{ dinein.title }}</td>
+                                        <td class="text-center">{{ dinein.totalQuantity }}</td>
+                                        <td class="text-center">{{ dinein.totalQuantity - dinein.availableQuantity }}</td>
+                                        <td class="text-center">{{ dinein.totalRedeemed }}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                        
+                                </div>
+                              </div>
+                            </div>
+                            
                           </div>
                         </div>
 
