@@ -12,6 +12,12 @@ app.controller('homeCtrl', ['$scope','homeFact', 'authFact', '$window', function
 	$scope.reedeemed = {};
 	$scope.focus = true;
 
+	$scope.stats = {};
+	homeFact.getstatus(function(response){
+		$scope.stats = response.data.storeOffers;
+		console.log($scope.stats);
+	})
+
 	var myin = $window.document.getElementById('myinput');
         if(myin){
         	myin.focus();
@@ -169,6 +175,19 @@ app.factory('homeFact', ['$http','$q', function($http,$q){
 			data: {
 					sessionId:"GUEST",
 					code:code
+					}
+		}).then(function (response) {
+            callback(response);
+        });
+	}
+
+	homeFact.getstatus = function(callback){
+		$http({
+			method: 'POST',
+			url: 'http://52.74.136.146/index.php/service/storeOffer/list',
+			data: {
+					sessionId:"GUEST",
+					type: "DINE-IN"
 					}
 		}).then(function (response) {
             callback(response);
