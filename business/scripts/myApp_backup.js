@@ -1,12 +1,33 @@
-//Initiating app
 var app = angular.module('myApp',['ui.router','ngCookies']);
-
-//App configuration
 app.config(function($stateProvider, $urlRouterProvider,$qProvider,$httpProvider){
-	$qProvider.errorOnUnhandledRejections(false);
-	$httpProvider.interceptors.push('httpRequestInterceptor');
+        // $httpProvider.defaults.headers.common = {};
+        // $httpProvider.defaults.headers.post = {};
+        // $httpProvider.defaults.headers.put = {};
+        // $httpProvider.defaults.headers.patch = {};
+        // $httpProvider.defaults.headers.get = {};
+        // delete $httpProvider.defaults.headers.common["X-Requested-With"];
 
-	$stateProvider
+
+	    $qProvider.errorOnUnhandledRejections(false);
+        $httpProvider.interceptors.push('httpRequestInterceptor');
+
+        $stateProvider
+
+        // dashboard STATES AND NESTED VIEWS ========================================
+        // .state('dashboard', {
+        //     url: '/dashboard',
+        //     views: {
+        //     	'': { templateUrl: 'views/dashboard.html' },
+        //     	'header@dashboard': { templateUrl: 'views/navs/header.html', controller:'headerCtrl' },
+        //     	'sidebar@dashboard': { templateUrl: 'views/navs/sidebar.html', controller:'headerCtrl' },
+        //     	'subnav@dashboard': { templateUrl: 'views/navs/subnav.html', controller:'headerCtrl' },
+        //     	'couponcode@dashboard': { templateUrl: 'views/navs/couponcode.html', controller:'couponCtrl' }
+        //     },
+        //     resolve: {
+        //             factory: checkRouting
+        //         }
+        // })
+
         .state('offers', {
             url: '/offers',
             views: {
@@ -15,33 +36,25 @@ app.config(function($stateProvider, $urlRouterProvider,$qProvider,$httpProvider)
             	'sidebar@offers': { templateUrl: 'views/navs/sidebar.html', controller:'headerCtrl' },
             	'subnav@offers': { templateUrl: 'views/navs/subnav.html', controller:'headerCtrl' },
             	'couponcode@offers': { templateUrl: 'views/navs/couponcode.html', controller:'couponCtrl' }
-            }
+            },
+            resolve: {
+                    factory: checkRouting
+                }
         })
 
-      .state('login', {
+        .state('login', {
             url: '/login',
             templateUrl: 'views/login.html',
             controller: 'authCtrl'
         });
 
-      $urlRouterProvider.otherwise('/login');
-});
-
-app.run(function($rootScope, $state, $cookies){
-		$rootScope.$on('$stateChangeStart', function (event, toState) {
-     	if (toState.name === 'offers') {
-       	if (!$cookies.get("APISESSID")) { // Check if user allowed to transition
-							event.preventDefault();
-							$state.go('login');
-        	}
-      	}
-		});
+        $urlRouterProvider.otherwise('/login');
 });
 
 
 
 //Login Check
-var checkRouting = function ($location, $cookies, $state){
+var checkRouting = function ($location, $cookies, $state) {
     if ($cookies.get("APISESSID")) {
         return true;
     } else {
@@ -58,6 +71,7 @@ app.factory('httpRequestInterceptor', function ($cookies) {
       if(session){
         config.headers['APISESSID'] = $cookies.get("APISESSID");
       }
+
       return config;
     }
   };
@@ -75,4 +89,4 @@ app.factory('urlFact', [function(){
     url.offerList = baseurl+"storeOffer/list";
     url.RedeemHistory = baseurl+"storeOffer/RedeemHistory";
     return url;
-}]);
+}])

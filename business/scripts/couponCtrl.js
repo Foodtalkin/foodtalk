@@ -28,9 +28,9 @@ app.controller('couponCtrl', ['$scope','couponFact','$window', '$rootScope',
 						jQuery('#modal-top').modal('show');
 						$scope.loading = false;
 					}
-					
+
 				}
-			});	
+			});
 		}else{
 			alert('Coupon code Cannot be empty');
 		}
@@ -53,7 +53,7 @@ app.controller('couponCtrl', ['$scope','couponFact','$window', '$rootScope',
 					swal('Success', 'Coupon reedeemed successfuly!', 'success');
 					$scope.cCode = "";
 					$scope.iAgree = false;
-					//$rootScope.fetchHistory();
+					$rootScope.fetchHistory();
 					$scope.loading = false;
 				}else{
 					$scope.details.coverImage = "";
@@ -63,7 +63,7 @@ app.controller('couponCtrl', ['$scope','couponFact','$window', '$rootScope',
 					swal('Oops...', 'Somthing Went Wrong! check history to see if coupon is reedeemed or not', 'error');
 					$scope.cCode = "";
 					$scope.iAgree = false;
-					//$rootScope.fetchHistory();
+					$rootScope.fetchHistory();
 					$scope.loading = false;
 				}
 			})
@@ -83,7 +83,7 @@ app.factory('couponFact', ['$http','urlFact', function($http,urlFact){
 		}).then(function(response){
             callback(response);
 		})
-	}	
+	}
 
 	coupon.reedeemCouponCode = function(code, callback) {
 		$http({
@@ -95,6 +95,6 @@ app.factory('couponFact', ['$http','urlFact', function($http,urlFact){
 		}).then(function(response){
             callback(response);
 		})
-	}	
+	}
 	return coupon;
 }])

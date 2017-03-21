@@ -1,11 +1,9 @@
 app.controller('offersCtrl', ['$scope','offersfact','$rootScope','$cookies', '$state',
  function($scope,offersfact, $rootScope, $cookies, $state){
- 	// if (!$cookies.get("APISESSID")) {
-  //      $state.go('login');
-  //   }
-	$scope.offerList = {};
-	
-	$scope.fetchHistory = function(){
+
+  $scope.offerList = {};
+
+	$rootScope.fetchHistory = function(){
 		offersfact.getOfferList(function(response){
 			$scope.offerList = response.data.result;
 			//console.log(response);
@@ -14,7 +12,7 @@ app.controller('offersCtrl', ['$scope','offersfact','$rootScope','$cookies', '$s
 			}
 		});
 	}
-	$scope.fetchHistory();
+	$rootScope.fetchHistory();
 	$scope.getHistory = function(id){
 		offersfact.getHistory(id, function(response){
 			console.log(response);
@@ -24,7 +22,7 @@ app.controller('offersCtrl', ['$scope','offersfact','$rootScope','$cookies', '$s
 			}else{
 				jQuery('#modal-history').modal('show');
 			}
-			
+
 		})
 	}
 }]);
