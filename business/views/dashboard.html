@@ -1,0 +1,190 @@
+<div id="page-container" class="sidebar-l side-scroll header-navbar-fixed">
+    <!-- Side Overlay-->
+    <aside id="side-overlay" ui-view="sidebar" style="display: block !important;">
+        
+    </aside>
+    <!-- END Side Overlay -->
+
+    <!-- Header -->
+    <header id="header-navbar" ui-view="header">
+        
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Sub Header -->
+        <div class="bg-gray-lighter visible-xs">
+            <div class="content-mini content-boxed">
+                <button class="btn btn-block btn-default visible-xs push" data-toggle="collapse" data-target="#sub-header-nav">
+                    <i class="fa fa-navicon push-5-r"></i>Menu
+                </button>
+            </div>
+        </div>
+       <div class="bg-primary-lighter collapse navbar-collapse remove-padding" id="sub-header-nav" ui-view="subnav" >
+            
+        </div>
+        <!-- END Sub Header -->
+        <div class="content content-boxed" ui-view="couponcode" style=" background-color: #f5f5f5;padding-bottom: 30px;">
+            
+        </div>
+        <!-- Page Content -->
+        <div class="content content-boxed" >
+            <!-- Section -->
+            <div class="bg-image img-rounded overflow-hidden push" style="background-image: url('assets/img/photos/photo29@2x.jpg');">
+                <div class="bg-black-op">
+                    <div class="content">
+                        <div class="block block-transparent block-themed text-center">
+                            <div class="block-content">
+                                <h1 class="h1 font-w700 text-white animated fadeInDown push-5">Dashboard</h1>
+                                <h2 class="h4 font-w400 text-white-op animated fadeInUp">Welcome Administrator.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Section -->
+
+            <!-- Stats -->
+            <div class="row text-uppercase">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="block block-rounded">
+                        <div class="block-content block-content-full">
+                            <div class="text-muted">
+                                <small><i class="si si-calendar"></i> Today</small>
+                            </div>
+                            <div class="font-s12 font-w700">Unq Visitors</div>
+                            <a class="h2 font-w300 text-primary" href="bd_dashboard.html" data-toggle="countTo" data-to="96780"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="block block-rounded">
+                        <div class="block-content block-content-full">
+                            <div class="text-muted">
+                                <small><i class="si si-calendar"></i> Today</small>
+                            </div>
+                            <div class="font-s12 font-w700">Prd Sales</div>
+                            <a class="h2 font-w300 text-primary" href="bd_dashboard.html" data-toggle="countTo" data-to="680"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="block block-rounded">
+                        <div class="block-content block-content-full">
+                            <div class="text-muted">
+                                <small><i class="si si-calendar"></i> Today</small>
+                            </div>
+                            <div class="font-s12 font-w700">Earnings</div>
+                            <a class="h2 font-w300 text-primary" href="bd_dashboard.html" data-toggle="countTo" data-to="63000" data-before="$ "></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="block block-rounded">
+                        <div class="block-content block-content-full">
+                            <div class="text-muted">
+                                <small><i class="si si-calendar"></i> Today</small>
+                            </div>
+                            <div class="font-s12 font-w700">Average Sale</div>
+                            <a class="h2 font-w300 text-primary" href="bd_dashboard.html" data-toggle="countTo" data-to="249" data-before="$ "></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Stats -->
+
+            <!-- Charts -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="block block-rounded block-opt-refresh-icon8">
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">Earnings in $</h3>
+                        </div>
+                        <div class="block-content block-content-full bg-gray-lighter text-center">
+                            <!-- Chart.js Charts (initialized in js/pages/base_pages_dashboard_v2.js), for more examples you can check out http://www.chartjs.org/docs/ -->
+                            <div style="height: 320px;"><canvas class="js-dash-chartjs-earnings"></canvas></div>
+                        </div>
+                        <div class="block-content text-center">
+                            <div class="row items-push-2x text-center push-20-t">
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-bank fa-2x"></i></div>
+                                    <div class="h5 text-muted">$148,000</div>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-angle-double-up fa-2x"></i></div>
+                                    <div class="h5 text-muted">+9% Earnings</div>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-headphones fa-2x"></i></div>
+                                    <div class="h5 text-muted">+20% Tickets</div>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-users fa-2x"></i></div>
+                                    <div class="h5 text-muted">+46% Clients</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="block block-rounded block-opt-refresh-icon8">
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">Sales</h3>
+                        </div>
+                        <div class="block-content block-content-full bg-gray-lighter text-center">
+                            <!-- Chart.js Charts (initialized in js/pages/base_pages_dashboard_v2.js), for more examples you can check out http://www.chartjs.org/docs/ -->
+                            <div style="height: 320px;"><canvas class="js-dash-chartjs-sales"></canvas></div>
+                        </div>
+                        <div class="block-content text-center">
+                            <div class="row items-push-2x text-center push-20-t">
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-wordpress fa-2x"></i></div>
+                                    <div class="h5 text-muted">+20% Themes</div>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-font fa-2x"></i></div>
+                                    <div class="h5 text-muted">+25% Fonts</div>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-archive fa-2x"></i></div>
+                                    <div class="h5 text-muted">-10% Icons</div>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                    <div class="push-15"><i class="fa fa-paint-brush fa-2x"></i></div>
+                                    <div class="h5 text-muted">+8% Graphics</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Charts -->
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+
+    <!-- Footer -->
+    <footer id="page-footer" class="bg-body font-s12">
+        <div class="content-mini content-mini-full content-boxed clearfix push-15">
+            <div class="pull-right">
+                Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="http://foodtalk.in" target="_blank">FoodTalk</a>
+            </div>
+            <div class="pull-left">
+                <a class="font-w600" href="http://foodtalk.in" target="_blank">Digital Food Talk Pvt. Ltd.</a> &copy; <span class="js-year-copy"></span>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+</div>
