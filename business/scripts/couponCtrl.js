@@ -13,7 +13,7 @@ app.controller('couponCtrl', ['$scope','couponFact','$window', '$rootScope',
 			$scope.loading = true;
 			couponFact.getCouponCode($scope.cCode, function(response) {
 				console.log(response);
-				if(response.data.message == "Error : Invalid Coupon code!"){
+				if(!response){
 					swal('Oops...', 'Invalid Coupon code!', 'error');
 					$scope.cCode = "";
 					$scope.loading = false;
@@ -82,6 +82,9 @@ app.factory('couponFact', ['$http','urlFact', function($http,urlFact){
 			}
 		}).then(function(response){
             callback(response);
+		}, function(error){
+			console.log(error);
+			callback(false);
 		})
 	}
 

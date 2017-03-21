@@ -3,6 +3,13 @@ var app = angular.module('myApp',['ui.router','ngCookies']);
 
 //App configuration
 app.config(function($stateProvider, $urlRouterProvider,$qProvider,$httpProvider){
+  // $httpProvider.defaults.headers.common = {};
+  //   $httpProvider.defaults.headers.post = {};
+  //   $httpProvider.defaults.headers.put = {};
+  //   $httpProvider.defaults.headers.patch = {};
+  //   $httpProvider.defaults.headers.get = {};
+  //   delete $httpProvider.defaults.headers.common["X-Requested-With"];
+    
 	$qProvider.errorOnUnhandledRejections(false);
 	$httpProvider.interceptors.push('httpRequestInterceptor');
 
@@ -23,7 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider,$qProvider,$httpProvider)
             templateUrl: 'views/login.html',
             controller: 'authCtrl'
         });
-
+      //$locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/login');
 });
 
