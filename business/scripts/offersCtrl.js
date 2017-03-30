@@ -6,7 +6,7 @@ app.controller('offersCtrl', ['$scope','offersfact','$rootScope','$cookies', '$s
 	$rootScope.fetchHistory = function(){
 		offersfact.getOfferList(function(response){
 			$scope.offerList = response.data.result;
-			console.log(response);
+			
 			if($scope.offerList.length == 0){
 				$scope.nodata = true;
 			}
@@ -15,7 +15,7 @@ app.controller('offersCtrl', ['$scope','offersfact','$rootScope','$cookies', '$s
 	$rootScope.fetchHistory();
 	$scope.getHistory = function(id){
 		offersfact.getHistory(id, function(response){
-			console.log(response);
+			
 			$scope.history = response.data.result.redeemUsers;
 			if($scope.history.length == 0){
 				swal('Oops...', 'No Data to show!', 'error');
