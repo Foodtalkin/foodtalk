@@ -12,7 +12,7 @@ app.controller('couponCtrl', ['$scope','couponFact','$window', '$rootScope',
 		if($scope.cCode != ""){
 			$scope.loading = true;
 			couponFact.getCouponCode($scope.cCode, function(response) {
-				console.log(response);
+				
 				if(!response){
 					swal('Oops...', 'Invalid Coupon code!', 'error');
 					$scope.cCode = "";
@@ -44,7 +44,7 @@ app.controller('couponCtrl', ['$scope','couponFact','$window', '$rootScope',
 		if($scope.iAgree){
 			$scope.loading = true;
 			couponFact.reedeemCouponCode($scope.cCode, function(response) {
-				console.log(response);
+				
 				if(response.data.message == "Success"){
 					$scope.details.coverImage = "";
 					$scope.details.title = "";
