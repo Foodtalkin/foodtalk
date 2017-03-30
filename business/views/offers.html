@@ -104,7 +104,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 50px;">#</th>
-                                <th>Offer Name</th>
+                                <th>Offer</th>
                                 <th>Total</th>
                                 <th>Claimed</th>
                                 <th>Reedeemed</th>
@@ -114,13 +114,13 @@
                         <tbody>
                             <tr ng-repeat="offer in offerList">
                                 <td class="text-center">{{ $index +1 }}</td>
-                                <td>{{ offer.title }}</td>
+                                <td>{{ offer.shortDescription }}</td>
                                 <td>{{ offer.totalQuantity }}</td>
                                 <td>{{ offer.totalQuantity - offer.availableQuantity }}</td>
                                 <td>{{ offer.totalRedeemed }}</td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-xs btn-info" type="button" ng-click="getHistory(offer.storeItemId);"><i class="fa fa-history" aria-hidden="true"></i></button>
+                                        <button class="btn btn-xs btn-info" title="history" type="button" ng-click="getHistory(offer.storeItemId);"><i class="fa fa-history" aria-hidden="true"></i></button>
                                     </div>
                                 </td>
                             </tr>

@@ -6,7 +6,7 @@ app.controller('offersCtrl', ['$scope','offersfact','$rootScope','$cookies', '$s
 	$rootScope.fetchHistory = function(){
 		offersfact.getOfferList(function(response){
 			$scope.offerList = response.data.result;
-			//console.log(response);
+			console.log(response);
 			if($scope.offerList.length == 0){
 				$scope.nodata = true;
 			}
