@@ -1,0 +1,142 @@
+/** {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf0f1;
+  min-width: 300px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  display: block;
+  font-weight: 400;
+}
+
+li, span, p, a, h1, h2, h3, h4, h5 {
+  line-height: 1;
+}
+
+p {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+*/
+/*img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}*/
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.social-btns .mybtn,
+.social-btns .mybtn:before,
+.social-btns .mybtn .fa {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .mybtn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .mybtn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-btns .mybtn.facebook:before {
+  background-color: #3b5998;
+}
+.social-btns .mybtn.facebook .fa {
+  color: #3b5998;
+}
+.social-btns .mybtn.twitter:before {
+  background-color: #3cf;
+}
+.social-btns .mybtn.twitter .fa {
+  color: #3cf;
+}
+.social-btns .mybtn.instgarm:before {
+  background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+}
+.social-btns .mybtn.instgarm .fa {
+  color: #fb3958;
+  
+}
+
+.social-btns .mybtn.snapchat:before {
+  background-color: #fffc00;
+}
+.social-btns .mybtn.snapchat .fa {
+  color: #fffc00;
+}
+
+.social-btns .mybtn:focus:before,
+.social-btns .mybtn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .mybtn:focus .fa,
+.social-btns .mybtn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.social-btns {
+  font-size: 0;
+  text-align: center;
+}
+.social-btns .mybtn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-btns .mybtn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-btns .mybtn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
