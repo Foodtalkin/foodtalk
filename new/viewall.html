@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta charset="utf-8" />
     <title>Pages - Front End</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="apple-touch-icon" href="pages/ico/60.png">
@@ -24,6 +23,7 @@
     <!-- BEGIN PAGES CSS -->
     <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!-- BEGIN PAGES CSS -->
     <style>
       .myserchbar{
@@ -41,7 +41,7 @@
       
     </style>
   </head>
-  <body>
+  <body ng-app="myapp">
     <!-- BEGIN HEADER -->
     <nav class="header bg-header transparent-dark " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
       <div class="container relative">

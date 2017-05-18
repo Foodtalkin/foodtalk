@@ -7582,6 +7582,7 @@ sup.dollar {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 768px) {
+
   /* Force table to not be like tables anymore */
   .pricing-table,
   .pricing-table thead,
@@ -8429,6 +8430,10 @@ sup.dollar {
 }
 /*** Phones ***/
 @media (max-width: 767px) {
+  .pull-center-small{
+    clear: both !important;
+    float: none !important;
+  }
   .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -8489,6 +8494,10 @@ sup.dollar {
   }
 }
 @media (max-width: 480px) {
+  .pull-center-small{
+    clear: both !important;
+    float: none !important;
+  }
   .xs-p-t-0 {
     padding-top: 0px !important;
   }
