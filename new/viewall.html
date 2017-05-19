@@ -23,7 +23,7 @@
     <!-- BEGIN PAGES CSS -->
     <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
     <!-- BEGIN PAGES CSS -->
     <style>
       .myserchbar{
@@ -112,7 +112,7 @@
       </div>
     </section>
     <!-- END HEADER -->
-    <section class="bg-master-darker relative full-width p-t-100 p-b-100" id="partners">
+    <section class="bg-master-darker relative full-width p-t-100 p-b-100" id="partners" ng-controller="mainCtrl">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 text-white text-center">
@@ -121,99 +121,19 @@
             <p class="m-t-20">The Food Talk app offers unbeatable value with Buy One Get One Free offers at the best restaurants across Delhi NCR and Mumbai. Simply download our app and buy one of the offer packs to start redeeming your coupons. Great savings await you!</p>
           </div>
           <div class="col-sm-8 col-sm-offset-2">
-            <input type="text" class="myserchbar" placeholder="&#xF002; Serach....">
+            <input type="text" class="myserchbar" placeholder="&#xF002; Serach...." ng-model="search">
           </div>
         </div>
         <div class="row m-t-80">
-          <div class="col-md-4 col-sm-6 col-lg-4">
+          <div class="col-md-4 col-sm-6 col-lg-4" ng-repeat="data in data.data | filter: search">
             <div class="card">
               <div class="row">
                 <div class="col-xs-5">
-                  <img src="assets/images/rest1.jpg" alt="" class="img-responsive">
+                  <img ng-src="{{data.card_image}}" alt="" class="img-responsive">
                 </div>
                 <div class="col-xs-7 p-l-0">
-                  <h5 class="m-t-5 m-b-5 semi-bold">Restaurent Name</h5>
+                  <h5 class="m-t-5 m-b-5 semi-bold">{{data.name}}</h5>
                   <h6 class="m-t-5 m-b-5">DLF Phase 2</h6>
-                  <h6 class="bold">
-                    Mid-Range, Asian
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-4">
-            <div class="card">
-              <div class="row">
-                <div class="col-xs-5">
-                  <img src="assets/images/rest2.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-xs-7 p-l-0">
-                  <h5 class="m-t-5 m-b-5 semi-bold">Restaurent Name</h5>
-                  <h6 class="m-t-5 m-b-5">DLF Phase 2</h6>
-                  <h6 class="bold">
-                    Mid-Range, Asian
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-4">
-            <div class="card">
-              <div class="row">
-                <div class="col-xs-5">
-                  <img src="assets/images/rest3.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-xs-7 p-l-0">
-                  <h5 class="m-t-5 m-b-5 semi-bold">Restaurent Name</h5>
-                  <h6 class="m-t-5 m-b-5">DLF Phase 2</h6>
-                  <h6 class="bold">
-                    Mid-Range, Asian
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-4">
-            <div class="card">
-              <div class="row">
-                <div class="col-xs-5">
-                  <img src="assets/images/rest4.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-xs-7 p-l-0">
-                  <h5 class="m-t-5 m-b-5 semi-bold">Restaurent Name</h5>
-                  <h6 class="m-t-5 m-b-5">DLF Phase 2</h6>
-                  <h6 class="bold">
-                    Mid-Range, Asian
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-4">
-            <div class="card">
-              <div class="row">
-                <div class="col-xs-5">
-                  <img src="assets/images/rest5.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-xs-7 p-l-0 status">
-                  <h5 class="m-t-5 m-b-5 semi-bold">Restaurent Name</h5>
-                  <h6 class="m-t-5 m-b-5">DLF Phase 2</h6>
-                  <h6 class="bold">
-                    Mid-Range, Asian
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-lg-4">
-            <div class="card">
-              <div class="row">
-                <div class="col-xs-5">
-                  <img src="assets/images/rest6.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-xs-7 p-l-0">
-                  <h5 class="m-t-5 m-b-5 semi-bold">Restaurent Name</h5>
-                  <h6 class="m-t-5 m-b-5">dlf Phase 2</h6>
                   <h6 class="bold">
                     Mid-Range, Asian
                   </h6>
@@ -247,7 +167,7 @@
               <ul class="no-style">
                 <li class="m-b-5 no-padding"><a href="privilege.html#details" class="link text-white">Details</a></li>
                 <li class="m-b-5 no-padding"><a href="privilege.html#pricing" class="link text-white">Pricing</a></li>
-                <li class="m-b-5 no-padding"><a href="#" class="link text-white ">Buy</a></li>
+                <li class="m-b-5 no-padding"><a href="privilege.html#pricing" class="link text-white ">Buy</a></li>
                 <li class="m-b-5 no-padding"><a href="#" class="link text-white ">Download iOS</a></li>
                 <li class="m-b-5 no-padding"><a href="#" class="link text-white ">Download Android</a></li>
                 <li class="m-b-5 no-padding"><a href="privilege.html#how-it-works" class="link text-white">How it works</a></li>
@@ -287,7 +207,6 @@
     <!-- BEGIN SWIPER DEPENDENCIES -->
     <script type="text/javascript" src="assets/plugins/swiper/js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <!-- BEGIN RETINA IMAGE LOADER -->
     <script type="text/javascript" src="assets/plugins/jquery-unveil/jquery.unveil.min.js"></script>
     <!-- END VENDOR JS -->
@@ -296,7 +215,33 @@
     <!-- END PAGES LIB -->
     <!-- BEGIN YOUR CUSTOM JS -->
     <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/contact.js"></script>
-    <script type="text/javascript" src="assets/js/google_map.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+      var app = angular.module('myapp',[]);
+      app.controller('mainCtrl', ['$scope','mainFact', function($scope, mainFact){
+        $scope.data = {};
+        //console.log($scope.search);
+        mainFact.getdata(function(response){
+         $scope.data = response.data.result;
+         console.log($scope.data);
+        })
+      }]);
+      app.factory('mainFact', ['$http', function($http){
+        var mainFact = {};
+        mainFact.getdata = function(callback){
+          $http({
+            method : "GET",
+            url : "http://stg-api.foodtalk.in/offers"
+          }).then(function(response){
+            callback(response);
+          },function(error){
+            if(error.status == 401){
+              console.log('Connection error!');
+            }
+          });
+        }
+        return mainFact;
+      }])
+    </script>
   </body>
 </html>
