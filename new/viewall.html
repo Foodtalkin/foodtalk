@@ -128,14 +128,14 @@
           <div class="col-md-4 col-sm-6 col-lg-4" ng-repeat="data in data.data | filter: search">
             <div class="card">
               <div class="row">
-                <div class="col-xs-5">
+                <div class="col-xs-5 p-r-0">
                   <img ng-src="{{data.card_image}}" alt="" class="img-responsive">
                 </div>
-                <div class="col-xs-7 p-l-0">
+                <div class="col-xs-7">
                   <h5 class="m-t-5 m-b-5 semi-bold">{{data.name}}</h5>
                   <h6 class="m-t-5 m-b-5">DLF Phase 2</h6>
                   <h6 class="bold">
-                    Mid-Range, Asian
+                    {{data.one_liner}}
                   </h6>
                 </div>
               </div>
