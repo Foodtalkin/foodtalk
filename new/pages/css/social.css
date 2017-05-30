@@ -125,7 +125,7 @@ button {
   position: relative;
   overflow: hidden;
   border-radius: 28%;
-  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.2);
   opacity: 0.99;
 }
 .social-btns .mybtn:before {
