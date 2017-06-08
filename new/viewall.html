@@ -127,8 +127,8 @@
             <input type="text" class="myserchbar" placeholder="&#xF002; Search your favorite restaurent...." ng-model="search">
           </div>
         </div>
-        <div class="row m-t-80">
-          <div class="col-md-4 col-sm-6 col-lg-4" ng-repeat="data in data.data | filter: search">
+        <div class="row m-t-80" >
+          <div class="col-md-4 col-sm-6 col-lg-4" ng-repeat="data in data | filter: search">
             <div class="card">
               <div class="row">
                 <div class="col-xs-5 p-r-0">
@@ -221,20 +221,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script>
       var app = angular.module('myapp',[]);
-      app.controller('mainCtrl', ['$scope','mainFact', function($scope, mainFact){
-        $scope.data = {};
-        //console.log($scope.search);
-        mainFact.getdata(function(response){
-         $scope.data = response.data.result;
-         console.log($scope.data);
-        })
+      app.controller('mainCtrl', ['$scope','mainFact','$window', function($scope, mainFact, $window){
+        $scope.data = [];
+        $scope.nextpage = "";
+        $scope.loadImages = function(url){
+          if(url != ""){         
+            mainFact.getdata(url, function(response){
+              $scope.data = $scope.data.concat(response.data.result.data);
+              if(response.data.result.next_page_url != ""){
+                 $scope.nextpage = response.data.result.next_page_url;
+                 $scope.loadImages($scope.nextpage);
+               }else{
+                $scope.nextpage = "";
+               }
+              console.log(response.data);
+            });
+          }
+        }
+        $scope.loadImages("http://stg-api.foodtalk.in/offers");
+        
       }]);
+      // app.directive('whenScrolled', function() {
+      //     return function(scope, elm, attr) {
+      //         var raw = elm[0];
+      //         console.log('1');
+      //         elm.bind('scroll', function() {
+      //             if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+      //                 scope.$apply(attr.whenScrolled);
+      //             }
+      //         });
+      //     };
+      // });
       app.factory('mainFact', ['$http', function($http){
         var mainFact = {};
-        mainFact.getdata = function(callback){
+        mainFact.getdata = function(url, callback){
           $http({
             method : "GET",
-            url : "http://stg-api.foodtalk.in/offers"
+            url : url
           }).then(function(response){
             callback(response);
           },function(error){
