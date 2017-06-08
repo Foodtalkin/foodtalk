@@ -23,17 +23,23 @@
     <!-- BEGIN PAGES CSS -->
     <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
     <link class="main-stylesheet" href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <!-- BEGIN PAGES CSS -->
+    <style>
+      .abril{
+        font-family: 'Roboto Slab', serif;
+      }
+    </style>
   </head>
   <body class="pace-dark">
-    <nav class="header bg-header transparent-dark " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
+    <nav class="header bg-header transparent-light " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
       <div class="container relative">
         <!-- BEGIN LEFT CONTENT -->
         <div class="pull-left">
           <!-- .header-inner Allows to vertically Align elements to the Center-->
           <div class="header-inner">
             <!-- BEGIN LOGO -->
-            <img src="assets/images/logo_black.png" width="152" height="21" data-src-retina="assets/images/logo_black_2x.png" class="logo" alt="">
+            <img src="assets/images/logo_white.png" width="152" height="21" data-src-retina="assets/images/logo_white_2x.png" class="logo" alt="">
             <img src="assets/images/logo_white.png" width="152" height="21" data-src-retina="assets/images/logo_white_2x.png" class="alt" alt="">
           </div>
         </div>
@@ -114,10 +120,10 @@
                         <!-- <h6 class="block-title m-b-0 text-white hint-text">
                           Discover
                         </h6> -->
-                        <h1 class="m-t-5 light">
-                        The Foodt Talk Privilege
+                        <h1 class="m-t-5 abril text-white">
+                          The Food Talk Privilege
                         </h1>
-                        <h2 class="sm-text-center">Endless meals and deals</h2>
+                        <h2 class="sm-text-center m-t-25 abril text-white">Endless meals and deals</h2>
                         <!-- <button class="btn btn-primary btn-cons" type="button" style="margin-right: 0;" data-toggle="modal" data-target="#myModal">Buy Now!</button> -->
                         <div class="text-center row">
                           <div class="p-t-15 text-right xs-text-center col-sm-3 col-sm-offset-3">
@@ -586,12 +592,12 @@
                     <p id="paysubline">We need payment information inorder to process your order</p>
                 </div>
                 <div class="modal-body" id="detailsform">
-                    <form class="form-default" role="form">
+                    <form class="form-default" role="form" id="form1">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" >
+                                    <input type="text" name="name" id="name" class="form-control" >
                                 </div>
                             </div>
                         </div>
@@ -599,13 +605,13 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Email Address</label>
-                                    <input type="email" class="form-control" >
+                                    <input type="email" name="email" id="email" class="form-control" >
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Mobile Number</label>
-                                    <input type="tel" class="form-control" >
+                                    <input type="tel" name="phone" id="phone" class="form-control" >
                                 </div>
                             </div>
                         </div>
@@ -623,19 +629,19 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <button type="button" class="btn btn-primary btn-lg btn-large btn-block" id="paystep1">
+                            <button type="button" class="btn btn-primary btn-lg btn-large btn-block" id="checkuser">
                             Next
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="modal-body" id="otpform">
-                    <form class="form-default" role="form">
+                    <form class="form-default" role="form" id="form2">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label>OTP</label>
-                                    <input type="number" minlength="4" maxlength="4" class="form-control" >
+                                    <input type="number" id="otp" minlength="4" maxlength="4" class="form-control" >
                                 </div>
                             </div>
                         </div>
@@ -653,11 +659,18 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <button type="button" class="btn btn-primary btn-lg btn-large btn-block" id="paystep1" data-dismiss="modal">
+                            <button type="button" class="btn btn-primary btn-lg btn-large btn-block" id="confirmOtp">
                             Pay
                             </button>
                         </div>
                     </div>
+                </div>
+                <div class="modal-body" id="otherthings">
+                  <div class="row">
+                    <div class="col-sm-12 p-t-30 p-b-30 text-center">
+                      <i class="fa fa-spinner fa-3x fa-spin" aria-hidden="true"></i>
+                    </div>
+                  </div>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -684,14 +697,108 @@
     <script>
       $(document).ready(function() {
         $('#otpform').hide();
-        $('#paystep1').on('click', function(event) {
+        $('#otherthings').hide();
+
+        $('#checkuser').on('click', function(event) {
           event.preventDefault();
           /* Act on the event */
-          console.log('step 1 done showing otp screen');
           $('#detailsform').hide();
-          $('#payheading').html('Confirm <span class="semi-bold">OTP</span>');
-          $('#paysubline').html('We need to confirm otp inorder to process your order');
-          $('#otpform').show();
+          $('#payheading').html('Checking <span class="semi-bold">Information</span>');
+          $('#paysubline').html('Please wait while we check the information you provide');
+          $('#otherthings').show();
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var phone = $('#phone').val();
+
+          $.ajax({
+              url: "http://stg-api.foodtalk.in/checkuser/"+phone,
+              type: "GET",
+              success: function(response){ 
+                console.log(response);
+                if(response.code == '404'){
+                  getOtp(name, email, phone, 1);
+                   $('#detailsform').hide();
+                    $('#payheading').html('Sending <span class="semi-bold">OTP</span>');
+                    $('#paysubline').html('Please wait while we send Your OTP on '+phone);
+                    $('#otherthings').show();
+                }else if(response.code = "200"){
+                  getOtp(name, email, phone, 0);
+                   $('#detailsform').hide();
+                    $('#payheading').html('Sending <span class="semi-bold">OTP</span>');
+                    $('#paysubline').html('Please wait while we send Your OTP on '+phone);
+                    $('#otherthings').show();
+                }else{
+                  alert('somthing went wrong');
+                }
+              },
+              error: function(){ 
+                  alert("error!");
+              } 
+          });
+          
+        });
+
+
+        function getOtp(name, email, phone, signup) {
+          var data = {
+            name : name,
+            email : email,
+            phone : phone,
+            signup : signup
+          }
+          data =  JSON.stringify(data);
+          $.ajax({
+              url: "http://stg-api.foodtalk.in/getotp",
+              data: data,
+              type: "POST",
+              success: function(response){ 
+                  console.log(response);
+                  if(response.code == "200"){
+                    $('#otherthings').hide();
+                    $('#detailsform').hide();
+                    $('#payheading').html('Confirm <span class="semi-bold">OTP</span>');
+                    $('#paysubline').html('Please enter otp sent on '+phone);
+                    $('#otpform').show();
+                  }
+              },
+              error: function(){ 
+                  alert("error!");
+              } 
+          });
+        }
+
+        $('#confirmOtp').on('click', function(event) {
+          event.preventDefault();
+          /* Act on the event */
+          $('#otherthings').show();
+          $('#detailsform').hide();
+          $('#payheading').html('Varifying <span class="semi-bold">OTP</span>');
+          $('#paysubline').html('Please wait while we varify the OTP');
+          $('#otpform').hide();
+          var otp = $('#otp').val();
+          var data = {
+             phone: $('#phone').val(),
+              otp:otp
+          }
+          data =  JSON.stringify(data);
+          $.ajax({
+              url: "http://stg-api.foodtalk.in/userlogin",
+              data: data,
+              type: "POST",
+              success: function(response){ 
+                  console.log(response);
+                  if(response.result.subscription.length == 0){
+                    console.log('no subscription');
+                    $('#payheading').html('Redirecting');
+                    $('#paysubline').html('varification confirmed please wait while we redirect you to payment gatway');
+                  }else{
+                    console.log('subscribed');
+                  }
+              },
+              error: function(){ 
+                  alert("error!");
+              } 
+          });
         });
       });
     </script>
