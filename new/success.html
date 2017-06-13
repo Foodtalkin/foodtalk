@@ -53,14 +53,37 @@
 				<div class="center-container text-center" id="checking">
 					<i class="fa fa-spinner fa-3x fa-spin" aria-hidden="true"></i>
 				</div>
+				<div class="center-container text-center" id="Failshow">
+					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
+					<img src="assets/images/fail.svg" alt="" class="my-img">
+					<br><br>
+					<h1 class="text-white">Something's Wrong</h1>
+					<p class="text-white m-t-30">The transaction could not completed. <br>
+					Please try again or <a href="contact.html">contact Support</a>.</p>
+					<div class="row m-t-30">
+						<div class="col-sm-6">
+							<a href="">
+								<img src="assets/images/apple.png" alt="" class="pull-right" style="width: 120px;">
+							</a>
+						</div>
+						<div class="col-sm-6">
+							<a href="">
+								<img src="assets/images/google.png" alt="" class="pull-left" style="width: 120px;">
+							</a>
+						</div>
+						<div class="col-sm-12">
+							<a href="index.html" class="btn btn-lg btn-warning m-t-20" style="background-color: #ffda44; color:#000;">Continue to website</a>
+						</div>
+					</div>
+				</div>
 				<div class="center-container text-center" id="successshow">
 					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
-					<img src="assets/images/success.png" alt="" class="my-img">
+					<img src="assets/images/success.svg" alt="" class="my-img">
 					<br><br>
-					<h1 class="text-white">SUCCESS</h1>
-					<p class="text-white">RID: 1335555</p>
-					<p class="text-white m-t-30">We have sent the details by SMS &amp; Email. <br>
-					For any help you can <a href="contact.html">contact us</a>.</p>
+					<h1 class="text-white">Welcome Aboard</h1>
+					<p class="text-white m-t-30">You have succesfully purchased <br>
+					 Food Talk Privilege for 1 year.<br> <br> <br> Thank You!
+					<!-- For any help you can <a href="contact.html">contact us</a>. --></p>
 					<div class="row m-t-30">
 						<div class="col-sm-6">
 							<a href="">
@@ -83,7 +106,7 @@
     	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     	<script>
     		$(document).ready(function() {
-    			$('#successshow').hide();
+    			$('#successshow, #Failshow').hide();
     			var getUrlParameter = function getUrlParameter(sParam) {
 				    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
 				        sURLVariables = sPageURL.split('&'),
@@ -108,6 +131,13 @@
 		            type: "POST",
 		            success : function(response){
 		              console.log(response);
+		              if(response.status === "OK"){
+		              	$('#checking, #Failshow').hide();
+		              	$('#successshow').show();
+		              }else{
+		              	$('#checking, #successshow').hide();
+		              	$('#Failshow').show();
+		              }
 		            }
 		        })
     		});
