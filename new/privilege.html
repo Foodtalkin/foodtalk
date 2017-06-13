@@ -713,6 +713,7 @@
         $('#otpform').hide();
         $('#otherthings').hide();
         $('#downloadthings').hide();
+        
         $('#checkuser').on('click', function(event) {
           event.preventDefault();
           /* Act on the event */
@@ -771,7 +772,7 @@
                     $('#otherthings').hide();
                     $('#detailsform').hide();
                     $('#payheading').html('Confirm <span class="semi-bold">OTP</span>');
-                    $('#paysubline').html('Please enter otp sent on '+phone);
+                    $('#paysubline').html("Please enter otp sent on "+phone+"<br>Didn`t get the OTP? <br><span id='resent' style='color:blue;cursor: pointer;'>Resent OTP</span>");
                     $('#otpform').show();
                   }
               },
@@ -801,24 +802,49 @@
               type: "POST",
               success: function(response){ 
                   console.log(response);
-                  if(response.result.subscription.length == 0){
-                    console.log('no subscription');
-                    $('#payheading').html('Redirecting');
-                    $('#paysubline').html('varification confirmed please wait while we redirect you to payment gatway');
-                    localStorage.setItem('SessionID', response.result.session.session_id);
-                    subscription_Payment(response.result.session.session_id);
-                  }else{
-                    console.log('subscribed');
+                  if(response.code == "406"){
+                    $('#payheading').html('Confirm <span class="semi-bold">OTP</span>');
+                    $('#paysubline').html("<span style='color:red;'>Wrong OTP</span><br/>Please enter otp sent on "+phone+"<br><span id='resent' style='color:blue;cursor: pointer;'>Resent OTP</span>");
+                    $('#otp').val("");
+                    $('#otpform').show();
                     $('#otherthings').hide();
-                    $('#payheading').html('Already subscribed');
-                    $('#paysubline').html('You are already Registered please download the app');
-                    $('#downloadthings').show();
+                  }else{
+                    if(response.result.subscription.length == 0){
+                      console.log('no subscription');
+                      $('#payheading').html('Redirecting');
+                      $('#paysubline').html('varification confirmed please wait while we redirect you to payment gatway');
+                      $('#otherthings').show();
+                      localStorage.setItem('SessionID', response.result.session.session_id);
+                      subscription_Payment(response.result.session.session_id);
+                    }else{
+                      console.log('subscribed');
+                      $('#otherthings').hide();
+                      $('#payheading').html('Already subscribed');
+                      $('#paysubline').html('You are already Registered please download the app');
+                      $('#downloadthings').show();
+                    }
                   }
+                    
               },
               error: function(){ 
                   alert("error!");
               } 
           });
+        });
+
+        $('#paysubline').on('click','#resent', function(event) {
+          event.preventDefault();
+          /* Act on the event */
+          $.ajax({
+            url: "http://stg-api.foodtalk.in/resendotp/"+$('#phone').val(),
+            type:"GET",
+            success: function(response){
+              console.log(response)
+            },
+              error: function(){ 
+                  alert("error!");
+              }
+          })
         });
 
         function subscription_Payment(sessionid) {
