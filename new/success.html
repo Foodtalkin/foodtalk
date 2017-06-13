@@ -84,21 +84,22 @@
     	<script>
     		$(document).ready(function() {
     			$('#successshow').hide();
-    			function GetURLParameter(sParam)
-				{
-				    var sPageURL = window.location.search.substring(1);
-				    var sURLVariables = sPageURL.split('&');
-				    for (var i = 0; i < sURLVariables.length; i++)
-				    {
-				        var sParameterName = sURLVariables[i].split('=');
-				        if (sParameterName[0] == sParam)
-				        {
-				            return decodeURIComponent(sParameterName[1]);
+    			var getUrlParameter = function getUrlParameter(sParam) {
+				    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				        sURLVariables = sPageURL.split('&'),
+				        sParameterName,
+				        i;
+
+				    for (i = 0; i < sURLVariables.length; i++) {
+				        sParameterName = sURLVariables[i].split('=');
+
+				        if (sParameterName[0] === sParam) {
+				            return sParameterName[1] === undefined ? true : sParameterName[1];
 				        }
 				    }
-				}​
+				};
 
-				var paymentid = GetURLParameter('payment_request_id');
+				var paymentid = getUrlParameter('payment_request_id');
 				var sessionid = localStorage.getItem('SessionID');
 
 				$.ajax({
