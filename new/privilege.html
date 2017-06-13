@@ -791,6 +791,8 @@
                     console.log('no subscription');
                     $('#payheading').html('Redirecting');
                     $('#paysubline').html('varification confirmed please wait while we redirect you to payment gatway');
+                    localStorage.setItem('SessionID', response.result.session.session_id);
+                    subscription_Payment(response.result.session.session_id);
                   }else{
                     console.log('subscribed');
                   }
@@ -800,6 +802,18 @@
               } 
           });
         });
+
+        function subscription_Payment(sessionid) {
+          $.ajax({
+            url: "http://stg-api.foodtalk.in/subscriptionPayment?sessionid="+sessionid,
+            data: JSON.stringify({"subscription_type_id":"1", "source" : "web"}),
+            type: "POST",
+            success : function(response){
+              console.log(response.result.transaction.longurl);
+              window.location = response.result.transaction.longurl;
+            }
+          })
+        }
       });
     </script>
 </html>

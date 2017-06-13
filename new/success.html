@@ -50,7 +50,10 @@
 	<body>
 		<div class="container-fluid p-l-0 p-r-0">
 			<div class="main-container">
-				<div class="center-container text-center">
+				<div class="center-container text-center" id="checking">
+					<i class="fa fa-spinner fa-3x fa-spin" aria-hidden="true"></i>
+				</div>
+				<div class="center-container text-center" id="successshow">
 					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
 					<img src="assets/images/success.png" alt="" class="my-img">
 					<br><br>
@@ -78,5 +81,35 @@
 		</div>
 		<script type="text/javascript" src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
     	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    	<script>
+    		$(document).ready(function() {
+    			$('#successshow').hide();
+    			function GetURLParameter(sParam)
+				{
+				    var sPageURL = window.location.search.substring(1);
+				    var sURLVariables = sPageURL.split('&');
+				    for (var i = 0; i < sURLVariables.length; i++)
+				    {
+				        var sParameterName = sURLVariables[i].split('=');
+				        if (sParameterName[0] == sParam)
+				        {
+				            return decodeURIComponent(sParameterName[1]);
+				        }
+				    }
+				}​
+
+				var paymentid = GetURLParameter('payment_request_id');
+				var sessionid = localStorage.getItem('SessionID');
+
+				$.ajax({
+		            url: "http://stg-api.foodtalk.in/subscription?sessionid="+sessionid,
+		            data: JSON.stringify({"payment_id":paymentid}),
+		            type: "POST",
+		            success : function(response){
+		              console.log(response);
+		            }
+		        })
+    		});
+    	</script>
 	</body>
 </html>
