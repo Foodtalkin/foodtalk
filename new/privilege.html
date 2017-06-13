@@ -641,7 +641,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label>OTP</label>
-                                    <input type="number" id="otp" minlength="4" maxlength="4" class="form-control" >
+                                    <input type="password" id="otp" minlength="4" maxlength="4" class="form-control" >
                                 </div>
                             </div>
                         </div>
@@ -672,6 +672,20 @@
                     </div>
                   </div>
                 </div>
+                <div class="modal-body" id="downloadthings">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <a href="">
+                        <img src="assets/images/apple.png" alt="" class="pull-right" style="width: 120px;">
+                      </a>
+                    </div>
+                    <div class="col-sm-6">
+                      <a href="">
+                        <img src="assets/images/google.png" alt="" class="pull-left" style="width: 120px;">
+                      </a>
+                    </div>
+                  </div>
+                </div>
             </div>
             <!-- /.modal-content -->
         </div>
@@ -698,7 +712,7 @@
       $(document).ready(function() {
         $('#otpform').hide();
         $('#otherthings').hide();
-
+        $('#downloadthings').hide();
         $('#checkuser').on('click', function(event) {
           event.preventDefault();
           /* Act on the event */
@@ -795,6 +809,10 @@
                     subscription_Payment(response.result.session.session_id);
                   }else{
                     console.log('subscribed');
+                    $('#otherthings').hide();
+                    $('#payheading').html('Already subscribed');
+                    $('#paysubline').html('You are already Registered please download the app');
+                    $('#downloadthings').show();
                   }
               },
               error: function(){ 
