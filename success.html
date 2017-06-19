@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	    <title>Food Talk Home</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <link rel="apple-touch-icon" href="pages/ico/60.png">
+	    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+	    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+	    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+	    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-touch-fullscreen" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+	    <meta content="" name="description" />
+	    <meta content="" name="author" />
+	     <!-- BEGIN PLUGINS -->
+	    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+	    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+	    <!-- END PLUGINS -->
+	    <!-- BEGIN PAGES CSS -->
+	    <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+	    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	    <!-- BEGIN PAGES CSS -->
+	    <style>
+	      .abril{
+	        font-family: 'Roboto Slab', serif;
+	      }
+	      .main-container{
+	      	width: 100%;
+	      	height: 100vh;
+	      	background-color: #313335;
+	      	position: relative;
+	      }
+	      .center-container{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+	      }
+	      .center-container .my-img{
+	      	width: 200px;
+	      	display: block;
+	      	margin: 0 auto;
+	      }
+	    </style>
+	</head>
+	<body>
+		<div class="container-fluid p-l-0 p-r-0">
+			<div class="main-container">
+				<div class="center-container text-center" id="checking">
+					<i class="fa fa-spinner fa-3x fa-spin" aria-hidden="true"></i>
+				</div>
+				<div class="center-container text-center" id="Failshow">
+					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
+					<img src="assets/images/fail.svg" alt="" class="my-img">
+					<br><br>
+					<h1 class="text-white">Something's Wrong</h1>
+					<p class="text-white m-t-30">The transaction could not completed. <br>
+					Please try again or <a href="contact.html">contact Support</a>.</p>
+					<div class="row m-t-30">
+						<div class="col-sm-6">
+							<a href="">
+								<img src="assets/images/apple.png" alt="" class="pull-right" style="width: 120px;">
+							</a>
+						</div>
+						<div class="col-sm-6">
+							<a href="">
+								<img src="assets/images/google.png" alt="" class="pull-left" style="width: 120px;">
+							</a>
+						</div>
+						<div class="col-sm-12">
+							<a href="index.html" class="btn btn-lg btn-warning m-t-20" style="background-color: #ffda44; color:#000;">Continue to website</a>
+						</div>
+					</div>
+				</div>
+				<div class="center-container text-center" id="successshow">
+					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
+					<img src="assets/images/success.svg" alt="" class="my-img">
+					<br><br>
+					<h1 class="text-white">Welcome Aboard</h1>
+					<p class="text-white m-t-30">You have succesfully purchased <br>
+					 Food Talk Privilege for 1 year.<br> <br> <br> Thank You!
+					<!-- For any help you can <a href="contact.html">contact us</a>. --></p>
+					<div class="row m-t-30">
+						<div class="col-sm-6">
+							<a href="">
+								<img src="assets/images/apple.png" alt="" class="pull-right" style="width: 120px;">
+							</a>
+						</div>
+						<div class="col-sm-6">
+							<a href="">
+								<img src="assets/images/google.png" alt="" class="pull-left" style="width: 120px;">
+							</a>
+						</div>
+						<div class="col-sm-12">
+							<a href="index.html" class="btn btn-lg btn-warning m-t-20" style="background-color: #ffda44; color:#000;">Continue to website</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+    	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    	<script>
+    		$(document).ready(function() {
+    			$('#successshow, #Failshow').hide();
+    			var getUrlParameter = function getUrlParameter(sParam) {
+				    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				        sURLVariables = sPageURL.split('&'),
+				        sParameterName,
+				        i;
+
+				    for (i = 0; i < sURLVariables.length; i++) {
+				        sParameterName = sURLVariables[i].split('=');
+
+				        if (sParameterName[0] === sParam) {
+				            return sParameterName[1] === undefined ? true : sParameterName[1];
+				        }
+				    }
+				};
+
+				var paymentid = getUrlParameter('payment_request_id');
+				var sessionid = localStorage.getItem('SessionID');
+
+				$.ajax({
+		            url: "http://stg-api.foodtalk.in/subscription?sessionid="+sessionid,
+		            data: JSON.stringify({"payment_id":paymentid}),
+		            type: "POST",
+		            success : function(response){
+		              console.log(response);
+		              if(response.status === "OK"){
+		              	$('#checking, #Failshow').hide();
+		              	$('#successshow').show();
+		              }else{
+		              	$('#checking, #successshow').hide();
+		              	$('#Failshow').show();
+		              }
+		            }
+		        })
+    		});
+    	</script>
+	</body>
+</html>
