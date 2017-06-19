@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Food Talk Contact</title>
+    <title>Food Talk Privilege</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="apple-touch-icon" href="pages/ico/60.png">
     <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
@@ -25,13 +25,26 @@
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <!-- BEGIN PAGES CSS -->
+
     <style>
+      .myserchbar{
+        width: 100%;
+        margin-top: 50px;
+        border: 2px solid rgba(255,255,255,.2);
+        border-radius: 5px;
+        line-height: 40px;
+        background: transparent;
+        font-family:Arial, 'FontAwesome';
+        font-size: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       .abril{
         font-family: 'Roboto Slab', serif;
       }
     </style>
   </head>
-  <body>
+  <body ng-app="myapp">
     <!-- BEGIN HEADER -->
     <nav class="header bg-header transparent-light " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
       <div class="container relative">
@@ -94,132 +107,52 @@
         </div>
       </div>
     </nav>
+    <section class="demo-hero-5" data-pages="parallax" data-pages-bg-image="assets/images/s_header1.jpg">
+      <div class="container-xs-height full-height">
+        <div class="col-xs-height col-middle text-center">
+          <h1 class="inner abril text-white">The Food Talk Privilege</h1>
+        </div>
+      </div>
+    </section>
     <!-- END HEADER -->
-    <div class="m-t-60">
-      <!-- START CONTACT SECTION -->
-      <section class="container container-fixed-lg p-t-70 p-b-80  sm-p-t-30 sm-p-b-30">
+    <section class="bg-master-darker relative full-width p-t-100 p-b-100" id="partners" ng-controller="mainCtrl">
+      <div class="container">
         <div class="row">
-          <div class="col-md-5">
-            <div class="row">
-              <div class="col-sm-6 col-md-12">
-                <h4>Need service or support? <br>
-                    Type your needed request and  <br>
-                    we’ll find you a solution.</h4>
-              </div>
-              <div class="col-sm-6 col-md-12">
-                <br class="visible-md visible-xs">
-                <h5 class="block-title hint-text m-b-0">Food Talk </h5>
-                <address class="m-t-10">K-3/25 DLF Phase 2, 
-                  <br> Gurgaon, Haryana 
-                  <br> Pin 122002</address>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">Hotline </p>
-                    <p class="hint-text no-margin fs-14"><a href="tel://1244225022" class="text-master">+91 124 422 5022</a></p>
-                  </div>
-                  <!-- <div class="col-sm-12">
-                    <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">Email </p>
-                    <p class="hint-text no-margin fs-14"><a href="mailto:info@foodtalkindia.com" class="text-master">info.foodtalkindia.com</a></p>
-                  </div> -->
-                </div>
-                <!-- <div class="row">
-                  <div class="col-md-12">
-                    <ul class="no-style fs-12 no-padding xs-m-t-20 m-t-20">
-                      <li class="inline no-padding"><a class="fs-16 text-master" href="https://www.facebook.com/foodtalkindia" target="_blank"><i class="fa p-r-25 fa-facebook"></i></a></li>
-                      <li class="inline no-padding"><a class="fs-16 text-master" href="https://instagram.com/foodtalkindia/" target="_blank"><i class="fa p-r-20 fa-instagram"></i></a></li>
-                      <li class="inline no-padding"><a class="fs-16 text-master" href="https://twitter.com/foodtalkindia" target="_blank"><i class="fa p-r-20 fa-twitter"></i></a></li>
-                      <li class="inline no-padding"><a class="fs-16 text-master" href="https://www.snapchat.com/add/snapfoodtalk" target="_blank"><i class="fa p-r-20 fa-snapchat-ghost"></i></a></li>
-                    </ul>
-                  </div>
-                </div> -->
-              </div>
-            </div>
+          <div class="col-sm-8 col-sm-offset-2 text-white text-center">
+           <!-- <h5 class="block-title hint-text no-margin text-white">Discover</h5> -->
+            <h1 class="m-t-5 text-white light">Partner Restaurants</h1>
+            <p class="m-t-20">The Food Talk app offers unbeatable value with Buy One Get One Free offers at the best restaurants across Delhi NCR and Mumbai. Simply download our app and buy one of the offer packs to start redeeming your coupons. Great savings await you!</p>
           </div>
-          <div class="col-md-7">
-            <br class=" visible-xs">
-            <br class="visible-xs">
-            <h4 class="sm-m-t-20">Say hellow!</h4>
-            <div class="panel"  id="contact-panel">
-              <form autocomplete="off" class="m-t-15" id="contact-form" method="post">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group form-group-default required">
-                      <label>name</label>
-                      <input type="text" name="name" class="form-control" placeholder="Jhon Doe" required>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group form-group-default required">
-                      <label>Email</label>
-                      <input type="email" name="email" placeholder="Jhonedoe@gmail.com" class="form-control" required>
-                    </div>
-                  </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <input type="text" class="myserchbar" placeholder="&#xF002; Search your favorite restaurent...." ng-model="search">
+          </div>
+        </div>
+        <div class="row m-t-80" >
+          <div class="col-md-4 col-sm-6 col-lg-4" ng-repeat="data in data | filter: search">
+            <div class="card">
+              <div class="row">
+                <div class="col-xs-5 p-r-0">
+                  <img ng-src="{{data.card_image}}" alt="" class="img-responsive">
                 </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group form-group-default required">
-                      <label>Contact No.</label>
-                      <input type="tel" name="contact" class="form-control" placeholder="0123456789" required>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group form-group-default required">
-                      <label>Purpose</label>
-                      <select class="form-control" name="purpose" required>
-                        <option value=""> -- select -- </option>
-                        <option value="privilege_partners">Become a privilege partner restaurant</option>
-                        <option value="brand_promotions">Promote your brand with us</option>
-                        <option value="Event_request">Food Talk events &amp; experiences</option>
-                        <option value="Job">Job application</option>
-                        <option value="Complaint">Complaint</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-                  </div>
+                <div class="col-xs-7">
+                  <h5 class="m-t-5 m-b-5 semi-bold">{{data.name}}</h5>
+                  <h6 class="m-t-5 m-b-5">{{data.outlet_count}} Outlets</h6>
+                  <h6 class="bold">
+                    {{data.one_liner}}
+                  </h6>
                 </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group form-group-default">
-                      <label>Website Url</label>
-                      <input type="url" name="website" class="form-control" placeholder="http://example.com">
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group form-group-default required">
-                      <label>Location / City</label>
-                      <input type="text" name="city" placeholder="Delhi NCR, Mumbai .." class="form-control" required>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group form-group-default required">
-                  <label>Message</label>
-                  <textarea name="message" placeholder="Type the message you wish to send" style="height:100px" class="form-control" required></textarea>
-                </div>
-                <div class="sm-p-t-10 clearfix">
-                  <!-- <p class="pull-left small hint-text m-t-5 font-arial">I hereby certify that the information above is true and accurate. </p> -->
-                  <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button>
-                </div>
-                <div class="clearfix"></div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-     
-      <!-- END CONTACT SECION -->
-      <!-- START GOOGLE MAP -->
-      <!-- <section class="container-fluid  no-padding no-overflow">
-        <div id="google-map" class="full-width demo-map gradient-overlay no-overflow"></div>
-      </section> -->
-      <!-- END GOOGLE MAP -->
-    </div>
+      </div>
+    </section>
     <!-- BEGIN FOOTER -->
     <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darkest ">
         <div class="container">
           <div class="row">
             <div class="col-sm-4 col-xs-12 xs-m-b-40">
               <img src="assets/images/logo_w.png" width="160" data-src-retina="assets/images/logo_w.png" class="alt m-t-30" alt="">
-              <!-- <p class="no-margin text-white fs-14 p-l-20"><a href="tel://1244225022" class="text-white">+91 124 422 5022</a></p> -->
             </div>
             <div class="col-sm-2 col-xs-6 xs-m-b-20">
               <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Company </h6>
@@ -265,7 +198,6 @@
               </ul>
             </div>
           </div>
-
           <p class="fs-12 hint-text p-t-10 text-white">Copyright &copy; 2017. All Rights Reserved.</p>
         </div>
     </section>
@@ -279,7 +211,6 @@
     <!-- BEGIN SWIPER DEPENDENCIES -->
     <script type="text/javascript" src="assets/plugins/swiper/js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <!-- BEGIN RETINA IMAGE LOADER -->
     <script type="text/javascript" src="assets/plugins/jquery-unveil/jquery.unveil.min.js"></script>
     <!-- END VENDOR JS -->
@@ -288,7 +219,56 @@
     <!-- END PAGES LIB -->
     <!-- BEGIN YOUR CUSTOM JS -->
     <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/contact.js"></script>
-    <!-- <script type="text/javascript" src="assets/js/google_map.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+      var app = angular.module('myapp',[]);
+      app.controller('mainCtrl', ['$scope','mainFact','$window', function($scope, mainFact, $window){
+        $scope.data = [];
+        $scope.nextpage = "";
+        $scope.loadImages = function(url){
+          if(url != ""){         
+            mainFact.getdata(url, function(response){
+              $scope.data = $scope.data.concat(response.data.result.data);
+              if(response.data.result.next_page_url != ""){
+                 $scope.nextpage = response.data.result.next_page_url;
+                 $scope.loadImages($scope.nextpage);
+               }else{
+                $scope.nextpage = "";
+               }
+              console.log(response.data);
+            });
+          }
+        }
+        $scope.loadImages("http://stg-api.foodtalk.in/offers");
+        
+      }]);
+      // app.directive('whenScrolled', function() {
+      //     return function(scope, elm, attr) {
+      //         var raw = elm[0];
+      //         console.log('1');
+      //         elm.bind('scroll', function() {
+      //             if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+      //                 scope.$apply(attr.whenScrolled);
+      //             }
+      //         });
+      //     };
+      // });
+      app.factory('mainFact', ['$http', function($http){
+        var mainFact = {};
+        mainFact.getdata = function(url, callback){
+          $http({
+            method : "GET",
+            url : url
+          }).then(function(response){
+            callback(response);
+          },function(error){
+            if(error.status == 401){
+              console.log('Connection error!');
+            }
+          });
+        }
+        return mainFact;
+      }])
+    </script>
   </body>
 </html>
