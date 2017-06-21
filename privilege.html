@@ -722,6 +722,12 @@
     <!-- <script type="text/javascript" src="assets/js/custom.js"></script> -->
     <!-- END PAGES LIB -->
     <script>
+      $(document).keypress(
+          function(event){
+           if (event.which == '13') {
+              event.preventDefault();
+            }
+      });
       $(document).ready(function() {
         $('#otpform').hide();
         $('#otherthings').hide();
@@ -736,7 +742,7 @@
           }else{
             $('#detailsform').hide();
             $('#payheading').html('Checking <span class="semi-bold">Information</span>');
-            $('#paysubline').html('Please wait while we check the information you provide');
+            $('#paysubline').html('Please wait while we check the information you have provided');
             $('#otherthings').show();
             var name = $('#name').val();
             var email = $('#email').val();
@@ -745,18 +751,18 @@
               url: "http://stg-api.foodtalk.in/checkuser/"+phone,
               type: "GET",
               success: function(response){ 
-                console.log(response);
+                // console.log(response);
                 if(response.code == '404'){
                   getOtp(name, email, phone, 1);
                    $('#detailsform').hide();
                     $('#payheading').html('Sending <span class="semi-bold">OTP</span>');
-                    $('#paysubline').html('Please wait while we send Your OTP on '+phone);
+                    $('#paysubline').html('Please wait while we send your OTP on '+phone);
                     $('#otherthings').show();
                 }else if(response.code = "200"){
                   getOtp(name, email, phone, 0);
                    $('#detailsform').hide();
                     $('#payheading').html('Sending <span class="semi-bold">OTP</span>');
-                    $('#paysubline').html('Please wait while we send Your OTP on '+phone);
+                    $('#paysubline').html('Please wait while we send your OTP on '+phone);
                     $('#otherthings').show();
                 }else{
                   alert('somthing went wrong');
@@ -785,12 +791,12 @@
               data: data,
               type: "POST",
               success: function(response){ 
-                  console.log(response);
+                  // console.log(response);
                   if(response.code == "200"){
                     $('#otherthings').hide();
                     $('#detailsform').hide();
                     $('#payheading').html('Confirm <span class="semi-bold">OTP</span>');
-                    $('#paysubline').html("Please enter otp sent on "+phone+"<br>Didn`t get the OTP? <br><span id='resent' style='color:blue;cursor: pointer;'>Resent OTP</span>");
+                    $('#paysubline').html("Please enter OTP sent on "+phone+"<br>Didn`t get the OTP? <br><span id='resent' style='color:blue;cursor: pointer;'>Resend OTP</span>");
                     $('#otpform').show();
                   }
               },
@@ -804,7 +810,7 @@
           event.preventDefault();
           /* Act on the event */
           if($('#otp').val() == ""){
-            $('#paysubline').html("<span style='color:red'>please enter the otp to continue</span>");
+            $('#paysubline').html("<span style='color:red'>Please enter the OTP to continue</span>");
             return;
           }else{
             $('#otherthings').show();
@@ -823,26 +829,26 @@
                 data: data,
                 type: "POST",
                 success: function(response){ 
-                    console.log(response);
+                    // console.log(response);
                     if(response.code == "406"){
                       $('#payheading').html('Confirm <span class="semi-bold">OTP</span>');
-                      $('#paysubline').html("<span style='color:red;'>Wrong OTP</span><br/>Please enter otp sent on "+phone+"<br><span id='resent' style='color:blue;cursor: pointer;'>Resent OTP</span>");
+                      $('#paysubline').html("<span style='color:red;'>Wrong OTP</span><br/>Please enter OTP sent on "+phone+"<br><span id='resent' style='color:blue;cursor: pointer;'>Resend OTP</span>");
                       $('#otp').val("");
                       $('#otpform').show();
                       $('#otherthings').hide();
                     }else{
                       if(response.result.subscription.length == 0){
-                        console.log('no subscription');
+                        // console.log('no subscription');
                         $('#payheading').html('Redirecting');
-                        $('#paysubline').html('Verification confirmed please wait while we redirect you to payment gatway');
+                        $('#paysubline').html('Verification confirmed please wait while we redirect you to the payment gatway');
                         $('#otherthings').show();
                         localStorage.setItem('SessionID', response.result.session.session_id);
                         subscription_Payment(response.result.session.session_id);
                       }else{
-                        console.log('subscribed');
+                        // console.log('subscribed');
                         $('#otherthings').hide();
                         $('#payheading').html('Already subscribed');
-                        $('#paysubline').html('You are already Registered please download the app');
+                        $('#paysubline').html('You are already Registered. Login via APP');
                         $('#downloadthings').show();
                       }
                     }
@@ -863,7 +869,7 @@
             url: "http://stg-api.foodtalk.in/resendotp/"+$('#phone').val(),
             type:"GET",
             success: function(response){
-              console.log(response)
+              //console.log(response)
             },
               error: function(){ 
                   alert("error!");
@@ -877,7 +883,7 @@
             data: JSON.stringify({"subscription_type_id":"1", "source" : "web"}),
             type: "POST",
             success : function(response){
-              console.log(response.result.transaction.longurl);
+              //console.log(response.result.transaction.longurl);
               window.location = response.result.transaction.longurl;
             }
           })
