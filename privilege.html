@@ -748,7 +748,7 @@
             var email = $('#email').val();
             var phone = $('#phone').val();
              $.ajax({
-              url: "http://stg-api.foodtalk.in/checkuser/"+phone,
+              url: "http://api.foodtalk.in/checkuser/"+phone,
               type: "GET",
               success: function(response){ 
                 // console.log(response);
@@ -787,7 +787,7 @@
           }
           data =  JSON.stringify(data);
           $.ajax({
-              url: "http://stg-api.foodtalk.in/getotp",
+              url: "http://api.foodtalk.in/getotp",
               data: data,
               type: "POST",
               success: function(response){ 
@@ -825,7 +825,7 @@
             }
             data =  JSON.stringify(data);
             $.ajax({
-                url: "http://stg-api.foodtalk.in/userlogin",
+                url: "http://api.foodtalk.in/userlogin",
                 data: data,
                 type: "POST",
                 success: function(response){ 
@@ -866,7 +866,7 @@
           event.preventDefault();
           /* Act on the event */
           $.ajax({
-            url: "http://stg-api.foodtalk.in/resendotp/"+$('#phone').val(),
+            url: "http://api.foodtalk.in/resendotp/"+$('#phone').val(),
             type:"GET",
             success: function(response){
               //console.log(response)
@@ -879,7 +879,7 @@
 
         function subscription_Payment(sessionid) {
           $.ajax({
-            url: "http://stg-api.foodtalk.in/subscriptionPayment?sessionid="+sessionid,
+            url: "http://api.foodtalk.in/subscriptionPayment?sessionid="+sessionid,
             data: JSON.stringify({"subscription_type_id":"1", "source" : "web"}),
             type: "POST",
             success : function(response){

@@ -35,13 +35,15 @@
 	      	position: relative;
 	      }
 	      .center-container{
+	      	width: 100%;
+	      	max-width: 500px;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
 	      }
 	      .center-container .my-img{
-	      	width: 200px;
+	      	width: 150px;
 	      	display: block;
 	      	margin: 0 auto;
 	      }
@@ -64,21 +66,21 @@
 					<i class="fa fa-spinner fa-3x fa-spin" aria-hidden="true"></i>
 				</div>
 				<div class="center-container text-center" id="Failshow">
-					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
+					<h3 class="abril text-white m-b-20">Food Talk Privilege</h3>
 					<img src="assets/images/fail.svg" alt="" class="my-img">
 					<br><br>
 					<h1 class="text-white">Something's Wrong</h1>
 					<p class="text-white m-t-30">The transaction could not completed. <br>
 					Please try again or <a href="contact.html">contact Support</a>.</p>
 					<div class="row m-t-30">
-						<div class="col-sm-6">
+						<div class="col-sm-6 col-xs-6">
 							<a href="">
-								<img src="assets/images/apple.png" alt="" class="pull-right" style="width: 120px;">
+								<img src="assets/images/apple.png" alt="" class="pull-right" style=" width:100%;max-width: 120px;">
 							</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-6  col-xs-6">
 							<a href="">
-								<img src="assets/images/google.png" alt="" class="pull-left" style="width: 120px;">
+								<img src="assets/images/google.png" alt="" class="pull-left" style=" width:100%;max-width: 120px;">
 							</a>
 						</div>
 						<div class="col-sm-12">
@@ -87,7 +89,7 @@
 					</div>
 				</div>
 				<div class="center-container text-center" id="successshow">
-					<h3 class="abril text-white m-b-40">Food Talk Privilege</h3>
+					<h3 class="abril text-white m-b-20">Food Talk Privilege</h3>
 					<img src="assets/images/success.svg" alt="" class="my-img">
 					<br><br>
 					<h1 class="text-white">Welcome Aboard</h1>
@@ -95,14 +97,14 @@
 					 Food Talk Privilege for 1 year.<br> <br> <br> Thank You!
 					<!-- For any help you can <a href="contact.html">contact us</a>. --></p>
 					<div class="row m-t-30">
-						<div class="col-sm-6">
+						<div class="col-sm-6  col-xs-6">
 							<a href="">
-								<img src="assets/images/apple.png" alt="" class="pull-right" style="width: 120px;">
+								<img src="assets/images/apple.png" alt="" class="pull-right" style=" width:100%;max-width: 120px;">
 							</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-6  col-xs-6">
 							<a href="">
-								<img src="assets/images/google.png" alt="" class="pull-left" style="width: 120px;">
+								<img src="assets/images/google.png" alt="" class="pull-left" style=" width:100%;max-width: 120px;">
 							</a>
 						</div>
 						<div class="col-sm-12">
@@ -136,7 +138,7 @@
 				var sessionid = localStorage.getItem('SessionID');
 
 				$.ajax({
-		            url: "http://stg-api.foodtalk.in/subscription?sessionid="+sessionid,
+		            url: "http://api.foodtalk.in/subscription?sessionid="+sessionid,
 		            data: JSON.stringify({"payment_id":paymentid}),
 		            type: "POST",
 		            success : function(response){
