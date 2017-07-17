@@ -45,7 +45,7 @@ var app = angular.module('myApp',['ui.router'])
 		appFact.requestInvite($scope.eventDetails.name, $scope.sessionid, function(response){
 			console.log(response);
 			if(response == true){
-				$scope.inviteButtonText = "We have recived your request";
+				$scope.inviteButtonText = "We have received your request";
 				$scope.inviteButtonColordefault = false;
 			}else{
 				alert('Request cannot be completed due to network issues pleae try again')
