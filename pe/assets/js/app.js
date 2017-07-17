@@ -44,7 +44,7 @@ var app = angular.module('myApp',['ui.router'])
 	$scope.requestInvite = function(){
 		appFact.requestInvite($scope.eventDetails.name, $scope.sessionid, function(response){
 			console.log(response);
-			if(response){
+			if(response == true){
 				$scope.inviteButtonText = "We have recived your request";
 				$scope.inviteButtonColordefault = false;
 			}else{
