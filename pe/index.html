@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
@@ -42,51 +42,19 @@
       .border-t-radius{
         border-radius: 2px 2px 0 0;
       }
+      .btn-info{
+          background-color: #ffda44;
+          border: 0px;
+          font-weight: bold;
+          color: #313335;
+      }
+      .brn-success{
+        background-color: #44db5e
+      }
     </style>
   </head>
-  <body class="pace-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 m-t-20">
-          <div class="card share share-other col no-t-b-border" data-social="item">
-            <div class="card-content">
-              <button class="btn btn-danger pull-right top-right m-r-10 m-t-10 btn-sm">Food</button>
-              <img alt="Person photo" src="assets/images/card2.jpg" class="lazy border-t-radius">
-              <div class="card-description1">
-                <p class="bold">Frech Patisserie Workshop with Chef Bani Nanda of  Miam</p>
-              </div>
-            </div>
-            
-            <div class="card-footer clearfix">
-              <div class="fs-12 semi-bold m-t-10">Tuesday, 25th July 2017 | 11 am to 1 pm</div>
-              <div class="fs-12 semi-bold m-t-10">MIAM, Hauz Khas Village</div>
-              <div class="fs-13 bold m-t-10">By Invitation Only</div>
-              
-            </div>
-            <a class="btn btn-block btn-info text-complete btn-lg" href="open.html" style="border-radius: 0 0 2px 2px;">Request Invite</a>
-          </div>
-        </div>
-        <div class="col-xs-12 m-t-20">
-          <div class="card share share-other col no-t-b-border" data-social="item">
-            <div class="card-content">
-              <button class="btn btn-danger pull-right top-right m-r-10 m-t-10 btn-sm">Food</button>
-              <img alt="Person photo" src="assets/images/card3.jpg" class="lazy border-t-radius">
-              <div class="card-description1">
-                <p class="bold">Frech Patisserie Workshop with Chef Bani Nanda of  Miam</p>
-              </div>
-            </div>
-            
-            <div class="card-footer clearfix">
-              <div class="fs-12 semi-bold m-t-10">Tuesday, 25th July 2017 | 11 am to 1 pm</div>
-              <div class="fs-12 semi-bold m-t-10">MIAM, Hauz Khas Village</div>
-              <div class="fs-13 bold m-t-10"><i class="fa fa-inr"></i> 1000</div>
-              
-            </div>
-            <a class="btn btn-block btn-info text-complete btn-lg" href="open.html" style="border-radius: 0 0 2px 2px;">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <body class="pace-white" ui-view>
+    
     <!-- BEGIN VENDOR JS -->
     <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="pages/js/pages.image.loader.js"></script>
@@ -101,5 +69,8 @@
     <!-- BEGIN YOUR CUSTOM JS -->
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <!-- END PAGES LIB -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+{
+    "error": false,
+    "message": "Event List Data Fatch successfully",
+    "data": {
+            "id": "1",
+            "name": "Public Affair",
+            "e_date": "2017-06-30",
+            "e_time": "7:00 PM Onwards",
+            "vanue": "venue",
+            "description":"lorem ipsumdoler sit amet",
+            "on_menu": ["item1", "item2", "item3"],
+            "seats": 10,
+            "cost": 0,
+            "full_address": "A 15/A. Market Lane, E Block, Hauz Khas , New Delhi",
+            "card_img":"",
+            "cover_image":"",
+            "tag":"food",
+            "active": false
+        }
+}
