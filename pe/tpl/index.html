@@ -1,4 +1,9 @@
-<div class="container">
+<div style="width: 100vw; height: 100vh; position: relative;" ng-hide="loadingdone">
+  <div style="position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="progress-circle-indeterminate"></div>
+  </div>
+</div>
+<div class="container" ng-show="loadingdone">
       <div class="row">
         <div class="col-xs-12 m-t-20" ng-repeat="event in eventList" ng-show="event.active">
           <div class="card share share-other col no-t-b-border" data-social="item">
