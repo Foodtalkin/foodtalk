@@ -20,9 +20,11 @@ var app = angular.module('myApp',['ui.router'])
 
 .controller('mainCtrl', ['$scope', 'appFact', '$location','$state', '$stateParams', function($scope, appFact, $location, $state, $stateParams){
 	$scope.eventList = {};
+	$scope.loadingdone = false;
 	$scope.sessionid = $stateParams.sessionid;
 	appFact.getList(function(response){
 		$scope.eventList = response.data.data.list;
+		$scope.loadingdone = true;
 		console.log($scope.eventList);
 	});	
 }])
