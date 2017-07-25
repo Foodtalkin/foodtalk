@@ -26,6 +26,18 @@
                     "card_img":"assets/images/card3.jpg",
                     "tag":"food",
                     "active": true
+                },
+                {
+                    "id": "3",
+                    "name": "French Patisserie Workshop with Chef Bani Nanda of  Miam",
+                    "e_date": "Tuesday, 25th July 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "MIAM, Hauz Khas Village",
+                    "cost": "By Invitation Only",
+                    "paid": false,
+                    "card_img":"assets/images/card2.jpg",
+                    "tag":"food",
+                    "active": true
                 }
         ],
         "details": {
@@ -49,7 +61,7 @@
             "2": {
                     "id": "2",
                     "name": "French Patisserie Workshop with Chef Bani Nanda of  Miam",
-                    "e_date": "Tuesday, 25th July 2017",
+                    "e_date": "Tuesday, 26th July 2017",
                     "e_time": "8:00 PM Onwards",
                     "vanue": "MIAM, Hauz Khas Village",
                     "description":"Learn how to make French Patisserie with  Chef Bani Nanda at her all new chic Cafe in Hauz Khas. A 2-hour demonstration class where she teaches you the basics of French Pastry  - your very own Le Cordon Bleu crash course.",
@@ -63,6 +75,23 @@
                     "cover_image":"assets/images/open.jpg",
                     "tag":"food",
                     "active": true
+                },
+            "3": {
+                    "id": "3",
+                    "name": "French Patisserie Workshop",
+                    "e_date": "Tuesday, 27th July 2017",
+                    "e_time": "11 am to 1 pm",
+                    "vanue": "MIAM, Hauz Khas Village",
+                    "description":"Learn how to make French Patisserie with  Chef Bani Nanda at her all new chic Cafe in Hauz Khas. A 2-hour demonstration class where she teaches you the basics of French Pastry  - your very own Le Cordon Bleu crash course.",
+                    "on_menu": ["Classic Tarts", "Financiers", "Madeleines"],
+                    "seats": "10",
+                    "cost": "By Invitation Only",
+                    "paid": false,
+                    "full_address": "A 15/A. Market Lane, E Block, Hauz Khas , New Delhi",
+                    "card_img":"assets/images/card2.jpg",
+                    "cover_image":"assets/images/open.jpg",
+                    "tag":"Food",
+                    "active": false
                 }
         }
     }
