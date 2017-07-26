@@ -44,8 +44,8 @@ var app = angular.module('myApp',['ui.router'])
 		});
 	});
 	$scope.requestInvite = function(){
+		$scope.inviteButtonText = "Sending your request";
 		appFact.requestInvite($scope.eventDetails.name, $scope.sessionid, function(response){
-			console.log(response);
 			if(response == true){
 				$scope.inviteButtonText = "We have received your request";
 				$scope.inviteButtonColordefault = false;
