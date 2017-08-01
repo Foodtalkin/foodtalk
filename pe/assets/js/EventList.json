@@ -13,7 +13,7 @@
                     "paid": false,
                     "card_img":"assets/images/miam.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "2",
@@ -49,6 +49,18 @@
                     "paid": false,
                     "card_img":"assets/images/ekbar.jpg",
                     "tag":"Drink",
+                    "active": true
+                },
+                {
+                    "id": "5",
+                    "name": "Armenian Workshop at Lavaash by Saby",
+                    "e_date": "Saturday, 19th August 2017",
+                    "e_time": "4:00 PM to 6:00 PM",
+                    "vanue": "Lavaash by Saby, Mehrauli",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/lavash.jpg",
+                    "tag":"Workshop",
                     "active": true
                 }
         ],
@@ -122,6 +134,24 @@
                     "card_img":"assets/images/ekbar.jpg",
                     "cover_image":"assets/images/ekbaropen.jpg",
                     "tag":"Drink",
+                    "active": true
+                },
+            "5": {
+                    "id": "5",
+                    "name": "Armenian Workshop at Lavaash by Saby",
+                    "e_date": "Saturday, 19th August 2017",
+                    "e_time": "4:00 PM to 6:00 PM",
+                    "vanue": "Lavaash by Saby, Mehrauli",
+                    "description":"Learn all about classic Armenian food with Head Chef Megha Kohli at Lavaash by Saby. In this 2 hour session, you'll get your hands dirty while rolling and stuffing Armenian style Manti and also learn the classic cooking style of Armenian food. ",
+                    "on_menu": ["Olive Oil", "Chilli Garlic Chicken", "Manti", "Pide"],
+                    "seats": "15",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "full_address": "H5/1, Ambawatta No.1, Kalkadass Marg, Mehrauli, New Delhi, Delhi 110030",
+                    "card_img":"assets/images/lavash.jpg",
+                    "cover_image":"assets/images/lavashopen.jpg",
+                    "tag":"Workshop ",
                     "active": true
                 }
         }
