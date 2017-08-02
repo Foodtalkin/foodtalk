@@ -33,6 +33,7 @@ $(document).ready(function() {
                   if(result.code == "200"){
                     //console.log(response);
 			       	//Set your Succss Message
+                    fbq('track', 'Lead');
 			       	clearForm("Thank you for Contacting Us! We have received your enquiry and will respond to you within 24 hours. For urgent enquiries please call us on the telephone number.");
                   }else{
                     $('#contact-panel').portlet({
