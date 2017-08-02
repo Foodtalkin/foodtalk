@@ -25,13 +25,13 @@
                     "paid": false,
                     "card_img":"assets/images/coffee1.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "3",
                     "name": "Coffee 101 at Kaffa Cerrado",
                     "e_date": "Saturday, 5th August 2017",
-                    "e_time": "6:00 PM to 8:00 PM",
+                    "e_time": "5:00 PM to 7:00 PM",
                     "vanue": "Kaffa Cerrado",
                     "cost": "By Invitation only",
                     "paid": false,
@@ -62,6 +62,18 @@
                     "card_img":"assets/images/lavash.jpg",
                     "tag":"Workshop",
                     "active": true
+                },
+                {
+                    "id": "6",
+                    "name": "From the Chef's heart, a tasting menu at Fig & Maple",
+                    "e_date": "Wednesday, 16th August 2017",
+                    "e_time": "7:00 PM to 10:00 PM",
+                    "vanue": "Fig & Maple, GK 2",
+                    "cost": "500",
+                    "paid": true,
+                    "card_img":"assets/images/fnm.jpg",
+                    "tag":"Food",
+                    "active": false
                 }
         ],
         "details": {
@@ -151,6 +163,24 @@
                     "full_address": "H5/1, Ambawatta No.1, Kalkadass Marg, Mehrauli, New Delhi, Delhi 110030",
                     "card_img":"assets/images/lavash.jpg",
                     "cover_image":"assets/images/lavashopen.jpg",
+                    "tag":"Workshop ",
+                    "active": true
+                },
+            "6": {
+                    "id": "6",
+                    "name": "From the Chef's heart, a tasting menu at Fig & Maple",
+                    "e_date": "Wednesday, 16th August 2017",
+                    "e_time": "7:00 PM to 10:00 PM",
+                    "vanue": "Fig & Maple, GK 2",
+                    "description":" Book a spot at Chef Radhika Khandelwal's tables as she shares her story through her food.From her Instagram famous salad to her undiscovered dishes, book a spot at this unique tasting menu curated just for you by Chef Radhika Khandelwal at Fig & Maple. ",
+                    "on_menu": ["Fig and Maple Salad", "Burgers and much more"],
+                    "seats": "15",
+                    "cost": "500",
+                    "paid": true,
+                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "full_address": "M-27, E Block Rd, Block M, Greater Kailash II, Greater Kailash, New Delhi, Delhi 110048",
+                    "card_img":"assets/images/fnm.jpg",
+                    "cover_image":"assets/images/fnmopen.jpg",
                     "tag":"Workshop ",
                     "active": true
                 }
