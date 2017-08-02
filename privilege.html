@@ -61,8 +61,25 @@
 
       ga('create', 'UA-90797670-2', 'auto');
       ga('send', 'pageview');
-
+      
     </script>
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '257926351368339'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_name: 'Privilege Page'
+      });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=257926351368339&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
   </head>
   <body class="pace-dark">
     <nav class="header bg-header transparent-light " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
@@ -315,7 +332,7 @@
                       </ul>
                     </div>
                     <div class="bg-master-lighter p-t-20 p-b-20">
-                      <a class="btn btn-rounded btn-black btn-lg" data-toggle="modal" data-target="#myModal">Buy Now</a>
+                      <a class="btn btn-rounded btn-black btn-lg" data-toggle="modal" data-target="#myModal" onClick="fbq('track', 'Lead', {content_name: 'privilege buy'});">Buy Now</a>
                       <!-- <a class="btn btn-rounded btn-white" href="#">Try</a> -->
                       <!-- <p class="small hint-text m-t-15 m-b-5">30 Days Free Trail for the
                         <br> Regular package</p> -->
@@ -613,7 +630,7 @@
               <!-- <h5 class="block-title hint-text no-margin">Buy</h5> -->
               <h1 class="m-t-60 visible-lg visible-md">Get Your Food Talk Privilege NOW.</h1>
               <h4 class="m-t-25 visible-xs visible-sm text-left">Get Your Food Talk Privilege NOW.</h4>
-              <button class="btn btn-primary m-r-10 m-t-20 btn-cons" type="button" data-toggle="modal" data-target="#myModal">Buy Now!</button>
+              <button class="btn btn-primary m-r-10 m-t-20 btn-cons" type="button" data-toggle="modal" data-target="#myModal" onClick="fbq('track', 'Lead', {content_name: 'privilege buy'});">Buy Now!</button>
             </div>
           </div>
       </div>
@@ -937,6 +954,8 @@
                       $('#otpform').show();
                       $('#otherthings').hide();
                     }else{
+                      fbq('track', 'CompleteRegistration');
+
                       if(response.result.subscription.length == 0){
                         // console.log('no subscription');
                         $('#payheading').html('Redirecting');
