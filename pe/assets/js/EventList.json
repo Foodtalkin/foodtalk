@@ -74,6 +74,18 @@
                     "card_img":"assets/images/fnm.jpg",
                     "tag":"Food",
                     "active": false
+                },
+                {
+                    "id": "7",
+                    "name": "4 ways to Cold Brew with Sleepy Owl",
+                    "e_date": "Sunday, 27th August 2017",
+                    "e_time": "4:00 PM to 6:00 PM",
+                    "vanue": "Lodi - The Garden Restaurant",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/sowl.jpg",
+                    "tag":"Tasting",
+                    "active": true
                 }
         ],
         "details": {
@@ -182,6 +194,24 @@
                     "card_img":"assets/images/fnm.jpg",
                     "cover_image":"assets/images/fnmopen.jpg",
                     "tag":"Workshop ",
+                    "active": true
+                },
+            "7": {
+                    "id": "7",
+                    "name": "4 ways to Cold Brew with Sleepy Owl ",
+                    "e_date": "Sunday, 27th August 2017",
+                    "e_time": "4:00 PM to 6:00 PM",
+                    "vanue": "Lodi - The Garden Restaurant",
+                    "description":"Taste your way through the different ways of experiencing Cold Brew with the men behind Sleepy Owl Cold Brew Coffee",
+                    "on_menu": ["4 different Cold Brew Coffees"],
+                    "seats": "15",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "full_address": "Lodhi Road, Opp. Mausam Bhavan, New Delhi, Delhi 110003",
+                    "card_img":"assets/images/sowl.jpg",
+                    "cover_image":"assets/images/sowlopen.jpg",
+                    "tag":"Tasting",
                     "active": true
                 }
         }
