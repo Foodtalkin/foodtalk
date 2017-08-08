@@ -42,8 +42,8 @@
                 {
                     "id": "4",
                     "name": "Cocktail Tasting at Ek bar",
-                    "e_date": "Wednesday, 9th August 2017",
-                    "e_time": "7:00 PM to 9:00 PM",
+                    "e_date": "Thursday, 10th August 2017",
+                    "e_time": "8:00 PM to 10:00 PM",
                     "vanue": "Ek bar, Defense Colony",
                     "cost": "By Invitation only",
                     "paid": false,
@@ -74,6 +74,18 @@
                     "card_img":"assets/images/fnm.jpg",
                     "tag":"Food",
                     "active": false
+                },
+                {
+                    "id": "7",
+                    "name": "4 ways to Cold Brew with Sleepy Owl",
+                    "e_date": "Sunday, 27th August 2017",
+                    "e_time": "4:00 PM to 6:00 PM",
+                    "vanue": "Lodi - The Garden Restaurant",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/sowl.jpg",
+                    "tag":"Tasting",
+                    "active": true
                 }
         ],
         "details": {
@@ -133,10 +145,12 @@
             "4": {
                     "id": "4",
                     "name": "Cocktail Tasting at Ek bar",
-                    "e_date": "Wednesday, 9th August 2017",
-                    "e_time": "7:00 PM to 9:00 PM",
+                    "e_date": "Thursday, 10th August 2017",
+                    "e_time": "8:00 PM to 10:00 PM",
                     "vanue": "Ek bar, Defense Colony",
-                    "description":" Ever walked into a bar and wanted to taste the different cocktails before choosing one? Well, Ek bar just got a new cocktail menu and we're loving it! Ek bar's mixologists will shake and serve you a cocktail sampler with 4 of Ek Bar's new cocktails. You can then order your choice of cocktail from a discounted menu. ",
+                    "description":"Ek Bar's mixologists will shake and serve you a cocktail sampler with 4 of Ek Bar's newest cocktails. 
+
+Pick your favourite cocktail for the night and savour it at a special rate of Rs. 400 AI",
                     "on_menu": ["A cocktail sampler", "Discounted cocktail menu"],
                     "seats": "15",
                     "cost": "By Invitation only",
@@ -182,6 +196,24 @@
                     "card_img":"assets/images/fnm.jpg",
                     "cover_image":"assets/images/fnmopen.jpg",
                     "tag":"Workshop ",
+                    "active": true
+                },
+            "7": {
+                    "id": "7",
+                    "name": "4 ways to Cold Brew with Sleepy Owl ",
+                    "e_date": "Sunday, 27th August 2017",
+                    "e_time": "4:00 PM to 6:00 PM",
+                    "vanue": "Lodi - The Garden Restaurant",
+                    "description":"Taste your way through the different ways of experiencing Cold Brew with the men behind Sleepy Owl Cold Brew Coffee",
+                    "on_menu": ["4 different Cold Brew Coffees"],
+                    "seats": "15",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "full_address": "Lodhi Road, Opp. Mausam Bhavan, New Delhi, Delhi 110003",
+                    "card_img":"assets/images/sowl.jpg",
+                    "cover_image":"assets/images/sowlopen.jpg",
+                    "tag":"Tasting",
                     "active": true
                 }
         }
