@@ -37,7 +37,7 @@
                     "paid": false,
                     "card_img":"assets/images/coffee2.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "4",
@@ -85,7 +85,7 @@
                     "paid": false,
                     "card_img":"assets/images/sowl.jpg",
                     "tag":"Tasting",
-                    "active": true
+                    "active": false
                 }
         ],
         "details": {
