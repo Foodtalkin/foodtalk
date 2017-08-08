@@ -37,7 +37,7 @@
                     "paid": false,
                     "card_img":"assets/images/coffee2.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "4",
@@ -85,7 +85,7 @@
                     "paid": false,
                     "card_img":"assets/images/sowl.jpg",
                     "tag":"Tasting",
-                    "active": true
+                    "active": false
                 }
         ],
         "details": {
@@ -122,7 +122,7 @@
                     "card_img":"assets/images/coffee1.jpg",
                     "cover_image":"assets/images/coffee1open.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
             "3": {
                     "id": "3",
@@ -148,10 +148,8 @@
                     "e_date": "Thursday, 10th August 2017",
                     "e_time": "8:00 PM to 10:00 PM",
                     "vanue": "Ek bar, Defense Colony",
-                    "description":"Ek Bar's mixologists will shake and serve you a cocktail sampler with 4 of Ek Bar's newest cocktails. 
-
-Pick your favourite cocktail for the night and savour it at a special rate of Rs. 400 AI",
-                    "on_menu": ["A cocktail sampler", "Discounted cocktail menu"],
+                    "description":"Ek Bar's mixologists will shake and serve you a cocktail sampler with 4 of Ek Bar's newest cocktails. Pick your favourite cocktail for the night and savour it at a special rate of Rs. 400 AI",
+                    "on_menu": ["One cocktail sampler", "Discounted cocktail menu"],
                     "seats": "15",
                     "cost": "By Invitation only",
                     "paid": false,
