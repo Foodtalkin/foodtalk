@@ -66,14 +66,14 @@
                 {
                     "id": "6",
                     "name": "From the Chef's heart, a tasting menu at Fig & Maple",
-                    "e_date": "Wednesday, 16th August 2017",
+                    "e_date": "Thursday, 17th August 2017",
                     "e_time": "7:00 PM to 10:00 PM",
                     "vanue": "Fig & Maple, GK 2",
                     "cost": "500",
                     "paid": true,
                     "card_img":"assets/images/fnm.jpg",
                     "tag":"Food",
-                    "active": false
+                    "active": true
                 },
                 {
                     "id": "7",
@@ -181,7 +181,7 @@
             "6": {
                     "id": "6",
                     "name": "From the Chef's heart, a tasting menu at Fig & Maple",
-                    "e_date": "Wednesday, 16th August 2017",
+                    "e_date": "Thursday, 17th August 2017",
                     "e_time": "7:00 PM to 10:00 PM",
                     "vanue": "Fig & Maple, GK 2",
                     "description":" Book a spot at Chef Radhika Khandelwal's tables as she shares her story through her food.From her Instagram famous salad to her undiscovered dishes, book a spot at this unique tasting menu curated just for you by Chef Radhika Khandelwal at Fig & Maple. ",
@@ -189,7 +189,7 @@
                     "seats": "15",
                     "cost": "500",
                     "paid": true,
-                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "pay_url" : "https://www.instamojo.com/foodtalk/from-the-chefs-heart/?embed=form",
                     "full_address": "M-27, E Block Rd, Block M, Greater Kailash II, Greater Kailash, New Delhi, Delhi 110048",
                     "card_img":"assets/images/fnm.jpg",
                     "cover_image":"assets/images/fnmopen.jpg",
