@@ -49,7 +49,7 @@
                     "paid": false,
                     "card_img":"assets/images/ekbar.jpg",
                     "tag":"Drink",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "5",
@@ -73,7 +73,7 @@
                     "paid": true,
                     "card_img":"assets/images/fnm.jpg",
                     "tag":"Food",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "7",
