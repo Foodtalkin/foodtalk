@@ -61,7 +61,7 @@
                     "paid": false,
                     "card_img":"assets/images/lavash.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "6",
@@ -86,6 +86,18 @@
                     "card_img":"assets/images/sowl.jpg",
                     "tag":"Tasting",
                     "active": false
+                },
+                {
+                    "id": "8",
+                    "name": "Burma Burma comes to Delhi",
+                    "e_date": "Wednesday, 30th August 2017",
+                    "e_time": "8:30 PM Onwards",
+                    "vanue": "Burma Burma, Select City Walk ",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/bb.jpg",
+                    "tag":"Dinner",
+                    "active": true
                 }
         ],
         "details": {
@@ -212,6 +224,24 @@
                     "card_img":"assets/images/sowl.jpg",
                     "cover_image":"assets/images/sowlopen.jpg",
                     "tag":"Tasting",
+                    "active": true
+                },
+            "8": {
+                    "id": "8",
+                    "name": "Burma Burma comes to Delhi ",
+                    "e_date": "Wednesday, 30th August 2017",
+                    "e_time": "8:30 PM Onwards",
+                    "vanue": "Burma Burma, Select City Walk",
+                    "description":"The much awaited Burmese food sensation Burma Burma comes to Delhi. And we are hosting a special preview tasting for our Food Talk Privilege members. Come explore the flavours of Burma with us as we bring you another #PrivilegeExperience ",
+                    "on_menu": ["A Burmese tasting menu"],
+                    "seats": "40",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "full_address": "Burma Burma, Select CityWalk Mall, Saket, District Centre, S-25, Second Floor , A 3, New Delhi, Delhi 1100173",
+                    "card_img":"assets/images/bb.jpg",
+                    "cover_image":"assets/images/bbopen.jpg",
+                    "tag":"Dinner",
                     "active": true
                 }
         }
