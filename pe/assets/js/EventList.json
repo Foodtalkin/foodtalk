@@ -97,7 +97,7 @@
                     "paid": false,
                     "card_img":"assets/images/bb.jpg",
                     "tag":"Dinner",
-                    "active": true
+                    "active": false
                 }
         ],
         "details": {
