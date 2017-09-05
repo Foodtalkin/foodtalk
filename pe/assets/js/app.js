@@ -21,7 +21,7 @@ var app = angular.module('myApp',['ui.router'])
 .controller('mainCtrl', ['$scope', 'appFact', '$location','$state', '$stateParams', function($scope, appFact, $location, $state, $stateParams){
 	$scope.eventList = {};
 	$scope.loadingdone = false;
-	$scope.noevent = true;
+	$scope.noevent = false;
 	$scope.sessionid = $stateParams.sessionid;
 	appFact.getList(function(response){
 		$scope.eventList = response.data.data.list;
@@ -41,6 +41,9 @@ var app = angular.module('myApp',['ui.router'])
 		  if(key == myId){
 		  	$scope.eventDetails = value;
 			console.log($scope.eventDetails);
+			if($scope.eventDetails.seats == "0"){
+				$scope.soldout = true;
+			}
 		  }
 		});
 	});

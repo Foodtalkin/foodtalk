@@ -6,14 +6,14 @@
                     {
                     "id": "1",
                     "name": "French Patisserie Workshop at Miam",
-                    "e_date": "Monday, 31st July 2017",
-                    "e_time": "10:00 AM to 1:00 PM",
+                    "e_date": "Sunday, 17th September 2017",
+                    "e_time": "10:00 AM",
                     "vanue": "Miam, Hauz Khas Market",
                     "cost": "By Invitation Only",
                     "paid": false,
                     "card_img":"assets/images/miam.jpg",
                     "tag":"Workshop",
-                    "active": false
+                    "active": true
                 },
                 {
                     "id": "2",
@@ -98,14 +98,26 @@
                     "card_img":"assets/images/bb.jpg",
                     "tag":"Dinner",
                     "active": false
+                },
+                {
+                    "id": "9",
+                    "name": "Danse Noir",
+                    "e_date": "Wednesday, 13th September 2017",
+                    "e_time": "8:30 pm to 11:00 pm ",
+                    "vanue": "Olive Bar & Kitchen",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/DanseNoir.jpg",
+                    "tag":"Dinner",
+                    "active": true
                 }
         ],
         "details": {
             "1": {
                     "id": "1",
                     "name": "French Patisserie Workshop at Miam",
-                    "e_date": "Monday, 31st July 2017",
-                    "e_time": "10:00 AM to 1:00 PM",
+                    "e_date": "Sunday, 17th September 2017",
+                    "e_time": "10:00 AM",
                     "vanue": "Miam, Hauz Khas Market",
                     "description":"Get Baking with Pastry Chef Bani Nanda as she teaches you how to bake French classic in this 3-hour baking workshop. Your very own Le Cordon Bleu crash course.",
                     "on_menu": ["Tarts", "Financiers", "Madeleines"],
@@ -241,6 +253,24 @@
                     "full_address": "Burma Burma, Select CityWalk Mall, Saket, District Centre, S-25, Second Floor , A 3, New Delhi, Delhi 1100173",
                     "card_img":"assets/images/bb.jpg",
                     "cover_image":"assets/images/bbopen.jpg",
+                    "tag":"Dinner",
+                    "active": true
+                },
+            "9": {
+                    "id": "9",
+                    "name": "Danse Noir",
+                    "e_date": "Wednesday, 13th September 2017",
+                    "e_time": "8:30 pm to 11:00 pm ",
+                    "vanue": "Olive Bar & Kitchen",
+                    "description":"A sensory dining experience where in the darkness of a blind fold your senses of touch, taste, sound, and smell are heightened.Experience the wonderful flavours as if for the first time as we take you on a culinary journey.",
+                    "on_menu": ["A five course menu"],
+                    "seats": "0",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "https://www.instamojo.com/foodtalk/test-e2aeb/",
+                    "full_address": "Olive Bar & Kitchen, Kalkadas Marg , Mehrauli, New Delhi, Delhi 110030",
+                    "card_img":"assets/images/DanseNoir.jpg",
+                    "cover_image":"assets/images/DanseNoirOpen.jpg",
                     "tag":"Dinner",
                     "active": true
                 }
