@@ -120,7 +120,7 @@
                     "e_time": "10:00 AM to 12:00 PM",
                     "vanue": "Miam, Hauz Khas Market",
                     "description":"Get Baking with Pastry Chef Bani Nanda as she teaches you how to bake French classic in this 3-hour baking workshop. Your very own Le Cordon Bleu crash course.",
-                    "on_menu": ["Tarts", "Financiers", "Madeleines"],
+                    "on_menu": ["Tarts", "Financiers", "Madeleines", "Almond Dacquoise"],
                     "seats": "15",
                     "cost": "By Invitation Only",
                     "paid": false,
