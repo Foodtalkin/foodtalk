@@ -109,7 +109,7 @@
                     "paid": false,
                     "card_img":"assets/images/DanseNoir.jpg",
                     "tag":"Dinner",
-                    "active": true
+                    "active": false
                 }
         ],
         "details": {
