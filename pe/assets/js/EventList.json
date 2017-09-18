@@ -13,7 +13,7 @@
                     "paid": false,
                     "card_img":"assets/images/miam.jpg",
                     "tag":"Workshop",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "2",
