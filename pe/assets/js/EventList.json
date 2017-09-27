@@ -110,6 +110,18 @@
                     "card_img":"assets/images/DanseNoir.jpg",
                     "tag":"Dinner",
                     "active": false
+                },
+                {
+                    "id": "10",
+                    "name": "Exclusive Preview : The all new Kylin Experience",
+                    "e_date": "Friday, 29th Sept 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "Kylin Experience, GK 1",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/kyexp.jpeg",
+                    "tag":"Dinner",
+                    "active": true
                 }
         ],
         "details": {
@@ -271,6 +283,24 @@
                     "full_address": "Olive Bar & Kitchen, Kalkadas Marg , Mehrauli, New Delhi, Delhi 110030",
                     "card_img":"assets/images/DanseNoir.jpg",
                     "cover_image":"assets/images/DanseNoirOpen.jpg",
+                    "tag":"Dinner",
+                    "active": true
+                },
+            "10": {
+                    "id": "10",
+                    "name": "Exclusive Preview : The all new Kylin Experience",
+                    "e_date": "Friday, 29th Sept 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "Kylin Experience, GK 1",
+                    "description":"A new Kylin Experience is opening soon and we're hosting 30 Privilege members for an exclusive preview dinner at the newest location. The first 30 Privilege members to request an invite will be invited. ",
+                    "on_menu": ["An Asian tasting menu "],
+                    "seats": "30",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "",
+                    "full_address": "Kylin Experience,  N-6, 1st Floor, GK-1 market.",
+                    "card_img":"assets/images/kyexp.jpg",
+                    "cover_image":"assets/images/kyexpOpen.jpg",
                     "tag":"Dinner",
                     "active": true
                 }
