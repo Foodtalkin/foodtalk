@@ -131,7 +131,7 @@
                     "vanue": "Cyber Hub",
                     "cost": "By Invitation only",
                     "paid": false,
-                    "card_img":"assets/images/mamagoto.jpeg",
+                    "card_img":"assets/images/mamagoto.jpg",
                     "tag":"Dinner",
                     "active": true
                 }
