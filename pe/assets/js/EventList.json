@@ -122,6 +122,18 @@
                     "card_img":"assets/images/kyexp.jpeg",
                     "tag":"Dinner",
                     "active": false
+                },
+                {
+                    "id": "11",
+                    "name": "#NewInTown Mr. Mamagoto",
+                    "e_date": "Friday, 6th October 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "Cyber Hub",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/mamagoto.jpeg",
+                    "tag":"Dinner",
+                    "active": true
                 }
         ],
         "details": {
@@ -303,6 +315,22 @@
                     "cover_image":"assets/images/kyexpOpen.jpg",
                     "tag":"Dinner",
                     "active": true
+                },
+            "11": {
+                    "id": "11",
+                    "name": "#NewInTown Mr. Mamagoto",
+                    "e_date": "Friday, 6th October 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "Cyber Hub",
+                    "description":"#NewInTown Mamagoto's chic cousin, Mr. Mamagoto has arrived in Gurgaon and we're rolling out the red carpet! Say hello to your favourite hawker food with a `sophisticated goofiness`. The first 20 to request an invite will be invited.",
+                    "on_menu": ["An Asian tasting menu "],
+                    "seats": "20",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "",
+                    "full_address": "Mr. Mamagoto, 1st floor, Cyber hub.",
+                    "cover_image":"assets/images/mamagotoOpen.jpg",
+                    "tag":"Dinner"
                 }
         }
     }
