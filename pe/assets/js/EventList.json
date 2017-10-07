@@ -133,7 +133,7 @@
                     "paid": false,
                     "card_img":"assets/images/mamagoto.jpg",
                     "tag":"Dinner",
-                    "active": true
+                    "active": false
                 }
         ],
         "details": {
