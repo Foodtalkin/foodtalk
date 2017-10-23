@@ -145,7 +145,7 @@
                     "paid": false,
                     "card_img":"assets/images/prego.jpg",
                     "tag":"Dinner",
-                    "active": true
+                    "active": false
                 }
         ],
         "details": {
@@ -356,7 +356,7 @@
                     "cost": "By Invitation only",
                     "paid": false,
                     "pay_url" : "",
-                    "full_address": "Mr. Mamagoto, 1st floor, Cyber hub.",
+                    "full_address": "Prego, The Westin, Gurgaon",
                     "cover_image":"assets/images/pregoOpen.jpg",
                     "tag":"Dinner"
                 }
