@@ -134,6 +134,18 @@
                     "card_img":"assets/images/mamagoto.jpg",
                     "tag":"Dinner",
                     "active": false
+                },
+                {
+                    "id": "12",
+                    "name": "From the Chef's heart at Prego",
+                    "e_date": "Thursday, 26th October 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "Prego, The Westin, Gurgaon ",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/prego.jpg",
+                    "tag":"Dinner",
+                    "active": true
                 }
         ],
         "details": {
@@ -330,6 +342,22 @@
                     "pay_url" : "",
                     "full_address": "Mr. Mamagoto, 1st floor, Cyber hub.",
                     "cover_image":"assets/images/mamagotoOpen.jpg",
+                    "tag":"Dinner"
+                },
+            "12": {
+                    "id": "12",
+                    "name": "From the Chef's heart at Prego",
+                    "e_date": "Thursday, 26th October 2017",
+                    "e_time": "8:00 PM Onwards",
+                    "vanue": "Prego, The Westin, Gurgaon",
+                    "description":"In the second edition of 'From The Chefs Heart', we have Chef Emiliano Di Stefano of Prego, Westin Gurugram who has curated an exclusive 4-course set Italian menu. Expect an unparalleled feast with fresh, authentic flavours, in Chef Stefano's signature style.",
+                    "on_menu": ["4 course Italian set menu"],
+                    "seats": "20",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "",
+                    "full_address": "Mr. Mamagoto, 1st floor, Cyber hub.",
+                    "cover_image":"assets/images/pregoOpen.jpg",
                     "tag":"Dinner"
                 }
         }
