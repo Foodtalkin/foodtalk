@@ -145,7 +145,7 @@
                     "paid": false,
                     "card_img":"assets/images/prego.jpg",
                     "tag":"Dinner",
-                    "active": false
+                    "active": true
                 }
         ],
         "details": {
