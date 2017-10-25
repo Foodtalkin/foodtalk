@@ -146,6 +146,18 @@
                     "card_img":"assets/images/prego.jpg",
                     "tag":"Dinner",
                     "active": true
+                },
+                {
+                    "id": "13",
+                    "name": "Tapas Workshop at HolyBelly",
+                    "e_date": "Sunday, 29th October 2017",
+                    "e_time": "12:00PM to 2:00PM",
+                    "vanue": "Greenr Cafe, Shahpur Jat",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/hollybelly.jpg",
+                    "tag":"Workshop",
+                    "active": false
                 }
         ],
         "details": {
@@ -351,7 +363,7 @@
                     "e_time": "8:00 PM Onwards",
                     "vanue": "Prego, The Westin, Gurgaon",
                     "description":"In the second edition of 'From The Chefs Heart', we have Chef Emiliano Di Stefano of Prego, Westin Gurugram who has curated an exclusive 4-course set Italian menu. Expect an unparalleled feast with fresh, authentic flavours, in Chef Stefano's signature style.",
-                    "on_menu": ["4 course Italian set menu"],
+                    "on_menu": ["4 course Italian set menu","Ricard Aperitif", "The Glenlivet 15 Single Malt", "Jacob's Creek Wine"],
                     "seats": "20",
                     "cost": "By Invitation only",
                     "paid": false,
@@ -359,6 +371,22 @@
                     "full_address": "Prego, The Westin, Gurgaon",
                     "cover_image":"assets/images/pregoOpen.jpg",
                     "tag":"Dinner"
+                },
+            "13": {
+                    "id": "13",
+                    "name": "Tapas Workshop at HolyBelly",
+                    "e_date": "Sunday, 29th October 2017",
+                    "e_time": "12:00PM to 2:00PM",
+                    "vanue": "Greenr Cafe, Shahpur Jat",
+                    "description":"Chef Rishi of HolyBelly is teaching you how to make some beautiful Tapas plates. With a very special all Vegetarian menu planned for the day, he shows you how to whip the perfect tapas for a cocktail party with friends.",
+                    "on_menu": ["Pea Protein Satay Sticks", "Carrot and Fennel Salad with Blood Orange Dressing", "Pardon Peppers with Red wine Salt", "Sweet Potato Wedges with Chipotle Sauce", "Grilled Brocolli, cashew nuts, Thai Lychee with Tofu Dressing", "Vegan Churros with Coconut Caramel"],
+                    "seats": "12",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "",
+                    "full_address": "416, Gora Street, Shahpur Jat, Siri Fort, New Delhi, Delhi 110049",
+                    "cover_image":"assets/images/hollybellyOpen.jpg",
+                    "tag":"Workshop"
                 }
         }
     }
