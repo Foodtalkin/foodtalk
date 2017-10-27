@@ -145,7 +145,7 @@
                     "paid": false,
                     "card_img":"assets/images/prego.jpg",
                     "tag":"Dinner",
-                    "active": true
+                    "active": false
                 },
                 {
                     "id": "13",
@@ -157,7 +157,7 @@
                     "paid": false,
                     "card_img":"assets/images/hollybelly.jpg",
                     "tag":"Workshop",
-                    "active": false
+                    "active": true
                 }
         ],
         "details": {
