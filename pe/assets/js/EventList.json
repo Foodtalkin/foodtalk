@@ -158,6 +158,18 @@
                     "card_img":"assets/images/hollybelly.jpg",
                     "tag":"Workshop",
                     "active": true
+                },
+                {
+                    "id": "14",
+                    "name": "Dimsum Night at Dao",
+                    "e_date": "Thursday, 2nd November 2017",
+                    "e_time": "8:00PM Onwards",
+                    "vanue": "Dao, GK-1",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "card_img":"assets/images/dao.jpg",
+                    "tag":"Dinner",
+                    "active": true
                 }
         ],
         "details": {
@@ -387,6 +399,22 @@
                     "full_address": "416, Gora Street, Shahpur Jat, Siri Fort, New Delhi, Delhi 110049",
                     "cover_image":"assets/images/hollybellyOpen.jpg",
                     "tag":"Workshop"
+                },
+            "14": {
+                    "id": "14",
+                    "name": "Dimsum Night at Dao",
+                    "e_date": "Thursday, 2nd November 2017",
+                    "e_time": "8:00PM Onwards",
+                    "vanue": "Dao, GK-1",
+                    "description":"Dimsums are proof that small things come in great packaging. We're hosting a Dimsum Night at one of the city's favourite haunts, DAO.",
+                    "on_menu": ["A dim sum Tasting menu"],
+                    "seats": "25",
+                    "cost": "By Invitation only",
+                    "paid": false,
+                    "pay_url" : "",
+                    "full_address": "N -17, Greater Kailash 1, New Delhi",
+                    "cover_image":"assets/images/daoOpen.jpg",
+                    "tag":"Dinner"
                 }
         }
     }
