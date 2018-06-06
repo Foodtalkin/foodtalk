@@ -238,7 +238,7 @@ header {
 }
 .block-two
 {
-	top: 50%;
+	top: 60%;
     right: 30%;
 }
 .block-three
@@ -268,7 +268,7 @@ header {
 .img-desc
 {
 	position: relative;
-	margin-top: 12em;
+	margin-top: 24em;
 	margin-bottom: 3em;
 }
 .grey-bg
@@ -452,10 +452,9 @@ footer .logo
 footer
 {
 	position: relative;
-	
 	padding: 220px 0;
-	margin-top: 14em;
-	background-color:#bb9959;
+	margin-top: 20em;
+	background: url("../img/footer-bg.png") no-repeat right bottom #bb9959;
 	background-size: contain;
 }
 footer .container
@@ -463,12 +462,17 @@ footer .container
 	position: relative;
 	z-index: 9;
 }
-footer .bg
+.footer-bg
 {
 	position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+.footer-bg img
+{
+	max-width: 100%;
+	height: 100%;
 }
 footer p
 {
@@ -529,7 +533,7 @@ footer p
 	}
 	.img-desc
 	{
-		margin-top: 8em;
+		margin-top: 16em;
 	}
 	
 	.content-wrapper
@@ -571,7 +575,7 @@ footer p
 	}
 	.img-desc
 	{
-		margin-top: 8em;
+		margin-top: 15em;
 	}
 	.home-layout .restaurant-info .inner h1
 	{
@@ -637,7 +641,7 @@ footer p
     top: -100px;
 }
 	.img-desc {
-    margin-top: 5em;
+    margin-top: 11em;
 }
 	.content-wrapper
 	{
@@ -666,7 +670,13 @@ footer p
 		margin-top: 8em;
 	}
 }
-
+@media(max-width:991px)
+{
+	.home-layout
+	{
+		margin-top: 70px;
+	}
+}
 @media(max-width:768px)
 {
 	.home-layout
@@ -675,7 +685,7 @@ footer p
 		padding: 0 80px;
 	}
 	.block-two {
-    top: 52%;
+    top: 61%;
     right: 23%;
 }
 	.img-blocks
@@ -697,7 +707,7 @@ footer p
 	}
 	.img-desc
 	{
-		
+		margin-top: 9em;
 		margin-bottom: 0;
 	}
 	.content-wrapper
@@ -878,6 +888,14 @@ footer p
 	.home-layout .restaurant-info .inner
 	{
 		width: 60%;
+	}
+	footer p
+	{
+		font-size: 14px; 
+	}
+	footer .col-md-12
+	{
+		padding: 0;
 	}
 	.home-page .restaurant-info
 	{
