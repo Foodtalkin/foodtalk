@@ -1,0 +1,978 @@
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+[hidden] {
+	display: none;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+.navbar-toggler,.navbar-toggler:focus
+{
+	outline: none;
+	border: 1px solid #fff;
+}
+body {
+	margin: 0;
+}
+a:focus {
+	outline: none;
+}
+a:hover, a:active {
+	outline: 0;
+}
+h1 {
+	font-size: 2em;
+	margin: 0;
+}
+h2 {
+	font-size: 1.5em;
+	margin: 0;
+}
+h3 {
+	font-size: 1.17em;
+	margin: 0;
+}
+h4 {
+	font-size: 1em;
+	margin: 0;
+}
+h5 {
+	font-size: 0.83em;
+	margin: 0;
+}
+h6 {
+	font-size: 0.75em;
+	margin: 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+dl, menu, ol, ul {
+	margin: 1em 0;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+menu, ol, ul {
+	padding: 0 0 0 40px;
+}
+nav ul, nav ol {
+	list-style: none;
+	list-style-image: none;
+}
+img {
+	border: 0; /* 1 */
+	-ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+form {
+	margin: 0;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+ *vertical-align: middle;
+}
+button, input {
+	line-height: normal;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+ *overflow: visible;
+}
+button[disabled], input[disabled] {
+	cursor: default;
+}
+ button::-moz-focus-inner, input::-moz-focus-inner {
+ border: 0;
+ padding: 0;
+}
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* Fonts */
+
+@font-face {
+	src: url("../fonts/JohnnieWalkerSans-Bold.otf");
+	font-style: normal;
+	font-family: 'johnnie-bold';
+}
+@font-face {
+	src: url("../fonts/JohnnieWalkerSans-Book.ttf");
+	font-style: normal;
+	font-family: "johnnie-regular";
+}
+.regular {
+	font-family: 'johnnie-regular';
+}
+.bold {
+	font-family: 'johnnie-bold';
+}
+html, body {
+	font-family: "johnnie-regular";
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased!important;
+	-moz-osx-font-smoothing: grayscale!important;
+	margin: 0;
+	padding: 0;
+	-webkit-animation: fadein 1.5s;
+	-moz-animation: fadein 1.5s;
+	-ms-animation: fadein 1.5s;
+	-o-animation: fadein 1.5s;
+	animation: fadein 1.5s;
+}
+@keyframes fadein {
+from {
+opacity:0
+}
+to {
+opacity:1
+}
+}
+@-moz-keyframes fadein {
+from {
+opacity:0
+}
+to {
+opacity:1
+}
+}
+@-webkit-keyframes fadein {
+from {
+opacity:0
+}
+to {
+opacity:1
+}
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	background-color: rgba(70,70,70,0.85);
+	box-shadow: 0px 0px 19px 14px rgba(0, 0, 0, 0.2);
+	font-family: 'johnnie-bold';
+}
+/* Home */
+.home-page header
+{
+	background-color: rgba(70,70,70,1.0);
+}
+.home-layout
+{
+	position: relative;
+	z-index: 99;
+	margin-top: 102px;
+	padding: 0 120px;
+}
+.home-layout .card
+{
+	border: none;
+	overflow: hidden;
+	border-radius: 0;
+	 box-shadow: 0px 0px 114.68px 7.32px rgba(0, 0, 0, 0.39);
+}
+.home-layout .card .card-body
+{
+	padding: 0;
+}
+.home-layout .restaurant-info .inner
+{
+	width: 50%;
+	text-align: right;
+}
+.home-layout .restaurant-info .inner h1
+{
+	position: relative;
+	color: #bb9959;
+	font-size: 44px;
+	padding-bottom: 14px;
+}
+.pl-15
+{
+	padding-left: 30px;
+}
+.home-layout .restaurant-info .inner h1:after
+{
+	position: absolute;
+	content: '';
+	bottom: 0;
+	width: 70%;
+	height: 2px;
+	background-color:#bb9959;
+	right: 0;
+}
+.block-one,.block-two,.block-three
+{
+	position: relative;
+}
+.block-one,.block-two
+{
+	width: 130%;
+}
+.block-two
+{
+	top: 60%;
+    right: 30%;
+}
+.block-three
+{
+	top: 40%;
+}
+.home-layout .max-width
+{
+	width: 100%;
+	display: block;
+}
+
+
+.home-layout .btn
+{
+	position: relative;
+	background-color: #bb9959;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'johnnie-bold';
+	font-size: 25px;
+	box-shadow: 0px 5px 33.95px 1.05px rgba(0, 0, 0, 0.17);
+	margin-bottom: 3em;
+	padding: 25px 40px;
+	border-radius: 0;
+}
+.img-desc
+{
+	position: relative;
+	margin-top: 24em;
+	margin-bottom: 3em;
+}
+.grey-bg
+{
+	background-color: #ececec;
+}
+.home-page footer
+{
+	position: relative;
+	margin-top: -160px;
+	padding-top: 280px;
+}
+footer .logo
+{
+	margin-top: 3em;
+}
+.home-page .restaurant-info
+{
+	position: relative;
+	top: -280px;
+}
+.content-wrapper
+{
+	position: relative;
+	max-width: 580px;
+	margin: 190px auto 0;
+	padding: 24px 0 60px 0;
+}
+.content-wrapper:before
+{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 50%;
+	height: 3px;
+	background-color: #bb9959;
+}
+.img-blocks
+{
+	position: relative;
+	top: -220px;
+}
+.img-desc p
+{
+	font-size: 30px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+.flex-end
+{
+	height: 100%;
+	justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+/* */
+.container {
+	width: 100%;
+	max-width: none;
+	padding: 0 120px;
+}
+
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+	padding: 15px 0;
+}
+.navbar-nav {
+	width: 100%;
+	float: none;
+	margin: 0;
+	padding: 10px 60px;
+}
+.navbar-nav>li>a {
+	color: #bb9959;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 24px;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: transparent;
+}
+.header-bg {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 55%;
+}
+.restaurant-info {
+	position: absolute;
+	width: 100%;
+	top: 350px;
+	right: 120px;
+}
+.restaurant-info .inner {
+	width: 38%;
+	margin-left: auto;
+}
+.restaurant-info:after {
+	clear: both;
+	display: table;
+}
+.restaurant-info .one {
+	position: relative;
+}
+.img-section {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+}
+.restaurant-info .one:after {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	content: '';
+	height: 90%;
+	width: 4px;
+	background-color: #bb9959;
+	margin: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.image-blocks {
+	position: relative;
+	padding: 110px 0 220px 0;
+}
+.grid-box {
+	width: 30%;
+	position: relative;
+	display: inline-block;
+}
+.mt-3 {
+	top: 120px;
+	margin-top: 0 !important;
+	position: relative;
+}
+.mt-4 {
+	top: 160px;
+	margin-top: 0 !important;
+	position: relative;
+}
+.image-blocks .image-layout-portrait {
+	position: relative;
+	max-width: 420px;
+	margin: 0 auto;
+}
+.image-blocks .image-layout-landscape {
+	position: relative;
+	max-width: 520px;
+	margin: 0 auto;
+}
+.wauto
+{
+	width: auto;
+}
+.hauto
+{
+	height: 560px;
+}
+.mr-auto {
+	margin: 0 0 0 auto!important;
+}
+.image-blocks .image-layout-portrait p, .image-blocks .image-layout-landscape p {
+	text-transform: uppercase;
+	margin-top: 12px;
+	font-size: 22px;
+	letter-spacing: 3px;
+}
+.image-blocks .img-responsive {
+	margin: 0 auto;
+}
+.image-blocks .row {
+	margin-bottom: 2em;
+}
+footer
+{
+	position: relative;
+	padding: 220px 0;
+	background: url("../img/footer-bg.png") no-repeat right bottom #bb9959;
+	background-size: contain;
+}
+footer .container
+{
+	position: relative;
+	z-index: 9;
+}
+.footer-bg
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+.footer-bg img
+{
+	max-width: 100%;
+	height: 100%;
+}
+footer p
+{
+	margin: 0.6em 0;
+}
+.social-link ul
+{
+	list-style: none;
+	padding: 0;
+	
+}
+.social-link ul li
+{
+	display: inline-block;
+	margin-right: 40px;
+}
+.social-link ul li:last-of-type
+{
+	margin-right: 0;
+}
+.social-link ul li a
+{
+	display: block;
+}
+@media(max-width:1600px)
+{
+	.image-blocks
+	{
+		padding-top: 70px;
+	}
+	.grid-box
+	{
+		width: 35%;
+	}
+	.home-page .restaurant-info
+	{
+		top: -230px;
+	}
+	.home-layout .restaurant-info .inner
+	{
+		width: 50%;
+	}
+	.home-layout .restaurant-info .inner h1
+	{
+		font-size: 38px;
+	}
+	.img-blocks
+	{
+		top: -150px;
+	}
+	.pattern img
+	{	
+		width: 75%;
+	
+	}
+}
+@media(max-width:1440px)
+{
+	.home-layout
+	{
+		margin-top: 96px;
+	}
+	.home-layout .restaurant-info .inner h1
+	{
+		font-size: 32px;
+	}
+	.home-layout .restaurant-info .inner
+	{
+		width: 52%;
+	}
+	.img-desc
+	{
+		margin-top: 16em;
+	}
+	
+	.content-wrapper
+	{
+		padding-bottom: 0;
+	}
+	.home-page .restaurant-info
+	{
+		top: -200px;
+		right: 100px;
+	}
+	.home-page footer
+	{
+		margin-top: -200px;
+	}
+	.restaurant-info
+	{
+		right: 160px;
+		top: 310px;
+	}
+	.grid-box {
+    width: 42%;
+}
+	.navbar-nav>li>a
+	{
+		font-size: 20px;
+	}
+}
+@media(max-width:1280px)
+{
+	.grid-box
+	{
+		width: 30%;
+		margin-right: 60px;
+	}
+	.img-blocks
+	{
+		top: -130px;
+	}
+	.img-desc
+	{
+		margin-top: 15em;
+	}
+	.home-page .restaurant-info
+	{
+		top: -180px;
+	}
+	.home-layout .restaurant-info .inner {
+    width: 48%;
+}
+	.home-layout .restaurant-info .inner h1
+	{
+		font-size: 26px;
+	}
+	.grid-box.mt-3,.grid-box.mt-4
+	{
+		margin-right: 0;
+		
+	}
+	.row.justify-content-center.mt-4 .grid-box:last-of-type
+	{
+		margin-right: 0;
+	}
+	.image-blocks .image-layout-portrait p, .image-blocks .image-layout-landscape p
+	{
+		font-size: 18px;
+	}
+	footer
+	{
+		padding: 150px 0;
+	}
+}
+@media only screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-min-device-pixel-ratio: 1)
+{
+	.img-section
+	{
+		height: 60vh;
+	}
+	.img-desc
+	{
+		margin-top: 8em;
+	}
+	
+}
+@media only screen and (device-width: 1366px) and (device-height: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+{
+	.img-desc
+	{
+		margin-top: 7em;
+	}
+	
+}
+@media(max-width:1024px)
+{
+	.navbar
+	{
+		padding: 15px 30px;
+	}
+	.home-layout
+	{
+		margin-top: 93px;
+	}
+	.home-layout .restaurant-info .inner h1
+	{
+		font-size: 24px;
+	}
+	.home-page .restaurant-info {
+    top: -150px;
+    right: 60px;
+}
+	.img-blocks {
+    top: -100px;
+}
+	.img-desc {
+    margin-top: 11em;
+}
+	.content-wrapper
+	{
+		padding: 24px 40px 30px;
+	}
+	.container
+	{
+		padding: 0 90px;
+	}
+	.navbar-nav>li>a {
+    font-size: 18px;
+}
+	.image-blocks .image-layout-portrait p, .image-blocks .image-layout-landscape p {
+    font-size: 16px;
+}
+	.header-bg
+	{
+		width: 63%;
+	}
+	.image-blocks
+	{
+		padding-top: 0;
+	}
+	footer
+	{
+		margin-top: 8em;
+	}
+}
+@media(max-width:991px)
+{
+	.home-layout
+	{
+		margin-top: 70px;
+	}
+}
+@media(max-width:768px)
+{
+	.home-layout
+	{
+		margin-top: 70px;
+		padding: 0 80px;
+	}
+	.block-two {
+    top: 61%;
+    right: 23%;
+}
+	.img-blocks
+	{
+		top: -70px;
+	}
+	.home-page .restaurant-info
+	{
+		top: -80px;
+		right: 40px;
+	}
+	.home-layout .restaurant-info .inner
+	{
+		width: 56%;
+	}
+	.home-layout .restaurant-info .inner h1
+	{
+		font-size: 18px;
+	}
+	.img-desc
+	{
+		margin-top: 9em;
+		margin-bottom: 0;
+	}
+	.content-wrapper
+	{
+		margin-top: 100px;
+	}
+	.img-desc p
+	{
+		margin-bottom: 12px;
+	}
+	.home-layout .btn
+	{
+		font-size: 18px;
+	}
+	.img-desc p
+	{
+		font-size: 16px;
+	}
+	.img-section
+	{
+		height: 60vh;
+	}
+	.header-bg
+	{
+		width: 75%;
+	}
+	.container
+	{
+		padding: 0 80px;
+	}
+	.grid-box
+	{
+		width: 42%;
+	}
+	.image-blocks .image-layout-portrait p, .image-blocks .image-layout-landscape p
+	{
+		white-space: nowrap;
+	}
+	footer
+	{
+		background-size: cover;
+	}
+	.restaurant-info {
+    right: 80px;
+    top: 300px;
+}
+	
+	.navbar-nav>li>a
+	{font-size: 16px;}
+	
+	.navbar-nav
+	{
+		flex-direction: row;
+	}
+	
+}
+@media(max-width:600px)
+{
+	.home-layout
+	{
+		padding: 0 50px;
+	}
+	.navbar-nav .nav-item
+	{
+		text-align: center;
+	}
+	.img-blocks,.img-desc .row
+	{
+		margin: 0;
+		top: auto;
+	}
+	.pattern img
+	{
+		width: 100%;
+	}
+	.img-blocks img,.img-desc img
+	{margin-bottom: 15px;}
+	.content-wrapper
+	{
+		margin-top: 50px;
+	}
+	.home-layout .restaurant-info .inner
+	{
+		width: 45%;
+	}
+	.block-one, .block-two,.block-three
+	{
+		top: auto;
+		right: auto;
+		width: 100%;
+	}
+	.img-desc
+	{
+		margin: 0;
+	}
+	.pl-15
+	{
+		padding: 0 15px;
+	}
+	.navbar-nav
+	{
+		flex-direction: column;
+		
+		background-color: rgba(70,70,70,0.95)
+	}
+	.navbar
+	{
+		height: 70px;
+		padding: 15px 20px;
+	}
+	.navbar-collapse
+	{
+		width: 100%;
+		position: relative;
+		top: 14px;
+		margin: 0 -21px;
+	}
+	.nav-item.ml-auto
+	{
+		margin: 0 !important;
+	}
+	.navbar-nav>li>a
+	{
+		white-space: nowrap;
+	}
+	.restaurant-info .one:after
+	{
+		right: -18px;
+	}
+	.header-bg
+	{
+		width: 80%;
+	}
+	.restaurant-info .inner
+	{
+		width: 55%;
+	}
+	.restaurant-info
+	{
+		top: 240px;
+		right: 60px;
+	}
+	.container
+	{
+		padding: 0 40px;
+	}
+	.navbar-toggler
+	{
+		border: 1px solid #fff;
+	}
+	.img-section{
+		height: 50vh;
+	}
+	.grid-box
+	{
+		width: 100%;
+		margin: 0 auto !important;
+	}
+	.mr-auto
+	{
+		margin: 0 auto !important;
+	}
+	.image-blocks
+	{
+		padding-bottom: 100px;
+	}
+	footer
+	{
+		margin-top: 0;
+	}
+	.mt-3,.mt-4
+	{
+		top: auto !important;
+	}
+	.image-blocks .row
+	{
+		margin-bottom: 0;
+	}
+}
+@media(max-width:414px)
+{
+	.home-layout .restaurant-info .inner
+	{
+		width: 60%;
+	}
+	footer p
+	{
+		font-size: 14px; 
+	}
+	footer .col-md-12
+	{
+		padding: 0;
+	}
+	.home-page .restaurant-info
+	{
+		top: auto;
+		margin: 1.5em 0;
+	}
+	footer .logo img
+	{
+		width: 120px;
+	}
+	.home-layout .restaurant-info .inner
+	{
+		width: 80%;
+	}
+	.home-layout
+	{
+		padding: 0 30px;
+	}
+	.img-section
+	{
+		height: 70vh;
+	}
+	.content-wrapper
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.home-layout .btn
+	{
+		font-size: 14px;
+	}
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-min-device-pixel-ratio: 1)
+{
+	.img-section
+	{
+		height: 55vh;
+	}
+}
+@media only screen and (device-width: 360px) and (device-height: 640px) and (-webkit-min-device-pixel-ratio: 1)
+{
+	.social-link ul li
+	{
+		margin-right: 24px;
+	}
+}
+@media(max-width:360px)
+{
+	.img-section
+	{
+		height: 80vh;
+	}
+	.social-link ul img
+	{
+		width: 40px;
+	}
+	
+}
