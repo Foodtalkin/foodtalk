@@ -1,0 +1,38 @@
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 no-padding">
+          <a ui-sref="app({sessionid : sessionid})" class="text-white top-left p-l-10 p-t-5 p-b-20 p-r-60" style="cursor: pointer;"><i class="fa fa-3x fa-angle-left" aria-hidden="true" style="text-shadow: 0px 2px #7e7e7e;"></i></a>
+          <img ng-src="{{eventDetails.cover_image}}" alt="" class="img-responsive">
+          <button class="btn btn-danger pull-right bottom-right m-r-10 m-b-10 btn-sm"> {{eventDetails.tag}}</button>
+        </div>
+        <div class="col-xs-12 m-t-15">
+          <h4 class="bold fs-20">{{eventDetails.name}}</h4>
+          <div class="fs-14 semi-bold m-t-10">{{eventDetails.e_date}} | {{eventDetails.e_time}}</div>
+          <div class="fs-14 semi-bold m-t-10">{{eventDetails.vanue}}</div>
+          <div class="fs-14 semi-bold m-t-10">{{eventDetails.seats}} PAX</div>
+          <div class="fs-14 bold m-t-10"><i class="fa fa-inr" ng-show="eventDetails.paid"></i> {{eventDetails.cost}}</div>
+
+        </div>
+        <div class="col-xs-12 m-t-10 text-black">
+          <h5 class="bold text-black">Description:</h5>
+          <div class="semi-bold fs-13" style="line-height: 1.6;">{{eventDetails.description}}
+          </div>
+        </div>
+        <div class="col-xs-12 m-t-10 text-black">
+          <h5 class="bold text-black">On the Menu:</h5>
+          <div class="semi-bold fs-13" style="line-height: 1.6;">
+            <span ng-repeat="item in eventDetails.on_menu">{{item}}<br></span>
+          </div>
+        </div>
+        <div class="col-xs-12 m-t-10 m-b-10 text-black">
+          <h5 class="bold text-black">Venue:</h5>
+          <div class="semi-bold fs-13" style="line-height: 1.6;">
+            {{eventDetails.full_address}}
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 m-b-20 no-padding p-b-5">
+        <button class="btn btn-block btn-lg {{inviteButtonColordefault ? 'btn-info' : 'btn-success'}}" ng-class="" ng-click="requestInvite()" ng-hide="eventDetails.paid" ng-disabled="soldout">{{inviteButtonText}}</button>
+        <a class="btn btn-info btn-block btn-lg" ng-show="eventDetails.paid" href="{{eventDetails.pay_url}}">Buy</a>
+      </div>
+    </div>

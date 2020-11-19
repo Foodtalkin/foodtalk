@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Pages - Front End</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" href="pages/ico/60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN PLUGINS -->
+    <!-- <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" /> -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="assets/plugins/swiper/css/swiper.css" rel="stylesheet" type="text/css" media="screen" /> -->
+    <!-- END PLUGINS -->
+    <!-- BEGIN PAGES CSS -->
+    <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" /> -->
+    <!-- BEGIN PAGES CSS -->
+    <style>
+      .card-description1{
+        background: rgba(0,0,0,.65);
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .no-t-b-border{
+        border-top: 0;
+        border-bottom:0;
+      }
+      .border-t-radius{
+        border-radius: 2px 2px 0 0;
+      }
+      .btn-info{
+          background-color: #ffda44;
+          border: 0px;
+          font-weight: bold;
+          color: #313335;
+      }
+      .btn-info:active , .btn-info:hover{
+          background-color: #f88d17;
+          border: 0px;
+          font-weight: bold;
+          color: #313335;
+      }
+      .btn-success,.btn-success:active{
+        background-color: #44db5e !important;
+        font-weight: bold;
+        border-color: #49cc60;
+      }
+    </style>
+  </head>
+  <body class="pace-white" ui-view>
+    <div style="width: 100vw; height: 100vh; position: relative;" id="page-loading">
+      <div style="position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="progress-circle-indeterminate"></div>
+      </div>
+    </div>
+    <!-- BEGIN VENDOR JS -->
+    <!-- <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script> -->
+    <!-- <script type="text/javascript" src="pages/js/pages.image.loader.js"></script> -->
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/plugins/velocity/velocity.min.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/plugins/velocity/velocity.ui.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/plugins/waypoints/jquery.waypoints.min.js"></script> -->
+    <!-- END VENDOR JS -->
+    <!-- BEGIN PAGES FRONTEND LIB -->
+    <!-- <script type="text/javascript" src="pages/js/pages.frontend.js"></script> -->
+    <!-- END PAGES LIB -->
+    <!-- BEGIN YOUR CUSTOM JS -->
+    <!-- <script type="text/javascript" src="assets/js/custom.js"></script> -->
+    <!-- END PAGES LIB -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <!-- <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script> -->
+
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+            /*VANILLA JAVASCRIPT*/
+            var element = document.getElementById("page-loading");
+            element.parentNode.removeChild(element);
+            /* OR WITH jQuery*/
+            $('#page-loading')
+                .fadeOut('slow');
+        });
+    </script>
+  </body>
+</html>

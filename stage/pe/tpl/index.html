@@ -1,0 +1,33 @@
+<div style="width: 100vw; height: 100vh; position: relative;" ng-hide="loadingdone">
+  <div style="position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="progress-circle-indeterminate"></div>
+  </div>
+</div>
+<div class="container" ng-show="loadingdone">
+      <div class="row">
+        <div class="col-xs-12 m-t-20" ng-repeat="event in eventList" ng-show="event.active">
+          <div class="card share share-other col no-t-b-border" data-social="item">
+            <div class="card-content">
+              <button class="btn btn-danger pull-right top-right m-r-10 m-t-10 btn-sm">{{event.tag}}</button>
+              <img alt="Person photo" ng-src="{{event.card_img}}" class="border-t-radius">
+              <div class="card-description1">
+                <p class="bold">{{event.name}}</p>
+              </div>
+            </div>
+            
+            <div class="card-footer clearfix">
+              <div class="fs-12 semi-bold m-t-10">{{event.e_date}} | {{event.e_time}}</div>
+              <div class="fs-12 semi-bold m-t-10">{{event.vanue}}</div>
+              <div class="fs-13 bold m-t-10"><i class="fa fa-inr" ng-show="event.paid"></i> {{event.cost}}</div>
+              
+            </div>
+            <a class="btn btn-block btn-info btn-lg" ui-sref="open({id : event.id, sessionid : sessionid})" style="border-radius: 0 0 2px 2px;">Know More</a>
+          </div>
+        </div>
+      </div>
+      <div class="row" ng-show="noevent">
+        <div class="col-cs-12 m-t-100">
+          <h1 class="text-center">New events coming soon</h1>
+        </div>
+      </div>
+    </div>

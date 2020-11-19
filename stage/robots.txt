@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: 
+
+Sitemap: http://www.foodtalk.in/sitemap.html
+Sitemap: http://www.foodtalk.in/sitemaps.html

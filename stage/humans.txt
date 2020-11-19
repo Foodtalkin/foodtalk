@@ -1,0 +1,30 @@
+
+                            
+/* TEAM */
+
+                            
+Web designer & developer: Richa Sharma.                  
+Contact: rchshrm16@gmail.com.                   
+Twitter: @rchshrm16.                            
+Location: Gurgaon, India.
+
+
+              
+/* THANKS */
+
+              
+
+/* SITE */
+
+                            
+Last update: 2017/06/19
+
+                            
+Standards: HTML5, CSS3.
+
+                            
+Components: animate.css, jQuery, bootstrap, font-awesome, modernizr.
+
+                            
+Software: sublime text, photoshop.
+   
